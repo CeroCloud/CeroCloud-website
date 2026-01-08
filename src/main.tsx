@@ -9,7 +9,7 @@ import App from "./App.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <HelmetProvider>
-      <BrowserRouter basename="/CeroCloud">
+      <BrowserRouter basename="/CeroCloud-website">
         <ThemeProvider>
           <App />
         </ThemeProvider>
