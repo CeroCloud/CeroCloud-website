@@ -22,7 +22,7 @@ export default function Footer() {
                                     {/* Glow effect */}
                                     <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-xl" />
                                     {/* Icon */}
-                                    <img src={icon} alt="CeroCloud Icon" className="relative w-full h-full drop-shadow-xl" />
+                    <img src={icon} alt="CeroCloud Icon" loading="lazy" className="relative w-full h-full drop-shadow-xl" />
                                 </div>
                                 <div>
                                     <h3 className="text-3xl font-black">CeroCloud</h3>

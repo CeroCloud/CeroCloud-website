@@ -104,7 +104,7 @@ export default function Navbar() {
                                     {/* Glow effect */}
                                     <div className="absolute inset-0 bg-primary/20 rounded-xl blur-lg group-hover:bg-primary/30 transition-colors" />
                                     {/* Icon */}
-                                    <img src={icon} alt="CeroCloud Icon" className="relative w-full h-full drop-shadow-lg" />
+                                    <img src={icon} alt="CeroCloud Icon" loading="lazy" className="relative w-full h-full drop-shadow-lg" />
                                 </div>
                                 <div>
                                     <span className="text-xl font-bold text-foreground">CeroCloud</span>
