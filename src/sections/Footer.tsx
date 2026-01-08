@@ -121,7 +121,7 @@ export default function Footer() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <a href="https://github.com/DaaNiieeL123/CeroCloud/issues/new" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1">
+                                        <a href="https://github.com/CeroCloud/CeroCloud-Desktop/issues/new" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1">
                                             Reportar Issues <ExternalLink className="w-3 h-3" />
                                         </a>
                                     </li>

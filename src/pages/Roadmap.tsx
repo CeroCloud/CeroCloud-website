@@ -102,9 +102,9 @@ export default function Roadmap() {
                 {/* Open Graph */}
                 <meta property="og:title" content="Roadmap de CeroCloud - Transparencia Total" />
                 <meta property="og:description" content="Mira lo que estamos construyendo. Únete a la comunidad y propón nuevas funcionalidades para el mejor POS local." />
-                <meta property="og:url" content="https://daaniieel123.github.io/CeroCloud/roadmap" />
+                <meta property="og:url" content="https://cerocloud.github.io/CeroCloud-website/roadmap" />
 
-                <link rel="canonical" href="https://daaniieel123.github.io/CeroCloud/roadmap" />
+                <link rel="canonical" href="https://cerocloud.github.io/CeroCloud-website/roadmap" />
             </Helmet>
 
             <div className="container mx-auto px-4 max-w-4xl">
@@ -136,7 +136,7 @@ export default function Roadmap() {
                         El roadmap es flexible y se adapta a las necesidades de la comunidad.
                     </p>
                     <a
-                        href="https://github.com/DaaNiieeL123/CeroCloud/discussions"
+                        href="https://github.com/CeroCloud/CeroCloud-Desktop/discussions"
                         target="_blank"
                         rel="noreferrer"
                         className="inline-flex items-center gap-2 text-primary font-bold hover:underline"

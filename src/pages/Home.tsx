@@ -21,19 +21,19 @@ export default function Home() {
 
                 {/* Facebook / Open Graph */}
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://daaniieel123.github.io/CeroCloud/" />
+                <meta property="og:url" content="https://cerocloud.github.io/CeroCloud-website/" />
                 <meta property="og:title" content="CeroCloud - Gestión Empresarial Local y Segura" />
                 <meta property="og:description" content="El sistema de gestión que corre en TU computadora. Sin nube, sin rentas, sin riesgos. Dashboard, POS e Inventario en un solo lugar." />
-                <meta property="og:image" content="https://daaniieel123.github.io/CeroCloud/og-image.jpg" />
+                <meta property="og:image" content="https://cerocloud.github.io/CeroCloud-website/og-image.jpg" />
 
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://daaniieel123.github.io/CeroCloud/" />
+                <meta property="twitter:url" content="https://cerocloud.github.io/CeroCloud-website/" />
                 <meta property="twitter:title" content="CeroCloud - Software POS e Inventario Gratuito" />
                 <meta property="twitter:description" content="Olvídate de pagar suscripciones. CeroCloud es tu centro de comando local. Rápido, seguro y elegante." />
-                <meta property="twitter:image" content="https://daaniieel123.github.io/CeroCloud/og-image.jpg" />
+                <meta property="twitter:image" content="https://cerocloud.github.io/CeroCloud-website/og-image.jpg" />
 
-                <link rel="canonical" href="https://daaniieel123.github.io/CeroCloud/" />
+                <link rel="canonical" href="https://cerocloud.github.io/CeroCloud-website/" />
             </Helmet>
 
             <Hero />

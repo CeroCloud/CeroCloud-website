@@ -76,9 +76,9 @@ export default function Docs() {
                 {/* Open Graph */}
                 <meta property="og:title" content="Centro de Ayuda y Documentación - CeroCloud" />
                 <meta property="og:description" content="Domina CeroCloud con nuestras guías completas. Instalación, configuración y trucos para maximizar tu negocio." />
-                <meta property="og:url" content="https://daaniieel123.github.io/CeroCloud/docs" />
+                <meta property="og:url" content="https://cerocloud.github.io/CeroCloud-website/docs" />
 
-                <link rel="canonical" href="https://daaniieel123.github.io/CeroCloud/docs" />
+                <link rel="canonical" href="https://cerocloud.github.io/CeroCloud-website/docs" />
             </Helmet>
 
             <div className="container mx-auto px-4 max-w-7xl flex flex-col md:flex-row gap-8 py-4 md:py-8">

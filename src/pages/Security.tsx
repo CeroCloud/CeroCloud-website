@@ -40,9 +40,9 @@ export default function Security() {
                 {/* Open Graph */}
                 <meta property="og:title" content="Seguridad de Grado Militar - CeroCloud" />
                 <meta property="og:description" content="Olvídate de las brechas de seguridad en la nube. CeroCloud mantiene tus datos cifrados y locales." />
-                <meta property="og:url" content="https://daaniieel123.github.io/CeroCloud/security" />
+                <meta property="og:url" content="https://cerocloud.github.io/CeroCloud-website/security" />
 
-                <link rel="canonical" href="https://daaniieel123.github.io/CeroCloud/security" />
+                <link rel="canonical" href="https://cerocloud.github.io/CeroCloud-website/security" />
             </Helmet>
 
             {/* Hero Section */}

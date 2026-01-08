@@ -113,9 +113,9 @@ export default function Tour() {
                 {/* Open Graph */}
                 <meta property="og:title" content="Tour Virtual - CeroCloud" />
                 <meta property="og:description" content="Mira cómo CeroCloud transforma tu negocio. Interfaz moderna, rápida y 100% local." />
-                <meta property="og:url" content="https://daaniieel123.github.io/CeroCloud/tour" />
+                <meta property="og:url" content="https://cerocloud.github.io/CeroCloud-website/tour" />
 
-                <link rel="canonical" href="https://daaniieel123.github.io/CeroCloud/tour" />
+                <link rel="canonical" href="https://cerocloud.github.io/CeroCloud-website/tour" />
             </Helmet>
 
             <div className="container mx-auto px-4">
