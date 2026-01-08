@@ -41,6 +41,9 @@ export default function Security() {
                 <meta property="og:title" content="Seguridad de Grado Militar - CeroCloud" />
                 <meta property="og:description" content="Olvídate de las brechas de seguridad en la nube. CeroCloud mantiene tus datos cifrados y locales." />
                 <meta property="og:url" content="https://cerocloud.github.io/CeroCloud-website/security" />
+                <meta property="og:image" content="https://cerocloud.github.io/CeroCloud-website/assets/docs/settings-light.png" />
+                <meta property="og:image:alt" content="Seguridad CeroCloud - Cifrado AES-256 y Base de Datos Local" />
+                <meta property="og:type" content="website" />
 
                 <link rel="canonical" href="https://cerocloud.github.io/CeroCloud-website/security" />
             </Helmet>
