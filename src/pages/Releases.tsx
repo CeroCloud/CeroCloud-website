@@ -35,7 +35,8 @@ export default function Releases() {
     useEffect(() => {
         const fetchReleases = async () => {
             try {
-                const response = await fetch("https://api.github.com/repos/DaaNiieeL123/CeroCloud/releases");
+                const response = await fetch("https://api.github.com/repos/CeroCloud/CeroCloud-Desktop/releases");
+
                 if (!response.ok) throw new Error("No se pudieron cargar las versiones");
                 const data = await response.json();
                 setReleases(data);
@@ -174,9 +175,9 @@ export default function Releases() {
                 {/* Open Graph */}
                 <meta property="og:title" content="Descargar CeroCloud - Software POS Gratuito" />
                 <meta property="og:description" content="Obtén la última versión estable de CeroCloud. Sin virus, sin publicidad, 100% código abierto y local." />
-                <meta property="og:url" content="https://daaniieel123.github.io/CeroCloud/releases" />
+                <meta property="og:url" content="https://cerocloud.github.io/CeroCloud-website/releases" />
+                <link rel="canonical" href="https://cerocloud.github.io/CeroCloud-website/releases" />
 
-                <link rel="canonical" href="https://daaniieel123.github.io/CeroCloud/releases" />
             </Helmet>
 
             <div className="container mx-auto px-4 max-w-4xl">
