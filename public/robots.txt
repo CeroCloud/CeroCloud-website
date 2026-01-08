@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://daaniieel123.github.io/CeroCloud/sitemap.xml

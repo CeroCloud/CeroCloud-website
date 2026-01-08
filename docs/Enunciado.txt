@@ -1,0 +1,71 @@
+Enunciado del Proyecto: CeroCloud
+Slogan: Gestión empresarial 100% local. Sin nube. Sin suscripciones.
+
+1. Descripción General
+CeroCloud es un sistema integral de ventas e inventario de escritorio diseñado para funcionar de forma completamente local y gratuita. El proyecto nace de la necesidad de ofrecer una alternativa profesional para negocios que no desean depender de servicios en la nube ni pagar suscripciones mensuales, manteniendo el control total de sus datos en su propia infraestructura.
+
+2. Pilares Fundamentales
+Independencia de la Nube: Tu negocio y tus datos funcionan sin depender de servidores externos o conexión a internet.
+
+Seguridad de Grado Empresarial: Implementación de cifrado AES-256 para la protección de datos sensibles y respaldos.
+
+Interfaz Moderna y Fluida: Diseño profesional basado en estándares web modernos (React + Tailwind CSS), alejándose de interfaces de escritorio tradicionales.
+
+Escalabilidad Local: Uso de SQLite como motor de base de datos para manejar grandes volúmenes de información sin pérdida de rendimiento.
+
+3. Stack Tecnológico (v1.2.0)
+La arquitectura se divide en tres capas fundamentales para garantizar seguridad y mantenibilidad:
+
+Núcleo (Main Process): Electron.js y Node.js para la gestión del ciclo de vida, acceso al sistema de archivos y base de datos.
+
+Base de Datos: SQLite a través de better-sqlite3, configurado con modo WAL para alto rendimiento.
+
+Interfaz (Renderer Process): React.js con Vite, estilizado con Tailwind CSS y componentes de shadcn/ui.
+
+Seguridad y Utilidades: TypeScript para un desarrollo tipado, Crypto-JS para cifrado y JSZip para gestión de backups .cerobak.
+
+4. Módulos y Funcionalidades Clave
+A. Dashboard Analítico "Premium Glass"
+Visualización de ingresos y ventas en tiempo real mediante gráficas dinámicas.
+
+Indicadores clave de rendimiento (KPIs) y alertas automáticas de stock bajo.
+
+B. Gestión de Inventario Profesional
+Catálogo completo con soporte para imágenes locales mediante el protocolo seguro cerocloud-image://.
+
+Control de categorías, proveedores y niveles mínimos de existencia.
+
+C. Punto de Venta (POS) y Ventas
+Interfaz de caja rápida para el registro de transacciones con múltiples métodos de pago.
+
+Historial de ventas detallado con capacidad de anulación y restauración automática de stock.
+
+D. Data Protection Suite
+Backup Wizard: Asistente para generar copias de seguridad comprimidas y cifradas.
+
+Restore Wizard: Proceso de restauración con validación de integridad y previsualización de datos antes de confirmar.
+
+5. Estado Actual del Proyecto
+CeroCloud se encuentra en la v1.2.0 - Data Protection Suite. Se ha completado con éxito la migración de almacenamiento JSON a SQLite, la implementación de un sistema de CI/CD para lanzamientos automáticos y el desarrollo de una identidad visual consistente y moderna.
+
+Objetivo Final: Que cualquier usuario pueda entender, confiar y utilizar CeroCloud como el motor principal de su negocio, garantizando que su información permanezca privada, segura y siempre disponible.
+
+
+Slogan Principal
+CeroCloud: Gestión empresarial 100% local. Sin nube. Sin suscripciones.
+
+Alternativas Profesionales
+CeroCloud: Inventario y ventas, totalmente en tu control.
+
+CeroCloud: Tu negocio. Tus datos. Sin depender de la nube.
+
+CeroCloud: Software local para negocios que no quieren pagar la nube.
+
+CeroCloud: Gestión moderna, datos locales.
+
+Slogans Cortos (Ideales para Logo, Splash Screen o Iconos)
+CeroCloud: Sin nube. Sin límites.
+
+CeroCloud: Local. Seguro. Profesional.
+
+CeroCloud: Local. Seguro. Profesional..
