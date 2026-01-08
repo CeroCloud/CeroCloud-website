@@ -88,13 +88,13 @@ export default function About() {
                                         <h4 className="font-bold text-lg">Daniel Ortiz</h4>
                                         <p className="text-sm text-muted-foreground mb-1">Lead Developer</p>
                                         <a
-                                            href="https://github.com/DaaNiieeL123"
+                                            href="https://github.com/CeroCloud"
                                             target="_blank"
                                             rel="noreferrer"
                                             className="text-primary hover:text-primary/80 transition-colors text-sm flex items-center gap-1.5"
                                         >
                                             <Globe className="w-3.5 h-3.5" />
-                                            @DaaNiieeL123
+                                            @CeroCloud
                                         </a>
                                     </div>
 

@@ -19,13 +19,12 @@ export function useLatestRelease() {
 
     useEffect(() => {
         if (cachedRelease) {
-            setLoading(false);
             return;
         }
 
         if (!pendingPromise) {
             console.log("Fetching GitHub release...");
-            pendingPromise = fetch("https://api.github.com/repos/DaaNiieeL123/CeroCloud/releases")
+            pendingPromise = fetch("https://api.github.com/repos/CeroCloud/CeroCloud-Desktop/releases")
                 .then(async res => {
                     if (!res.ok) throw new Error(`Status: ${res.status}`);
                     return res.json();

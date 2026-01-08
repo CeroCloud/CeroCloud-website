@@ -22,7 +22,7 @@ export default function Navbar() {
     const location = useLocation();
     const navigate = useNavigate();
     const isHome = location.pathname === "/";
-    const GITHUB_REPO = "https://github.com/DaaNiieeL123/CeroCloud";
+    const GITHUB_REPO = "https://github.com/CeroCloud/CeroCloud-Desktop";
 
     useEffect(() => {
         const handleScroll = () => {

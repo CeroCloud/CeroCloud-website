@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://daaniieel123.github.io/CeroCloud/sitemap.xml
+Sitemap: https://cerocloud.github.io/CeroCloud-website/sitemap.xml

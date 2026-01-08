@@ -40,28 +40,28 @@ export default function Contribute() {
                         title="Reportar Bugs"
                         desc="Si encuentras un error, avísanos. Los reportes detallados son oro puro para nosotros."
                         action="Ir a Issues"
-                        href="https://github.com/DaaNiieeL123/CeroCloud/issues/new"
+                        href="https://github.com/CeroCloud/CeroCloud-Desktop/issues/new"
                     />
                     <ContributionCard
                         icon={Code}
                         title="Escribir Código"
                         desc="Toma un issue etiquetado como 'good first issue' y envía tu primer Pull Request."
                         action="Ver Repositorio"
-                        href="https://github.com/DaaNiieeL123/CeroCloud"
+                        href="https://github.com/CeroCloud/CeroCloud-Desktop"
                     />
                     <ContributionCard
                         icon={MessageSquare}
                         title="Discutir Ideas"
                         desc="¿Tienes una idea para una nueva función? Compártela en nuestras discusiones."
                         action="Unirse al debate"
-                        href="https://github.com/DaaNiieeL123/CeroCloud/discussions"
+                        href="https://github.com/CeroCloud/CeroCloud-Desktop/discussions"
                     />
                     <ContributionCard
                         icon={Star}
                         title="Difundir"
                         desc="¡Danos una estrella en GitHub! Ayuda a que más gente conozca el proyecto."
                         action="Dar Star ⭐"
-                        href="https://github.com/DaaNiieeL123/CeroCloud"
+                        href="https://github.com/CeroCloud/CeroCloud-Desktop"
                     />
                 </div>
 
@@ -97,7 +97,7 @@ export default function Contribute() {
                         Tu nombre quedará inmortalizado en nuestra lista de contribuidores y en el corazón de la comunidad.
                     </p>
                     <a
-                        href="https://github.com/DaaNiieeL123/CeroCloud/graphs/contributors"
+                        href="https://github.com/CeroCloud/CeroCloud-Desktop/graphs/contributors"
                         target="_blank"
                         rel="noreferrer"
                         className="text-primary hover:underline font-medium"
