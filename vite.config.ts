@@ -4,7 +4,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/CeroCloud/',
+  base: '/CeroCloud-website/',
   plugins: [react()],
   resolve: {
     alias: {
