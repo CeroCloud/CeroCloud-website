@@ -72,7 +72,7 @@ export default function Hero() {
                                     {/* Glow effect */}
                                     <div className="absolute inset-0 bg-primary/20 rounded-3xl blur-2xl" />
                                     {/* Icon */}
-                                    <img src={icon} alt="CeroCloud Icon" className="relative w-full h-full drop-shadow-2xl" />
+                                    <img src={icon} alt="CeroCloud Icon" loading="lazy" className="relative w-full h-full drop-shadow-2xl" />
                                 </motion.div>
                                 <div>
                                     <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight">CeroCloud</h2>
@@ -215,7 +215,8 @@ export default function Hero() {
                                     <motion.img
                                         key={theme}
                                         src={theme === "dark" ? dashboardDark : dashboardLight}
-                                        alt="CeroCloud Dashboard - Premium Glass Interface"
+                                        alt={`CeroCloud Dashboard ${theme === "dark" ? "Modo Oscuro" : "Modo Claro"} - Interfaz Premium de Gestión Empresarial con Estadísticas en Tiempo Real`}
+                                        title="CeroCloud Dashboard - Software POS e Inventario Local"
                                         initial={{ opacity: 0, scale: 0.95 }}
                                         animate={{ opacity: 1, scale: 1 }}
                                         transition={{ duration: 0.5 }}

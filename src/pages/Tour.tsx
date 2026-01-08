@@ -114,6 +114,9 @@ export default function Tour() {
                 <meta property="og:title" content="Tour Virtual - CeroCloud" />
                 <meta property="og:description" content="Mira cómo CeroCloud transforma tu negocio. Interfaz moderna, rápida y 100% local." />
                 <meta property="og:url" content="https://cerocloud.github.io/CeroCloud-website/tour" />
+                <meta property="og:image" content="https://cerocloud.github.io/CeroCloud-website/assets/docs/pos-light.png" />
+                <meta property="og:image:alt" content="CeroCloud Punto de Venta - Interfaz POS completa" />
+                <meta property="og:type" content="website" />
 
                 <link rel="canonical" href="https://cerocloud.github.io/CeroCloud-website/tour" />
             </Helmet>
@@ -219,7 +222,8 @@ export default function Tour() {
                                         <img
                                             loading="lazy"
                                             src={previewTheme === 'dark' ? feature.darkImage : feature.lightImage}
-                                            alt={feature.title}
+                                            alt={`${feature.title} - CeroCloud ${previewTheme === 'dark' ? 'Modo Oscuro' : 'Modo Claro'} - ${feature.subtitle}`}
+                                            title={feature.title}
                                             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                                         />
 

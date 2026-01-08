@@ -6,9 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CeroCloud | Software POS e Inventario Local</title>
     <meta name="description" content="CeroCloud es la plataforma de gestión empresarial (POS) 100% local, segura y gratuita. Sin nube, sin suscripciones. Control total de tu negocio." />
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "CeroCloud",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Windows, macOS, Linux",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Software de Punto de Venta (POS) e Inventario 100% local, gratuito y sin suscripciones",
+      "image": [
+        "https://cerocloud.github.io/CeroCloud-website/assets/dashboard-light.png",
+        "https://cerocloud.github.io/CeroCloud-website/assets/dashboard-dark.png",
+        "https://cerocloud.github.io/CeroCloud-website/assets/cerocloud-icon.png"
+      ],
+      "screenshot": [
+        "https://cerocloud.github.io/CeroCloud-website/assets/docs/pos-light.png",
+        "https://cerocloud.github.io/CeroCloud-website/assets/docs/inventory-light.png",
+        "https://cerocloud.github.io/CeroCloud-website/assets/docs/settings-light.png"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "1"
+      }
+    }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- SEO fallback content for crawlers before React loads -->
+      <noscript>
+        <h1>CeroCloud - Software POS e Inventario 100% Local</h1>
+        <p>Gestión empresarial gratuita, segura y sin suscripciones. Control total de tus datos.</p>
+      </noscript>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

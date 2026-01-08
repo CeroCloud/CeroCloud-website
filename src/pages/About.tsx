@@ -18,7 +18,7 @@ export default function About() {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-20"
                 >
-                    <img src={logo} alt="CeroCloud Logo" className="w-24 h-24 mx-auto mb-6 drop-shadow-2xl" />
+                    <img src={logo} alt="CeroCloud Logo" loading="lazy" className="w-24 h-24 mx-auto mb-6 drop-shadow-2xl" />
                     <h1 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
                         Democratizando la <span className="text-primary">Gestión Empresarial</span>
                     </h1>

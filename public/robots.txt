@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Explicitly allow Googlebot-Image to crawl images
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /
+
 Sitemap: https://cerocloud.github.io/CeroCloud-website/sitemap.xml

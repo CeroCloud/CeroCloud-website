@@ -77,6 +77,9 @@ export default function Docs() {
                 <meta property="og:title" content="Centro de Ayuda y Documentación - CeroCloud" />
                 <meta property="og:description" content="Domina CeroCloud con nuestras guías completas. Instalación, configuración y trucos para maximizar tu negocio." />
                 <meta property="og:url" content="https://cerocloud.github.io/CeroCloud-website/docs" />
+                <meta property="og:image" content="https://cerocloud.github.io/CeroCloud-website/assets/dashboard-light.png" />
+                <meta property="og:image:alt" content="Documentación CeroCloud - Guías y Manuales" />
+                <meta property="og:type" content="website" />
 
                 <link rel="canonical" href="https://cerocloud.github.io/CeroCloud-website/docs" />
             </Helmet>

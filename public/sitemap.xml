@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://cerocloud.github.io/CeroCloud-website/</loc>
     <lastmod>2024-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://cerocloud.github.io/CeroCloud-website/assets/dashboard-light.png</image:loc>
+      <image:title>CeroCloud Dashboard - Interfaz Principal</image:title>
+      <image:caption>Dashboard analítico de CeroCloud con visualización de ventas, inventario y métricas en tiempo real</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cerocloud.github.io/CeroCloud-website/assets/dashboard-dark.png</image:loc>
+      <image:title>CeroCloud Dashboard Modo Oscuro</image:title>
+      <image:caption>Dashboard de CeroCloud en modo oscuro para trabajo nocturno y reducción de fatiga visual</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cerocloud.github.io/CeroCloud-website/assets/cerocloud-icon.png</image:loc>
+      <image:title>Logo CeroCloud</image:title>
+      <image:caption>Logo oficial de CeroCloud - Software POS e Inventario Local</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://cerocloud.github.io/CeroCloud-website/releases</loc>
@@ -17,6 +33,21 @@
     <lastmod>2024-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://cerocloud.github.io/CeroCloud-website/assets/docs/pos-light.png</image:loc>
+      <image:title>CeroCloud Punto de Venta (POS)</image:title>
+      <image:caption>Módulo de punto de venta de CeroCloud con carrito, búsqueda de productos y cálculo automático</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cerocloud.github.io/CeroCloud-website/assets/docs/inventory-light.png</image:loc>
+      <image:title>CeroCloud Gestión de Inventario</image:title>
+      <image:caption>Sistema de inventario con control de stock, categorías y alertas de productos bajos</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cerocloud.github.io/CeroCloud-website/assets/docs/settings-light.png</image:loc>
+      <image:title>CeroCloud Configuración y Seguridad</image:title>
+      <image:caption>Panel de configuración de CeroCloud con opciones de seguridad, backup y personalización</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://cerocloud.github.io/CeroCloud-website/docs</loc>
