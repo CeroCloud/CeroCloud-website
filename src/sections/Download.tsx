@@ -107,7 +107,7 @@ export default function DownloadSection() {
                                     )}
                                     {getDownloadButtonText()}
                                 </Button>
-                                <a href="https://github.com/DaaNiieeL123/CeroCloud" target="_blank" rel="noreferrer">
+                                <a href="https://github.com/CeroCloud/CeroCloud-Desktop" target="_blank" rel="noreferrer">
                                     <Button size="lg" variant="outline" className="text-lg px-8 py-6 group w-full">
                                         <Github className="mr-2 h-5 w-5" />
                                         Ver en GitHub
