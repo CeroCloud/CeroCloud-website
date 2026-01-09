@@ -1,9 +1,41 @@
+# Allow all search engines to crawl the entire site
 User-agent: *
 Allow: /
 
-# Explicitly allow Googlebot-Image to crawl images
-User-agent: Googlebot-Image
-Allow: /assets/
+# Googlebot (Google Search)
+User-agent: Googlebot
 Allow: /
 
+# Googlebot-Image (Google Images)
+User-agent: Googlebot-Image
+Allow: /
+Allow: /assets/
+
+# Bingbot (Bing & Yahoo Search - Yahoo uses Bing's index)
+User-agent: Bingbot
+Allow: /
+
+# Bingbot-Image (Bing Images)
+User-agent: Bingbot-Image
+Allow: /
+Allow: /assets/
+
+# Yandex (Russian Search Engine)
+User-agent: Yandex
+Allow: /
+
+# YandexBot
+User-agent: YandexBot
+Allow: /
+
+# Brave Search
+User-agent: Brave-Search
+Allow: /
+
+# Brave Search Images
+User-agent: Brave-Search-Image
+Allow: /
+Allow: /assets/
+
+# Sitemap location
 Sitemap: https://cerocloud.github.io/CeroCloud-website/sitemap.xml
