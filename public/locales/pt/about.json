@@ -1,0 +1,89 @@
+{
+  "about": {
+    "seo": {
+      "title": "Sobre Nós - CeroCloud POS",
+      "description": "Conheça a missão, filosofia e equipe por trás do CeroCloud. Gestão empresarial 100% local, segura e open source."
+    },
+    "hero": {
+      "title_start": "Estamos democratizando a",
+      "title_highlight": "gestão local",
+      "subtitle": "Sem assinaturas. Sem nuvem. Apenas software poderoso para o seu negócio."
+    },
+    "philosophy": {
+      "privacy": {
+        "title": "Soberania de Dados",
+        "description": "Acreditamos que os dados do seu negócio pertencem a você. Não a nós, não à nuvem. É por isso que o CeroCloud funciona 100% offline."
+      },
+      "cost": {
+        "title": "Zero Custos Recorrentes",
+        "description": "Software empresarial não deve sangrar seu orçamento. Uma vez baixado, é seu para sempre."
+      }
+    },
+    "mission": "Empoderando negócios locais com tecnologia que respeita sua privacidade e independência.",
+    "team": {
+      "title": "Construído por Desenvolvedores",
+      "dev_team": "Equipe de Desenvolvimento",
+      "roles": {
+        "lead_dev": "Desenvolvedor Líder e Arquiteto",
+        "developer": "Colaborador Principal"
+      },
+      "tech_stack": "Stack Tecnológico"
+    },
+    "footer_love": "Feito com amor para negócios locais"
+  },
+  "contribute": {
+    "seo": {
+      "title": "Contribuir para o CeroCloud - POS Open Source",
+      "description": "Ajude-nos a construir o melhor POS local open source. Contribua com código, relate bugs ou traduza o CeroCloud."
+    },
+    "hero": {
+      "title": "Junte-se à Revolução",
+      "subtitle": "CeroCloud é código aberto. Seu código, ideias e feedback moldam o futuro do software para negócios locais."
+    },
+    "cards": {
+      "bugs": {
+        "title": "Relatar Bugs",
+        "description": "Encontrou uma falha? Avise-nos para que possamos corrigir para todos.",
+        "action": "Abrir Issue"
+      },
+      "code": {
+        "title": "Escrever Código",
+        "description": "Pegue uma issue, faça um fork do repo e envie um PR. Amamos colaboradores!",
+        "action": "Ver Repo"
+      },
+      "discuss": {
+        "title": "Participe de Discussões",
+        "description": "Compartilhe ideias para novos recursos ou faça perguntas em nossa comunidade.",
+        "action": "Discutir"
+      },
+      "spread": {
+        "title": "Espalhe a Palavra",
+        "description": "Dê uma estrela ao repo e conte aos outros sobre o CeroCloud.",
+        "action": "Dar Estrela"
+      }
+    },
+    "steps": {
+      "step1": {
+        "title": "Fork e Clonar",
+        "description": "Faça um fork do repositório para sua conta GitHub e clone localmente."
+      },
+      "step2": {
+        "title": "Criar Branch",
+        "description": "Crie uma nova branch para seu recurso ou correção (ex: feat/novo-relatorio)."
+      },
+      "step3": {
+        "title": "Commit e Push",
+        "description": "Faça commit de suas alterações com mensagens claras e envie para seu fork."
+      },
+      "step4": {
+        "title": "Pull Request",
+        "description": "Abra um PR contra nossa branch main. Vamos revisar e fazer o merge!"
+      }
+    },
+    "thanks": {
+      "title": "Obrigado!",
+      "description": "Cada contribuição ajuda pequenos negócios ao redor do mundo.",
+      "link": "Ver todos os colaboradores"
+    }
+  }
+}

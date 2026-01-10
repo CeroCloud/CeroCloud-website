@@ -1,107 +1,76 @@
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle2, Rocket, Database, Users, Globe, Zap, Shield, FileText } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useMemo } from "react";
 
 export default function Roadmap() {
-    const phases = [
+    const { t } = useTranslation('roadmap');
+    const phases = useMemo(() => [
         {
-            title: "Fase 0: Preparación",
+            title: t('phases.phase0.title'),
             status: "completed",
-            items: [
-                "Definición de alcance y arquitectura",
-                "Elección del stack (Electron + React + SQLite)",
-                "Documentación inicial y guías de contribución"
-            ],
+            items: t('phases.phase0.items', { returnObjects: true }) as string[],
             color: "blue",
             icon: FileText
         },
         {
-            title: "Fase 1: Base del Sistema",
+            title: t('phases.phase1.title'),
             status: "completed",
-            items: [
-                "Configuración de Electron + Vite",
-                "Diseño UI/UX con Shadcn/UI",
-                "CRUD de Productos completo",
-                "Persistencia de datos con electron-store"
-            ],
+            items: t('phases.phase1.items', { returnObjects: true }) as string[],
             color: "indigo",
             icon: Database
         },
         {
-            title: "Fase 2: Ventas y POS",
+            title: t('phases.phase2.title'),
             status: "completed",
-            items: [
-                "Módulo de Punto de Venta (POS)",
-                "Carrito de compras interactivo",
-                "Cálculo de impuestos y descuentos",
-                "Control de stock automático"
-            ],
+            items: t('phases.phase2.items', { returnObjects: true }) as string[],
             color: "violet",
             icon: Zap
         },
         {
-            title: "Fase 3: Reportes y Backups",
+            title: t('phases.phase3.title'),
             status: "completed",
-            items: [
-                "Sistema de reportes y estadísticas",
-                "Exportación a Excel/CSV",
-                "Sistema de respaldos `.cerobak`",
-                "Validación de integridad de datos"
-            ],
+            items: t('phases.phase3.items', { returnObjects: true }) as string[],
             color: "purple",
             icon: Shield
         },
         {
-            title: "Fase 4: UX Avanzado (Actual)",
+            title: t('phases.phase4.title'),
             status: "completed",
             version: "v1.2.0",
-            items: [
-                "Dashboard con gráficas interactivas",
-                "Modo Oscuro perfeccionado",
-                "Cifrado AES-256 para backups",
-                "Mejoras de rendimiento y animaciones"
-            ],
+            items: t('phases.phase4.items', { returnObjects: true }) as string[],
             color: "pink",
             icon: Rocket
         },
         {
-            title: "Fase 5: Escalabilidad",
+            title: t('phases.phase5.title'),
             status: "planned",
             version: "v2.0.0",
             icon: Users,
-            items: [
-                "Sistema de múltiples usuarios y roles",
-                "Soporte para impresión térmica (ESC/POS)",
-                "Soporte para red local (LAN)",
-                "Gestión de múltiples empresas"
-            ],
+            items: t('phases.phase5.items', { returnObjects: true }) as string[],
             color: "rose"
         },
         {
-            title: "Fase 6: Expansión",
+            title: t('phases.phase6.title'),
             status: "future",
             version: "v3.0.0",
             icon: Globe,
-            items: [
-                "Companion App para móviles",
-                "Sincronización opcional en la nube",
-                "Integración con e-commerce",
-                "Internationalización (i18n)"
-            ],
+            items: t('phases.phase6.items', { returnObjects: true }) as string[],
             color: "orange"
         }
-    ];
+    ], [t]);
 
     return (
         <div className="min-h-screen bg-background pt-8 pb-20">
             <Helmet>
-                <title>Roadmap de Desarrollo - Futuro de CeroCloud</title>
-                <meta name="description" content="Conoce la hoja de ruta de CeroCloud. Planes futuros: App móvil, impresión térmica, multisuccursal y más. Software POS en constante evolución." />
-                <meta name="keywords" content="roadmap cerocloud, cerocloud futuro, desarrollo pos, software punto de venta open source, features planeados" />
+                <title>{t('seo.title')}</title>
+                <meta name="description" content={t('seo.description')} />
+                <meta name="keywords" content={t('seo.keywords')} />
 
                 {/* Open Graph */}
-                <meta property="og:title" content="Roadmap de CeroCloud - Transparencia Total" />
-                <meta property="og:description" content="Mira lo que estamos construyendo. Únete a la comunidad y propón nuevas funcionalidades para el mejor POS local." />
+                <meta property="og:title" content={t('seo.og_title')} />
+                <meta property="og:description" content={t('seo.og_description')} />
                 <meta property="og:url" content="https://cerocloud.github.io/CeroCloud-website/roadmap" />
 
                 <link rel="canonical" href="https://cerocloud.github.io/CeroCloud-website/roadmap" />
@@ -117,10 +86,10 @@ export default function Roadmap() {
                         <Rocket className="w-8 h-8" />
                     </div>
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
-                        Hoja de Ruta
+                        {t('hero.title')}
                     </h1>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        Nuestra visión transparente del desarrollo. CeroCloud evoluciona constantemente gracias al apoyo de la comunidad.
+                        {t('hero.subtitle')}
                     </p>
                 </motion.div>
 
@@ -131,9 +100,9 @@ export default function Roadmap() {
                 </div>
 
                 <div className="mt-20 text-center p-8 bg-muted/20 rounded-2xl border border-border">
-                    <h3 className="text-xl font-bold mb-4">¿Tienes una idea?</h3>
+                    <h3 className="text-xl font-bold mb-4">{t('cta.title')}</h3>
                     <p className="text-muted-foreground mb-6">
-                        El roadmap es flexible y se adapta a las necesidades de la comunidad.
+                        {t('cta.description')}
                     </p>
                     <a
                         href="https://github.com/CeroCloud/CeroCloud-Desktop/discussions"
@@ -141,7 +110,7 @@ export default function Roadmap() {
                         rel="noreferrer"
                         className="inline-flex items-center gap-2 text-primary font-bold hover:underline"
                     >
-                        Proponer característica <Globe className="w-4 h-4" />
+                        {t('cta.link')} <Globe className="w-4 h-4" />
                     </a>
                 </div>
             </div>

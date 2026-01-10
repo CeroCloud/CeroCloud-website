@@ -1,0 +1,297 @@
+{
+  "seo": {
+    "title": "Documentação Oficial - CeroCloud POS",
+    "description": "Manual do usuário, guias de instalação e documentação técnica para CeroCloud. Aprenda a gerenciar seu inventário e vendas offline.",
+    "keywords": "documentação cerocloud, manual usuario pos, guia instalação, ajuda cerocloud, suporte tecnico pos",
+    "og_title": "Centro de Ajuda e Documentação - CeroCloud",
+    "og_description": "Domine o CeroCloud com nossos guias completos. Instalação, configuração e truques para maximizar seu negócio.",
+    "og_image_alt": "Documentação CeroCloud - Guias e Manuais"
+  },
+  "mobile": {
+    "menu_button": "Menu de Documentação"
+  },
+  "sidebar": {
+    "title": "Documentação",
+    "search_input": "Pesquisar..."
+  },
+  "sections": {
+    "getting_started": {
+      "title": "Começando",
+      "intro": "Introdução",
+      "install": "Guia de Instalação"
+    },
+    "guides": {
+      "title": "Guias de Uso",
+      "manual": "Manual do Usuário"
+    },
+    "development": {
+      "title": "Desenvolvimento",
+      "technical": "Documentação Técnica"
+    }
+  },
+  "intro": {
+    "welcome": "Bem-vindo",
+    "headline": "Documentação do CeroCloud",
+    "subheadline": "Seu guia completo para dominar o sistema de gestão empresarial mais seguro e privado. Sem internet. Sem assinaturas. 100% Seu."
+  },
+  "cards": {
+    "install": {
+      "title": "Instalação",
+      "description": "Guia passo a passo para instalar CeroCloud no Windows, macOS e Linux. Requisitos do sistema e solução de problemas."
+    },
+    "manual": {
+      "title": "Manual do Usuário",
+      "description": "Aprenda a registrar vendas, gerenciar estoque, gerar relatórios e configurar seu negócio do zero."
+    },
+    "dev": {
+      "title": "Para Desenvolvedores",
+      "description": "Explore a arquitetura técnica, esquema de banco de dados e padrões de segurança. Contribua com o código!"
+    }
+  },
+  "installation": {
+    "hero": {
+      "title": "Guia de Instalação",
+      "subtitle": "Instale CeroCloud no seu computador em poucos minutos. Compatível com Windows, macOS e Linux."
+    },
+    "requirements": {
+      "title": "Requisitos do Sistema",
+      "windows": [
+        "Windows 10 ou 11 (64-bit)",
+        "4GB RAM mínimo",
+        "500MB espaço livre"
+      ],
+      "macos": [
+        "macOS 10.15+ (Catalina)",
+        "Suporte chip Apple M1/M2/M3",
+        "4GB RAM mínimo"
+      ],
+      "linux": [
+        "Ubuntu 20.04+, Fedora, Arch",
+        "Suporte AppImage / .deb",
+        "4GB RAM mínimo"
+      ]
+    },
+    "windows": {
+      "title": "Instalação no Windows",
+      "step1": {
+        "title": "Baixar o Instalador",
+        "text_start": "Vá para a página de",
+        "link_text": "Downloads",
+        "text_end": "e baixe o arquivo"
+      },
+      "step2": {
+        "title": "Executar o Arquivo",
+        "text": "Clique duas vezes no arquivo baixado. Você pode ver um aviso de \"Windows protegeu seu PC\" (SmartScreen).",
+        "warning": {
+          "title": "Por que isso aparece?",
+          "text": "Como somos um projeto open source gratuito, não pagamos a cara certificação da Microsoft. Clique em \"Mais informações\" e depois em \"Executar mesmo assim\". É 100% seguro."
+        }
+      },
+      "step3": {
+        "title": "Instalação Automática",
+        "text": "O instalador configurará tudo automaticamente. Ao terminar, o CeroCloud abrirá sozinho e criará um atalho na sua área de trabalho."
+      }
+    },
+    "macos": {
+      "title": "Instalação no macOS",
+      "step1": "1. Baixe o arquivo",
+      "step2": "2. Abra o arquivo DMG e arraste o ícone do CeroCloud para a pasta de",
+      "apps_folder": "Aplicativos",
+      "step3": "3. Ao abri-lo pela primeira vez, clique com o botão direito e selecione \"Abrir\" se o macOS bloquear o aplicativo por ser de um desenvolvedor não identificado."
+    },
+    "updates": {
+      "title": "Atualizações Automáticas",
+      "text": "CeroCloud buscará novas versões automaticamente toda vez que você abri-lo. Se houver uma atualização, ela será baixada em segundo plano e instalada na próxima vez que você reiniciar o app.",
+      "badge": "Você estará sempre atualizado sem esforço."
+    }
+  },
+  "manual": {
+    "hero": {
+      "title": "Manual do Usuário",
+      "subtitle": "Aprenda a dominar o CeroCloud. Da sua primeira venda até a gestão avançada de estoque."
+    },
+    "nav": {
+      "setup": "Primeiro Início",
+      "inventory": "Estoque",
+      "pos": "Ponto de Venda",
+      "reports": "Relatórios"
+    },
+    "setup": {
+      "title": "1. Primeiro Início",
+      "description": "Ao abrir o CeroCloud pela primeira vez, guiaremos você por um assistente de configuração rápida. Aqui você definirá a identidade do seu negócio.",
+      "image_alt": "Tela de Boas-vindas CeroCloud",
+      "steps": {
+        "step1": {
+          "title": "Dados do Negócio",
+          "text": "Nome, endereço e contato. Estes aparecerão nos seus recibos."
+        },
+        "step2": {
+          "title": "Moeda e Impostos",
+          "text": "Defina sua moeda local (ex: USD, MXN, BRL) e o IVA padrão."
+        },
+        "step3": {
+          "title": "Logo",
+          "text": "Envie seu logo para personalizar o aplicativo."
+        }
+      }
+    },
+    "inventory": {
+      "title": "2. Gestão de Estoque",
+      "subtitle": "O coração do seu negócio. Mantenha seu catálogo de produtos organizado.",
+      "actions": {
+        "title": "Ações Principais",
+        "add_product": {
+          "title": "Adicionar Produto",
+          "description": "Clique em \"Novo Produto\". Você deve preencher:",
+          "fields": {
+            "name": {
+              "label": "Nome",
+              "desc": "O que o cliente verá."
+            },
+            "sku": {
+              "label": "Código/SKU",
+              "desc": "Escaneie o código de barras aqui."
+            },
+            "price": {
+              "label": "Preço Compra/Venda",
+              "desc": "Para calcular lucros."
+            },
+            "stock": {
+              "label": "Estoque",
+              "desc": "Quantidade atual."
+            }
+          }
+        },
+        "low_stock": {
+          "title": "Controle de Estoque Baixo",
+          "description": "Defina um \"Estoque Mínimo\". Quando um produto cair abaixo dessa quantidade, o CeroCloud marcará em vermelho e enviará um alerta no Dashboard para você reabastecer."
+        }
+      }
+    },
+    "pos": {
+      "title": "3. Ponto de Venda (POS)",
+      "image_alt": "Interface de Ponto de Venda",
+      "flow": {
+        "title": "Fluxo de Venda Rápida",
+        "step1": {
+          "label": "Buscar",
+          "text": "Escaneie um código de barras ou digite o nome do produto na barra de pesquisa."
+        },
+        "step2": {
+          "label": "Adicionar",
+          "text": "O produto é adicionado ao carrinho. Você pode ajustar a quantidade com os botões [+] e [-]."
+        },
+        "step3": {
+          "label": "Receber",
+          "text": "Pressione \"Completar Venda\". Escolha o método de pagamento (Dinheiro, Cartão, Misto)."
+        },
+        "step4": {
+          "label": "Recibo",
+          "text": "Se você digitou um valor em dinheiro, ele dirá o troco. Você pode imprimir o recibo ou enviar por email."
+        }
+      },
+      "tip": {
+        "title": "Dica Pro: Impressão Térmica",
+        "text": "O CeroCloud detecta automaticamente impressoras padrão. Para recibos de 58mm ou 80mm, certifique-se de configurar o tamanho do papel em",
+        "path": "Configurações > Impressoras."
+      }
+    },
+    "reports": {
+      "title": "4. Relatórios e Análises",
+      "subtitle": "Tome decisões baseadas em dados. O CeroCloud gera relatórios automáticos da sua operação.",
+      "cards": {
+        "cutoff": {
+          "title": "Fechamento de Caixa",
+          "desc": "Resumo diário de vendas, dinheiro em caixa e métodos de pagamento."
+        },
+        "top_products": {
+          "title": "Produtos Top",
+          "desc": "Descubra o que vende mais e quais produtos estão parados."
+        },
+        "history": {
+          "title": "Histórico de Vendas",
+          "desc": "Lista detalhada de todas as transações. Permite cancelamentos e reimpressões."
+        },
+        "inventory_value": {
+          "title": "Valor do Estoque",
+          "desc": "Calcula quanto dinheiro você tem investido em mercadoria atualmente."
+        },
+        "profits": {
+          "title": "Lucros",
+          "desc": "Diferença entre custos e vendas (Margem de lucro)."
+        },
+        "export": {
+          "title": "Exportar Tudo",
+          "desc": "Baixe qualquer relatório para Excel (CSV) ou PDF com um clique."
+        }
+      }
+    }
+  },
+  "technical": {
+    "hero": {
+      "title": "Documentação Técnica",
+      "subtitle": "Detalhes sobre a arquitetura, segurança e stack tecnológico do CeroCloud."
+    },
+    "architecture": {
+      "title": "Arquitetura",
+      "description_start": "CeroCloud utiliza uma arquitetura",
+      "hybrid": "híbrida moderna",
+      "description_mid": "baseada em Electron.",
+      "description_end": "Combina a flexibilidade das tecnologias web com a potência do acesso nativo ao sistema operacional.",
+      "backend": {
+        "title": "Process Main (Backend Local)",
+        "list": [
+          "• Gerencia o ciclo de vida do app",
+          "• Acesso direto ao SQLite (better-sqlite3)",
+          "• I/O de arquivos (Backups, Logs)",
+          "• Comunicação segura via IPC"
+        ]
+      },
+      "frontend": {
+        "title": "Process Renderer (Frontend)",
+        "list": [
+          "• React + Vite",
+          "• Estado global com Zustand",
+          "• Routing com React-Router",
+          "• UI com Tailwind + Shadcn"
+        ]
+      }
+    },
+    "database": {
+      "title": "Persistência de Dados",
+      "description_start": "Utilizamos",
+      "description_end": "como motor de banco de dados embarcado. Isso garante:",
+      "features": {
+        "zero_config": {
+          "title": "Zero Config",
+          "desc": "Sem instalação de servidores"
+        },
+        "acid": {
+          "title": "ACID",
+          "desc": "Integridade transacional"
+        },
+        "portability": {
+          "title": "Portabilidade",
+          "desc": "Tudo em um único arquivo .db"
+        }
+      },
+      "schema_title": "Esquema Simplificado:"
+    },
+    "security": {
+      "title": "Segurança",
+      "local_first": {
+        "title": "Local-First por Design",
+        "description": "Não há nuvem. Os dados nunca saem da máquina do usuário, a menos que ele os exporte explicitamente (ex: Backup para Google Drive)."
+      },
+      "isolation": {
+        "title": "Isolamento de Contexto",
+        "description": "estão ativados. O frontend não tem acesso direto ao Node.js, prevenindo ataques RCE via XSS."
+      }
+    }
+  },
+  "common": {
+    "or": "ou",
+    "and": "e",
+    "retry": "Tentar novamente"
+  }
+}

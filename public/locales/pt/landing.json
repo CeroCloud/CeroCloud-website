@@ -1,0 +1,147 @@
+{
+  "home": {
+    "title": "CeroCloud - Software POS e Estoque 100% Local",
+    "description": "Sistema de Ponto de Venda (POS) e Estoque projetado para desktop. Funciona sem internet, sem assinaturas mensais e com controle total dos seus dados. Baixe grátis.",
+    "keywords": "CeroCloud, software ponto de venda, sistema de estoque, pos desktop, software gratuito, sem internet, offline pos, gestão de negócios, electron react",
+    "og": {
+      "title": "CeroCloud - Gestão Empresarial Local e Segura",
+      "description": "O sistema de gestão que roda no SEU computador. Sem nuvem, sem aluguel, sem riscos. Dashboard, POS e Estoque em um só lugar.",
+      "image_alt": "Dashboard do CeroCloud mostrando estatísticas de vendas e estoque"
+    },
+    "twitter": {
+      "title": "CeroCloud - Software POS e Estoque Gratuito",
+      "description": "Esqueça pagar assinaturas. CeroCloud é o seu centro de comando local. Rápido, seguro e elegante.",
+      "image_alt": "Dashboard do CeroCloud com métricas em tempo real"
+    }
+  },
+  "features": {
+    "main_title": "Pilares Fundamentais",
+    "main_subtitle": "CeroCloud é construído sobre quatro princípios que garantem controle, segurança e desempenho",
+    "footer_note": "Seus dados permanecem privados, seguros e sempre disponíveis",
+    "cloud": {
+      "title": "Independência da Nuvem",
+      "description": "Seu negócio e seus dados funcionam sem depender de servidores externos ou conexão com a internet."
+    },
+    "security": {
+      "title": "Segurança de Grau Empresarial",
+      "description": "Implementação de criptografia AES-256 para proteção de dados sensíveis e backups."
+    },
+    "interface": {
+      "title": "Interface Moderna e Fluida",
+      "description": "Design profissional baseado em padrões web modernos (React + Tailwind CSS), afastando-se das interfaces de desktop tradicionais."
+    },
+    "scalability": {
+      "title": "Escalabilidade Local",
+      "description": "Uso do SQLite como motor de banco de dados para lidar com grandes volumes de informações sem perda de desempenho."
+    }
+  }
+,
+  "modules": {
+    "main_title": "Módulos Integrados",
+    "intro_description": "Tudo o que você precisa para gerenciar seu negócio em um único aplicativo.",
+    "dashboard": {
+      "title": "Painel",
+      "subtitle": "Visão Geral",
+      "description": "Obtenha uma visão clara e rápida do status do seu negócio com métricas chave em tempo real.",
+      "features": ["Métricas em tempo real", "Gráficos de desempenho", "Alertas de estoque", "Resumo financeiro"]
+    },
+    "inventory": {
+      "title": "Estoque",
+      "subtitle": "Gestão de Produtos",
+      "description": "Controle total sobre seu estoque, categorias e movimentações de produtos.",
+      "features": ["Controle de estoque", "Gestão de categorias", "Histórico de movimentações", "Ajustes de estoque"]
+    },
+    "pos": {
+      "title": "Ponto de Venda",
+      "subtitle": "Vendas Ágeis",
+      "description": "Interface otimizada para realizar vendas rápidas e eficientes no balcão.",
+      "features": ["Interface tátil ou teclado", "Múltiplos métodos de pagamento", "Impressão de recibos", "Gestão de clientes"]
+    },
+    "backup": {
+      "title": "Backups",
+      "subtitle": "Segurança de Dados",
+      "description": "Proteja suas informações vitais com ferramentas integradas de backup e restauração.",
+      "features": ["Backups locais", "Restauração com um clique", "Histórico de versões", "Exportação de dados"]
+    }
+  }
+,
+  "hero": {
+    "subtitle": "Sem nuvem. Sem limites.",
+    "headline_start": "Gestão empresarial",
+    "headline_highlight": "inteligente e local",
+    "slogan_start": "Assuma o controle com",
+    "slogan_highlight": "tecnologia que pertence a você",
+    "features": {
+      "control": "Controle total de dados",
+      "security": "Segurança máxima",
+      "privacy": "Privacidade garantida"
+    },
+    "badges": {
+      "free": "Grátis e Código Aberto",
+      "offline": "Offline First",
+      "free_bad": "Grátis"
+    },
+    "cta": {
+      "download": "Baixar Agora",
+      "github": "Ver no GitHub"
+    },
+    "version": {
+      "label": "Versão atual:",
+      "loading": "Carregando..."
+    },
+    "scroll_more": "Descubra mais"
+  }
+,
+  "stats": {
+    "free": {
+      "label": "Download Grátis",
+      "description": "Software completo sem custos ocultos, livre para sempre"
+    },
+    "security": {
+      "label": "Segurança Total",
+      "description": "Seus dados criptografados e protegidos localmente"
+    },
+    "local": {
+      "value": "100%",
+      "label": "Sem Internet",
+      "description": "Funciona offline sem dependências externas"
+    },
+    "version": {
+      "label": "Versão Estável",
+      "loading": "Verificando..."
+    }
+  }
+,
+  "download": {
+    "title": "Baixar CeroCloud",
+    "version_prefix": "Versão:",
+    "loading_version": "Buscando versão mais recente...",
+    "github": "Código Fonte",
+    "button": {
+      "windows": "Baixar para Windows",
+      "mac": "Baixar para macOS",
+      "linux": "Baixar para Linux",
+      "default": "Ver Downloads"
+    },
+    "requirements": {
+      "title": "Requisitos do Sistema",
+      "os": {
+        "label": "Sistema Operacional",
+        "value": "Windows 10+, macOS 11+, Linux"
+      },
+      "disk": {
+        "label": "Espaço em Disco",
+        "value": "500 MB livres"
+      },
+      "connection": {
+        "label": "Conexão",
+        "value": "Apenas para atualizações e backup"
+      }
+    },
+    "features": {
+      "free": "100% Grátis",
+      "install": "Instalação Rápida",
+      "local": "Banco de Dados Local"
+    }
+  }
+}

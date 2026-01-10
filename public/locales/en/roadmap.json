@@ -1,0 +1,82 @@
+{
+  "seo": {
+    "title": "Development Roadmap - Future of CeroCloud",
+    "description": "Know the CeroCloud roadmap. Future plans: Mobile app, thermal printing, multi-branch and more. POS software in constant evolution.",
+    "keywords": "cerocloud roadmap, future cerocloud, pos development, open source point of sale software, planned features",
+    "og_title": "CeroCloud Roadmap - Total Transparency",
+    "og_description": "See what we are building. Join the community and propose new features for the best local POS."
+  },
+  "hero": {
+    "title": "Roadmap",
+    "subtitle": "Our transparent vision of development. CeroCloud evolves constantly thanks to community support."
+  },
+  "phases": {
+    "phase0": {
+      "title": "Phase 0: Preparation",
+      "items": [
+        "Scope and architecture definition",
+        "Stack selection (Electron + React + SQLite)",
+        "Initial documentation and contribution guides"
+      ]
+    },
+    "phase1": {
+      "title": "Phase 1: System Base",
+      "items": [
+        "Electron + Vite configuration",
+        "UI/UX Design with Shadcn/UI",
+        "Complete Products CRUD",
+        "Data persistence with electron-store"
+      ]
+    },
+    "phase2": {
+      "title": "Phase 2: Sales and POS",
+      "items": [
+        "Point of Sale (POS) Module",
+        "Interactive shopping cart",
+        "Tax and discount calculation",
+        "Automatic stock control"
+      ]
+    },
+    "phase3": {
+      "title": "Phase 3: Reports and Backups",
+      "items": [
+        "Reporting and statistics system",
+        "Export to Excel/CSV",
+        "`.cerobak` backup system",
+        "Data integrity validation"
+      ]
+    },
+    "phase4": {
+      "title": "Phase 4: Advanced UX (Current)",
+      "items": [
+        "Dashboard with interactive charts",
+        "Perfected Dark Mode",
+        "AES-256 encryption for backups",
+        "Performance improvements and animations"
+      ]
+    },
+    "phase5": {
+      "title": "Phase 5: Scalability",
+      "items": [
+        "Multiple users and roles system",
+        "Support for thermal printing (ESC/POS)",
+        "Local network support (LAN)",
+        "Multi-company management"
+      ]
+    },
+    "phase6": {
+      "title": "Phase 6: Expansion",
+      "items": [
+        "Companion App for mobile",
+        "Optional cloud synchronization",
+        "Integration with e-commerce",
+        "Internationalization (i18n)"
+      ]
+    }
+  },
+  "cta": {
+    "title": "Have an idea?",
+    "description": "The roadmap is flexible and adapts to community needs.",
+    "link": "Propose feature"
+  }
+}

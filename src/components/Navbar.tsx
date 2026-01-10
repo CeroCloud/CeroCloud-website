@@ -1,20 +1,15 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { Download, Menu, X, Github, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import icon from "@/assets/cerocloud-icon.png";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useLocation, useNavigate } from "react-router-dom";
-
-const navLinks = [
-    { name: "Inicio", href: "/" },
-    { name: "Tour", href: "/tour" },
-    { name: "Seguridad", href: "/security" },
-    { name: "Roadmap", href: "/roadmap" },
-    { name: "Documentación", href: "/docs" },
-];
+import LanguageSelector from "./LanguageSelector";
 
 export default function Navbar() {
+    const { t } = useTranslation();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState("hero");
@@ -23,6 +18,14 @@ export default function Navbar() {
     const navigate = useNavigate();
     const isHome = location.pathname === "/";
     const GITHUB_REPO = "https://github.com/CeroCloud/CeroCloud-Desktop";
+
+    const navLinks = [
+        { name: t('navbar.home'), href: "/" },
+        { name: t('navbar.tour'), href: "/tour" },
+        { name: t('navbar.security'), href: "/security" },
+        { name: t('navbar.roadmap'), href: "/roadmap" },
+        { name: t('navbar.docs'), href: "/docs" },
+    ];
 
     useEffect(() => {
         const handleScroll = () => {
@@ -51,7 +54,7 @@ export default function Navbar() {
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [isHome]);
+    }, [isHome, navLinks]); // Added navLinks dependency
 
     // Handle initial scroll if URL has hash
     useEffect(() => {
@@ -108,7 +111,7 @@ export default function Navbar() {
                                 </div>
                                 <div>
                                     <span className="text-xl font-bold text-foreground">CeroCloud</span>
-                                    <p className="text-xs text-primary font-semibold hidden md:block">Sin nube. Sin límites.</p>
+                                    <p className="text-xs text-primary font-semibold hidden md:block">{t('navbar.brand_slogan')}</p>
                                 </div>
                             </div>
                         </div>
@@ -146,6 +149,8 @@ export default function Navbar() {
 
                         {/* Right Actions (Visible on LG+) */}
                         <div className="hidden lg:flex items-center gap-2 ml-auto">
+                            <LanguageSelector />
+
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
@@ -174,7 +179,7 @@ export default function Navbar() {
                                 className="gap-2 bg-primary hover:bg-primary/90 shadow-lg shadow-primary/25 text-primary-foreground"
                             >
                                 <Download className="h-4 w-4" />
-                                Descargar
+                                {t('navbar.download')}
                             </Button>
                         </div>
 
@@ -223,19 +228,23 @@ export default function Navbar() {
                                 <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-white/10">
                                     <div className="flex items-center justify-between gap-4 px-2">
                                         <span className="text-sm font-medium text-slate-400">Tema</span>
-                                        <div className="flex bg-slate-900/50 p-1 rounded-lg border border-white/5">
-                                            <button
-                                                onClick={() => theme === 'dark' && toggleTheme()}
-                                                className={`p-2 rounded-md transition-all ${theme === 'light' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
-                                            >
-                                                <Sun className="h-4 w-4" />
-                                            </button>
-                                            <button
-                                                onClick={() => theme === 'light' && toggleTheme()}
-                                                className={`p-2 rounded-md transition-all ${theme === 'dark' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
-                                            >
-                                                <Moon className="h-4 w-4" />
-                                            </button>
+                                        <div className="flex items-center gap-2">
+                                            <LanguageSelector />
+
+                                            <div className="flex bg-slate-900/50 p-1 rounded-lg border border-white/5">
+                                                <button
+                                                    onClick={() => theme === 'dark' && toggleTheme()}
+                                                    className={`p-2 rounded-md transition-all ${theme === 'light' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
+                                                >
+                                                    <Sun className="h-4 w-4" />
+                                                </button>
+                                                <button
+                                                    onClick={() => theme === 'light' && toggleTheme()}
+                                                    className={`p-2 rounded-md transition-all ${theme === 'dark' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
+                                                >
+                                                    <Moon className="h-4 w-4" />
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                     <Button
@@ -252,7 +261,7 @@ export default function Navbar() {
                                         className="w-full gap-2 justify-center bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-900/20 border-0"
                                     >
                                         <Download className="h-4 w-4" />
-                                        Descargar Ahora
+                                        {t('navbar.download')}
                                     </Button>
                                 </div>
                             </div>

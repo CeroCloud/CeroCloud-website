@@ -1,48 +1,51 @@
+import { useMemo } from "react"; // Added useMemo
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Shield, Lock, WifiOff, Server, Key, FileJson } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Security() {
+    const { t } = useTranslation('legal');
     const navigate = useNavigate();
 
-    const features = [
+    const features = useMemo(() => [
         {
             icon: Lock,
-            title: "Cifrado Militar AES-256",
-            description: "Tus backups no son simples archivos. Utilizamos el estándar de cifrado avanzado (AES) de 256 bits para asegurar que solo tú tengas acceso a tu información crítica."
+            title: t('security.features.encryption.title'),
+            description: t('security.features.encryption.description')
         },
         {
             icon: Server,
-            title: "Base de Datos SQLite Local",
-            description: "Olvídate de servidores externos lentos o vulnerables. Tus datos viven en tu disco duro, optimizados con SQLite y modo WAL para un rendimiento instantáneo."
+            title: t('security.features.database.title'),
+            description: t('security.features.database.description')
         },
         {
             icon: WifiOff,
-            title: "Arquitectura Offline-First",
-            description: "CeroCloud no necesita internet para funcionar. Si se cae la red, tu negocio sigue operando sin interrupciones. Cero dependencias externas."
+            title: t('security.features.offline.title'),
+            description: t('security.features.offline.description')
         },
         {
             icon: Key,
-            title: "Propiedad Total",
-            description: "No hay 'Términos de Servicio' ocultos sobre el uso de tus datos. Tú eres el único dueño y administrador de tu base de datos y tus clientes."
+            title: t('security.features.ownership.title'),
+            description: t('security.features.ownership.description')
         }
-    ];
+    ], [t]);
 
     return (
         <div className="min-h-screen bg-background pt-8 pb-20">
             <Helmet>
-                <title>Seguridad y Privacidad - CeroCloud (AES-256)</title>
-                <meta name="description" content="Tus datos, tu propiedad. Descubre cómo CeroCloud protege tu negocio con cifrado AES-256, base de datos local (SQLite) y funcionamiento 100% offline." />
-                <meta name="keywords" content="seguridad datos pos, cifrado aes-256, software local seguro, privacidad empresarial, sin nube, offline first" />
+                <title>{t('security.seo.title')}</title>
+                <meta name="description" content={t('security.seo.description')} />
+                <meta name="keywords" content={t('security.seo.keywords')} />
 
                 {/* Open Graph */}
-                <meta property="og:title" content="Seguridad de Grado Militar - CeroCloud" />
-                <meta property="og:description" content="Olvídate de las brechas de seguridad en la nube. CeroCloud mantiene tus datos cifrados y locales." />
+                <meta property="og:title" content={t('security.seo.og_title')} />
+                <meta property="og:description" content={t('security.seo.og_description')} />
                 <meta property="og:url" content="https://cerocloud.github.io/CeroCloud-website/security" />
                 <meta property="og:image" content="https://cerocloud.github.io/CeroCloud-website/assets/docs/settings-light.png" />
-                <meta property="og:image:alt" content="Seguridad CeroCloud - Cifrado AES-256 y Base de Datos Local" />
+                <meta property="og:image:alt" content={t('security.seo.og_image_alt')} />
                 <meta property="og:type" content="website" />
 
                 <link rel="canonical" href="https://cerocloud.github.io/CeroCloud-website/security" />
@@ -59,12 +62,11 @@ export default function Security() {
                         <Shield className="w-8 h-8" />
                     </div>
                     <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-                        Tus Datos. Tu Control. <br />
-                        <span className="text-primary">Sin Intermediarios.</span>
+                        {t('security.hero.title_start')} <br />
+                        <span className="text-primary">{t('security.hero.title_highlight')}</span>
                     </h1>
                     <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                        En una era donde todo está en la nube, nosotros te devolvemos el poder.
-                        CeroCloud está diseñado desde cero con la privacidad y la soberanía de datos como prioridad absoluta.
+                        {t('security.hero.subtitle')}
                     </p>
                 </motion.div>
             </div>
@@ -83,8 +85,8 @@ export default function Security() {
                     <div className="relative grid md:grid-cols-3 gap-8 items-center text-center">
                         <div className="bg-background/80 backdrop-blur-sm p-6 rounded-2xl border border-border shadow-lg">
                             <FileJson className="w-12 h-12 text-blue-500 mx-auto mb-4" />
-                            <h3 className="font-bold mb-2">Tus Datos (.db)</h3>
-                            <p className="text-xs text-muted-foreground">Almacenados localmente</p>
+                            <h3 className="font-bold mb-2">{t('security.diagram.local_data.title')}</h3>
+                            <p className="text-xs text-muted-foreground">{t('security.diagram.local_data.subtitle')}</p>
                         </div>
 
                         <div className="hidden md:flex justify-center items-center">
@@ -106,14 +108,14 @@ export default function Security() {
 
                         <div className="bg-background/80 backdrop-blur-sm p-6 rounded-2xl border border-border shadow-lg">
                             <Server className="w-12 h-12 text-primary mx-auto mb-4" />
-                            <h3 className="font-bold mb-2">Nube (No existe)</h3>
-                            <p className="text-xs text-muted-foreground">Cero conexión externa</p>
+                            <h3 className="font-bold mb-2">{t('security.diagram.cloud.title')}</h3>
+                            <p className="text-xs text-muted-foreground">{t('security.diagram.cloud.subtitle')}</p>
                         </div>
                     </div>
 
                     <div className="text-center mt-12">
                         <p className="text-sm font-mono text-primary/80 bg-primary/10 inline-block px-4 py-2 rounded-lg border border-primary/20">
-                            Protocolo: Local-Only • Cifrado: AES-256-CBC • Dependencia: 0%
+                            {t('security.diagram.protocol_info')}
                         </p>
                     </div>
                 </motion.div>
@@ -149,9 +151,9 @@ export default function Security() {
 
             {/* CTA */}
             <div className="container mx-auto px-4 mt-32 text-center">
-                <h2 className="text-2xl font-bold mb-6">Protege tu negocio hoy mismo</h2>
+                <h2 className="text-2xl font-bold mb-6">{t('security.cta.title')}</h2>
                 <Button size="lg" onClick={() => navigate("/releases")} className="px-8">
-                    Descargar CeroCloud
+                    {t('security.cta.button')}
                 </Button>
             </div>
         </div>

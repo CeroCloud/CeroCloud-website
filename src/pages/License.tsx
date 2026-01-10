@@ -1,13 +1,32 @@
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Scale, Check, X, Info } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function License() {
+    const { t } = useTranslation('legal');
+
+    const allowedItems = [
+        "use",
+        "install",
+        "modify",
+        "study",
+        "share"
+    ];
+
+    const restrictedItems = [
+        "sell",
+        "charge",
+        "saas",
+        "package",
+        "remove_notice"
+    ];
+
     return (
         <div className="min-h-screen bg-background pt-24 pb-20">
             <Helmet>
-                <title>Licencia Legal - Utiliza CeroCloud Libremente</title>
-                <meta name="description" content="Información legal sobre el uso de CeroCloud. Código abierto bajo licencia MIT + Commons Clause." />
+                <title>{t('license.seo.title')}</title>
+                <meta name="description" content={t('license.seo.description')} />
             </Helmet>
 
             <div className="container mx-auto px-4 max-w-4xl">
@@ -19,10 +38,10 @@ export default function License() {
                     <div className="inline-flex items-center justify-center p-3 bg-yellow-500/10 rounded-full mb-6 text-yellow-500">
                         <Scale className="w-8 h-8" />
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6">Licencia y Uso Legal</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('license.hero.title')}</h1>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        CeroCloud es software de <strong className="text-foreground">Código Abierto</strong> bajo la licencia <span className="text-foreground font-semibold">MIT + Commons Clause</span>.
-                        <br />Diseñado para ser libre, pero protegido contra explotación comercial.
+                        {t('license.hero.subtitle_start')} <strong className="text-foreground">{t('license.hero.subtitle_opensource')}</strong> {t('license.hero.subtitle_under')} <span className="text-foreground font-semibold">MIT + Commons Clause</span>.
+                        <br />{t('license.hero.subtitle_end')}
                     </p>
                 </motion.div>
 
@@ -37,19 +56,13 @@ export default function License() {
                     >
                         <h3 className="text-2xl font-bold text-green-500 mb-6 flex items-center gap-3">
                             <Check className="w-6 h-6 border-2 border-green-500 rounded-full p-0.5" />
-                            Lo que SÍ puedes hacer
+                            {t('license.allowed.title')}
                         </h3>
                         <ul className="space-y-4">
-                            {[
-                                "Usar CeroCloud en tu negocio gratuitamente (sin límites)",
-                                "Instalarlo en múltiples computadoras",
-                                "Modificar el código fuente para tu uso personal",
-                                "Estudiar cómo funciona el sistema",
-                                "Compartir modificaciones de forma gratuita"
-                            ].map((item, i) => (
+                            {allowedItems.map((item, i) => (
                                 <li key={i} className="flex items-start gap-3 text-muted-foreground">
                                     <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                                    <span>{item}</span>
+                                    <span>{t(`license.allowed.items.${item}`)}</span>
                                 </li>
                             ))}
                         </ul>
@@ -64,20 +77,14 @@ export default function License() {
                     >
                         <h3 className="text-2xl font-bold text-red-500 mb-6 flex items-center gap-3">
                             <X className="w-6 h-6 border-2 border-red-500 rounded-full p-0.5" />
-                            Lo que NO puedes hacer
+                            {t('license.restricted.title')}
                         </h3>
-                        <div className="mb-4 text-xs font-semibold uppercase tracking-wider text-red-500/80">Commons Clause Restriction</div>
+                        <div className="mb-4 text-xs font-semibold uppercase tracking-wider text-red-500/80">{t('license.restricted.badge')}</div>
                         <ul className="space-y-4">
-                            {[
-                                "Vender el software (ejecutable o código) a terceros",
-                                "Cobrar por servicios de instalación o configuración",
-                                "Ofrecer CeroCloud como un servicio SaaS pagado",
-                                "Incluirlo en paquetes de software comercial",
-                                "Eliminar los avisos de copyright y licencia"
-                            ].map((item, i) => (
+                            {restrictedItems.map((item, i) => (
                                 <li key={i} className="flex items-start gap-3 text-muted-foreground">
                                     <X className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                                    <span>{item}</span>
+                                    <span>{t(`license.restricted.items.${item}`)}</span>
                                 </li>
                             ))}
                         </ul>
@@ -86,28 +93,25 @@ export default function License() {
 
                 {/* FAQ Section */}
                 <div className="space-y-8 mb-20 bg-muted/20 p-8 rounded-2xl border border-border">
-                    <h2 className="text-2xl font-bold ">Preguntas Frecuentes</h2>
+                    <h2 className="text-2xl font-bold ">{t('license.faq.title')}</h2>
 
                     <div className="space-y-6">
                         <div>
-                            <h4 className="font-bold text-lg mb-2">¿Es realmente gratis para mi empresa?</h4>
+                            <h4 className="font-bold text-lg mb-2">{t('license.faq.q1.question')}</h4>
                             <p className="text-muted-foreground">
-                                Absolutamente. Ya seas un pequeño emprendedor o una empresa con 500 empleados,
-                                puedes usar CeroCloud internamente sin pagar ni un centavo, para siempre.
+                                {t('license.faq.q1.answer')}
                             </p>
                         </div>
                         <div>
-                            <h4 className="font-bold text-lg mb-2">¿Puedo contratar a alguien para que le agregue funciones?</h4>
+                            <h4 className="font-bold text-lg mb-2">{t('license.faq.q2.question')}</h4>
                             <p className="text-muted-foreground">
-                                Sí. Puedes pagar a un desarrollador para que modifique TU versión de CeroCloud para uso interno.
-                                Lo que no puede hacer ese desarrollador es vender esa versión modificada a otras personas.
+                                {t('license.faq.q2.answer')}
                             </p>
                         </div>
                         <div>
-                            <h4 className="font-bold text-lg mb-2">¿Por qué usar esta licencia y no MIT puro?</h4>
+                            <h4 className="font-bold text-lg mb-2">{t('license.faq.q3.question')}</h4>
                             <p className="text-muted-foreground">
-                                Queremos garantizar que CeroCloud siga siendo gratuito para los usuarios finales y evitar
-                                que empresas de terceros se apropien del trabajo de la comunidad para venderlo.
+                                {t('license.faq.q3.answer')}
                             </p>
                         </div>
                     </div>
@@ -117,11 +121,9 @@ export default function License() {
                 <div className="flex bg-blue-500/10 border border-blue-500/20 p-6 rounded-xl gap-4 items-start">
                     <Info className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" />
                     <div>
-                        <h4 className="font-bold text-blue-500 mb-1">Sin Garantías (AS IS)</h4>
+                        <h4 className="font-bold text-blue-500 mb-1">{t('license.disclaimer.title')}</h4>
                         <p className="text-sm text-muted-foreground">
-                            El software se proporciona "tal cual", sin garantía de ningún tipo. Los autores no se hacen responsables
-                            de daños o pérdida de datos. Te recomendamos encarecidamente realizar copias de seguridad frecuentes
-                            de tu información utilizando nuestra herramienta de backups.
+                            {t('license.disclaimer.text')}
                         </p>
                     </div>
                 </div>

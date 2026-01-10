@@ -1,0 +1,61 @@
+{
+  "common": {
+    "prev": "Anterior",
+    "next": "Próximo",
+    "pagination": "Página {{current}} de {{total}}",
+    "light": "Claro",
+    "dark": "Escuro",
+    "or": "ou",
+    "and": "e",
+    "retry": "Tentar novamente"
+  },
+  "bottom": null,
+  "navbar": {
+    "home": "Início",
+    "tour": "Tour",
+    "security": "Segurança",
+    "roadmap": "Roteiro",
+    "docs": "Documentação",
+    "download": "Baixar",
+    "slogan": "Sem nuvem. Sem limites.",
+    "brand_slogan": "Sem nuvem. Sem limites."
+  },
+  "footer": {
+    "brand": {
+      "slogan": "Gestão local, potencial global",
+      "description": "CeroCloud é um sistema POS e de gestão de estoque de código aberto, projetado para funcionar 100% offline e devolver o controle de seus dados.",
+      "promise": "Seus dados são seus. Sempre."
+    },
+    "version": {
+      "loading": "Carregando versão..."
+    },
+    "columns": {
+      "resources": {
+        "title": "Recursos",
+        "docs": "Documentação",
+        "user_manual": "Manual do Usuário",
+        "install_guide": "Guia de Instalação"
+      },
+      "project": {
+        "title": "Projeto",
+        "about": "Sobre",
+        "license": "Licença",
+        "changelog": "Log de Alterações"
+      },
+      "community": {
+        "title": "Comunidade",
+        "contribute": "Contribuir",
+        "issues": "Reportar Erro",
+        "roadmap": "Roteiro"
+      }
+    },
+    "bottom": {
+      "tagline1": "Código Aberto",
+      "tagline2": "Sem Rastreadores",
+      "privacy": "Privacidade",
+      "terms": "Termos",
+      "made_with": "Feito com",
+      "for_local": "para comércios locais"
+    }
+  }
+}

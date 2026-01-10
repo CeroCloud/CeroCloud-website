@@ -1,0 +1,69 @@
+{
+  "seo": {
+    "title": "Tour do Produto - CeroCloud POS e Dashboard",
+    "description": "Explore os recursos: Dashboard analítico em tempo real, Ponto de Venda (POS) rápido, Gestão de Inventário com imagens e Segurança AES-256.",
+    "keywords": "tour cerocloud, recursos pos, dashboard vendas, controle estoque, segurança local, software gestão",
+    "og_title": "Tour Virtual - CeroCloud",
+    "og_description": "Veja como o CeroCloud transforma seu negócio. Interface moderna, rápida e 100% local.",
+    "og_image_alt": "CeroCloud POS - Interface POS completa"
+  },
+  "preview_badge": "Prévia Interativa",
+  "hero": {
+    "title": "Potência Local para seu Negócio",
+    "subtitle": "Descubra como o CeroCloud transforma seu computador em um centro de comando empresarial, sem depender da internet.",
+    "view_theme": "Ver interface em:"
+  },
+  "features": {
+    "dashboard": {
+      "title": "Dashboard Analítico 'Premium Glass'",
+      "subtitle": "Controle Total em Tempo Real",
+      "description": "Visualize o pulso do seu negócio com gráficos dinâmicos e KPIs atualizados instantaneamente. Projetado para facilitar a tomada de decisões sem distrações.",
+      "points": [
+        "Visualização de receitas e vendas em tempo real",
+        "Alertas automáticos de estoque baixo",
+        "Interface livre de desordem (Clutter-free)",
+        "Modo escuro otimizado para longas jornadas"
+      ]
+    },
+    "pos": {
+      "title": "Ponto de Venda (POS) Fluido",
+      "subtitle": "Vendas Rápidas, Clientes Felizes",
+      "description": "Uma experiência de checkout otimizada para velocidade. Registre transações, gerencie múltiplos métodos de pagamento e emita tickets em segundos.",
+      "points": [
+        "Interface de caixa rápida com atalhos de teclado",
+        "Busca instantânea de produtos",
+        "Cálculo automático de troco",
+        "Suporte para múltiplos métodos de pagamento"
+      ]
+    },
+    "inventory": {
+      "title": "Gestão de Inventário Profissional",
+      "subtitle": "Seu Estoque, Perfeitamente Organizado",
+      "description": "Esqueça as planilhas. Mantenha um catálogo detalhado com imagens, categorias e fornecedores, tudo armazenado localmente.",
+      "points": [
+        "Suporte para imagens de produtos",
+        "Gestão de fornecedores e custos",
+        "Controle de níveis mínimos e máximos",
+        "Histórico de movimentação detalhado"
+      ]
+    },
+    "security": {
+      "title": "Data Protection Suite",
+      "subtitle": "Segurança de Grau Bancário",
+      "description": "Seus dados são seus. Nosso sistema de backups criptografados garante que suas informações estejam seguras sem depender da nuvem.",
+      "points": [
+        "Criptografia militar AES-256",
+        "Assistente de Backups (CeroBak)",
+        "Restauração com validação de integridade",
+        "Sem telemetria ou rastreadores"
+      ]
+    }
+  },
+  "cta": {
+    "try": "Experimente agora"
+  },
+  "footer_cta": {
+    "title": "Pronto para modernizar seu negócio?",
+    "button": "Baixar CeroCloud Grátis"
+  }
+}

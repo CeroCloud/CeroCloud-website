@@ -1,0 +1,147 @@
+{
+  "home": {
+    "title": "CeroCloud - 100% Local POS & Inventory Software",
+    "description": "Desktop POS (Point of Sale) and Inventory System. Works without internet, no monthly subscriptions, and gives you total control over your data. Download for free.",
+    "keywords": "CeroCloud, pos software, inventory system, desktop pos, free software, offline pos, business management, electron react",
+    "og": {
+      "title": "CeroCloud - Secure & Local Business Management",
+      "description": "The management system that runs on YOUR computer. No cloud, no rent, no risks. Dashboard, POS, and Inventory in one place.",
+      "image_alt": "CeroCloud Dashboard showing sales and inventory statistics"
+    },
+    "twitter": {
+      "title": "CeroCloud - Free POS & Inventory Software",
+      "description": "Forget about paying subscriptions. CeroCloud is your local command center. Fast, secure, and elegant.",
+      "image_alt": "CeroCloud Dashboard with real-time metrics"
+    }
+  },
+  "features": {
+    "main_title": "Fundamental Pillars",
+    "main_subtitle": "CeroCloud is built on four principles that ensure control, security, and performance",
+    "footer_note": "Your data remains private, secure, and always available",
+    "cloud": {
+      "title": "Cloud Independence",
+      "description": "Your business and data work without depending on external servers or internet connection."
+    },
+    "security": {
+      "title": "Enterprise Grade Security",
+      "description": "Implementation of AES-256 encryption for protecting sensitive data and backups."
+    },
+    "interface": {
+      "title": "Modern & Fluid Interface",
+      "description": "Professional design based on modern web standards (React + Tailwind CSS), moving away from traditional desktop interfaces."
+    },
+    "scalability": {
+      "title": "Local Scalability",
+      "description": "Using SQLite as the database engine to handle large volumes of information without performance loss."
+    }
+  }
+,
+  "modules": {
+    "main_title": "Integrated Modules",
+    "intro_description": "Everything you need to manage your business in a single application.",
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "Overview",
+      "description": "Get a clear and quick view of your business status with key real-time metrics.",
+      "features": ["Real-time metrics", "Performance charts", "Stock alerts", "Financial summary"]
+    },
+    "inventory": {
+      "title": "Inventory",
+      "subtitle": "Product Management",
+      "description": "Total control over your stock, categories, and product movements.",
+      "features": ["Stock control", "Category management", "Movement history", "Inventory adjustments"]
+    },
+    "pos": {
+      "title": "Point of Sale",
+      "subtitle": "Fast Sales",
+      "description": "Optimized interface for quick and efficient sales at the counter.",
+      "features": ["Touch or keyboard interface", "Multiple payment methods", "Receipt printing", "Customer management"]
+    },
+    "backup": {
+      "title": "Backups",
+      "subtitle": "Data Security",
+      "description": "Protect your vital information with integrated backup and restore tools.",
+      "features": ["Local backups", "One-click restore", "Version history", "Data export"]
+    }
+  }
+,
+  "hero": {
+    "subtitle": "No cloud. No limits.",
+    "headline_start": "Business management",
+    "headline_highlight": "smart and local",
+    "slogan_start": "Take control with",
+    "slogan_highlight": "technology you own",
+    "features": {
+      "control": "Total data control",
+      "security": "Maximum security",
+      "privacy": "Guaranteed privacy"
+    },
+    "badges": {
+      "free": "Free & Open Source",
+      "offline": "Offline First",
+      "free_bad": "Free"
+    },
+    "cta": {
+      "download": "Download Now",
+      "github": "View on GitHub"
+    },
+    "version": {
+      "label": "Current version:",
+      "loading": "Loading..."
+    },
+    "scroll_more": "Discover more"
+  }
+,
+  "stats": {
+    "free": {
+      "label": "Free Download",
+      "description": "Full software with no hidden costs, free forever"
+    },
+    "security": {
+      "label": "Total Security",
+      "description": "Your data encrypted and protected locally"
+    },
+    "local": {
+      "value": "100%",
+      "label": "Offline First",
+      "description": "Works offline without external dependencies"
+    },
+    "version": {
+      "label": "Stable Version",
+      "loading": "Checking..."
+    }
+  }
+,
+  "download": {
+    "title": "Download CeroCloud",
+    "version_prefix": "Version:",
+    "loading_version": "Checking latest version...",
+    "github": "Source Code",
+    "button": {
+      "windows": "Download for Windows",
+      "mac": "Download for macOS",
+      "linux": "Download for Linux",
+      "default": "View Downloads"
+    },
+    "requirements": {
+      "title": "System Requirements",
+      "os": {
+        "label": "Operating System",
+        "value": "Windows 10+, macOS 11+, Linux"
+      },
+      "disk": {
+        "label": "Disk Space",
+        "value": "500 MB free"
+      },
+      "connection": {
+        "label": "Connection",
+        "value": "Only for updates and backup"
+      }
+    },
+    "features": {
+      "free": "100% Free",
+      "install": "Quick Install",
+      "local": "Local Database"
+    }
+  }
+}

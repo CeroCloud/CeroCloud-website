@@ -1,0 +1,69 @@
+{
+  "seo": {
+    "title": "Product Tour - CeroCloud POS and Dashboard",
+    "description": "Explore features: Real-time Analytics Dashboard, Fast POS, Inventory Management with images, and AES-256 Security.",
+    "keywords": "tour cerocloud, pos features, sales dashboard, inventory control, local security, management software",
+    "og_title": "Virtual Tour - CeroCloud",
+    "og_description": "See how CeroCloud transforms your business. Modern, fast, and 100% local interface.",
+    "og_image_alt": "CeroCloud POS - Complete POS Interface"
+  },
+  "preview_badge": "Interactive Preview",
+  "hero": {
+    "title": "Local Power for Your Business",
+    "subtitle": "Discover how CeroCloud transforms your computer into a business command center, without depending on the internet.",
+    "view_theme": "View interface in:"
+  },
+  "features": {
+    "dashboard": {
+      "title": "'Premium Glass' Analytics Dashboard",
+      "subtitle": "Total Control in Real Time",
+      "description": "Visualize your business pulse with dynamic charts and instantly updated KPIs. Designed to facilitate decision-making without distractions.",
+      "points": [
+        "Real-time revenue and sales visualization",
+        "Automatic low stock alerts",
+        "Clutter-free interface",
+        "Dark mode optimized for long workdays"
+      ]
+    },
+    "pos": {
+      "title": "Fluid Point of Sale (POS)",
+      "subtitle": "Fast Sales, Happy Customers",
+      "description": "A checkout experience optimized for speed. Record transactions, manage multiple payment methods, and issue tickets in seconds.",
+      "points": [
+        "Fast checkout interface with keyboard shortcuts",
+        "Instant product search",
+        "Automatic change calculation",
+        "Support for multiple payment methods"
+      ]
+    },
+    "inventory": {
+      "title": "Professional Inventory Management",
+      "subtitle": "Your Stock, Perfectly Organized",
+      "description": "Forget spreadsheets. Maintain a detailed catalog with images, categories, and suppliers, all stored locally.",
+      "points": [
+        "Product image support",
+        "Supplier and cost management",
+        "Minimum and maximum level control",
+        "Detailed movement history"
+      ]
+    },
+    "security": {
+      "title": "Data Protection Suite",
+      "subtitle": "Bank-Grade Security",
+      "description": "Your data is yours. Our encrypted backup system ensures your information is safe without relying on the cloud.",
+      "points": [
+        "Military-grade AES-256 encryption",
+        "Backup Assistant (CeroBak)",
+        "Restore with integrity validation",
+        "No telemetry or trackers"
+      ]
+    }
+  },
+  "cta": {
+    "try": "Try it now"
+  },
+  "footer_cta": {
+    "title": "Ready to modernize your business?",
+    "button": "Download CeroCloud Free"
+  }
+}

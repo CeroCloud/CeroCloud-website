@@ -1,0 +1,61 @@
+{
+  "common": {
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "pagination": "Página {{current}} de {{total}}",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "or": "o",
+    "and": "y",
+    "retry": "Intentar de nuevo"
+  },
+  "bottom": null,
+  "navbar": {
+    "home": "Inicio",
+    "tour": "Recorrido",
+    "security": "Seguridad",
+    "roadmap": "Roadmap",
+    "docs": "Documentación",
+    "download": "Descargar",
+    "slogan": "Sin nube. Sin límites.",
+    "brand_slogan": "Sin nube. Sin límites."
+  },
+  "footer": {
+    "brand": {
+      "slogan": "Gestión local, potencial global",
+      "description": "CeroCloud es un sistema POS y de gestión de inventario de código abierto, diseñado para funcionar 100% offline y devolverte el control de tus datos.",
+      "promise": "Tus datos son tuyos. Siempre."
+    },
+    "version": {
+      "loading": "Cargando versión..."
+    },
+    "columns": {
+      "resources": {
+        "title": "Recursos",
+        "docs": "Documentación",
+        "user_manual": "Manual de Usuario",
+        "install_guide": "Guía de Instalación"
+      },
+      "project": {
+        "title": "Proyecto",
+        "about": "Acerca de",
+        "license": "Licencia",
+        "changelog": "Historial de Cambios"
+      },
+      "community": {
+        "title": "Comunidad",
+        "contribute": "Contribuir",
+        "issues": "Reportar Error",
+        "roadmap": "Roadmap"
+      }
+    },
+    "bottom": {
+      "tagline1": "Open Source",
+      "tagline2": "Sin Rastradores",
+      "privacy": "Privacidad",
+      "terms": "Términos",
+      "made_with": "Hecho con",
+      "for_local": "para comercios locales"
+    }
+  }
+}

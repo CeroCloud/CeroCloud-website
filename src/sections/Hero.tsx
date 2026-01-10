@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Download, Github, Lock, Zap, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import icon from "@/assets/cerocloud-icon.png";
@@ -9,6 +10,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { useLatestRelease } from "@/lib/useLatestRelease";
 
 export default function Hero() {
+    const { t } = useTranslation('landing');
     const { theme } = useTheme();
     const { release, loading } = useLatestRelease();
     console.log("Hero rendering. Loading:", loading, "Release:", release);
@@ -76,7 +78,7 @@ export default function Hero() {
                                 </motion.div>
                                 <div>
                                     <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight">CeroCloud</h2>
-                                    <p className="text-sm md:text-base lg:text-lg text-muted-foreground font-medium mt-1">Local. Seguro. Profesional.</p>
+                                    <p className="text-sm md:text-base lg:text-lg text-muted-foreground font-medium mt-1">{t('hero.subtitle')}</p>
                                 </div>
                             </div>
                         </motion.div>
@@ -88,9 +90,9 @@ export default function Hero() {
                             transition={{ delay: 0.3, duration: 0.6 }}
                             className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight"
                         >
-                            Gestión Empresarial{" "}
+                            {t('hero.headline_start')}{" "}
                             <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent animate-gradient">
-                                100% Local
+                                {t('hero.headline_highlight')}
                             </span>
                         </motion.h1>
 
@@ -101,8 +103,8 @@ export default function Hero() {
                             transition={{ delay: 0.5, duration: 0.6 }}
                             className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-2xl mx-auto lg:mx-0"
                         >
-                            Sin nube. Sin suscripciones.{" "}
-                            <span className="text-foreground font-semibold">Control total de tus datos.</span>
+                            {t('hero.slogan_start')}{" "}
+                            <span className="text-foreground font-semibold">{t('hero.slogan_highlight')}</span>
                         </motion.p>
 
                         {/* Value proposition */}
@@ -113,9 +115,9 @@ export default function Hero() {
                             className="mb-8 space-y-3"
                         >
                             {[
-                                "Control total de tus datos en tu negocio",
-                                "Seguridad empresarial sin costos mensuales",
-                                "Datos privados, seguros y siempre disponibles",
+                                t('hero.features.control'),
+                                t('hero.features.security'),
+                                t('hero.features.privacy'),
                             ].map((text, index) => (
                                 <motion.div
                                     key={text}
@@ -138,9 +140,9 @@ export default function Hero() {
                             className="flex flex-wrap gap-3 justify-center lg:justify-start mb-10"
                         >
                             {[
-                                { label: "100% Gratuito", icon: Lock },
+                                { label: t('hero.badges.free'), icon: Lock },
                                 { label: "AES-256", icon: Lock },
-                                { label: "Sin Internet", icon: Zap },
+                                { label: t('hero.badges.offline'), icon: Zap },
                             ].map((badge, index) => (
                                 <motion.div
                                     key={badge.label}
@@ -168,14 +170,14 @@ export default function Hero() {
                             <Link to="/releases" className="w-full sm:w-auto">
                                 <Button size="lg" className="text-lg px-8 py-6 group shadow-lg hover:shadow-xl transition-all w-full">
                                     <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
-                                    Descargar Ahora
+                                    {t('hero.cta.download')}
                                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                                 </Button>
                             </Link>
                             <a href="https://github.com/CeroCloud/CeroCloud-Desktop" target="_blank" rel="noreferrer" className="w-full sm:w-auto">
                                 <Button size="lg" variant="outline" className="text-lg px-8 py-6 group border-2 hover:border-primary/50 w-full">
                                     <Github className="mr-2 h-5 w-5" />
-                                    Ver en GitHub
+                                    {t('hero.cta.github')}
                                 </Button>
                             </a>
                         </motion.div>
@@ -189,9 +191,9 @@ export default function Hero() {
                         >
                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                             <span className="text-sm text-muted-foreground">
-                                Versión actual:{" "}
+                                {t('hero.version.label')}{" "}
                                 <span className="font-semibold text-foreground">
-                                    {loading ? "Cargando..." : (release?.tag_name || "Unknown")} - {loading ? "" : (release?.name || "Release")}
+                                    {loading ? t('hero.version.loading') : (release?.tag_name === release?.name ? release?.tag_name : `${release?.tag_name} - ${release?.name || "Release"}`)}
                                 </span>
                             </span>
                         </motion.div>
@@ -280,7 +282,7 @@ export default function Hero() {
                             >
                                 <div className="flex flex-col items-center gap-1">
                                     <span className="text-2xl font-bold text-primary">100%</span>
-                                    <span className="text-xs font-semibold text-muted-foreground">Gratuito</span>
+                                    <span className="text-xs font-semibold text-muted-foreground">{t('hero.badges.free_bad')}</span>
                                 </div>
                             </motion.div>
                         </div>
@@ -306,7 +308,7 @@ export default function Hero() {
                     }}
                     className="flex flex-col items-center gap-2 text-muted-foreground cursor-pointer"
                 >
-                    <span className="text-sm font-medium">Descubre más</span>
+                    <span className="text-sm font-medium">{t('hero.scroll_more')}</span>
                     <ArrowRight className="w-5 h-5 rotate-90" />
                 </motion.div>
             </motion.div>

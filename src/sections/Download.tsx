@@ -5,18 +5,20 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useOsDetection } from "@/lib/useOsDetection";
 import { useLatestRelease } from "@/lib/useLatestRelease";
+import { useTranslation } from "react-i18next";
 
 export default function DownloadSection() {
     const navigate = useNavigate();
     const os = useOsDetection();
     const { release, loading } = useLatestRelease();
+    const { t } = useTranslation('landing');
 
     const getDownloadButtonText = () => {
         switch (os) {
-            case 'windows': return "Descargar para Windows";
-            case 'mac': return "Descargar para macOS";
-            case 'linux': return "Descargar para Linux";
-            default: return "Descargar CeroCloud";
+            case 'windows': return t('download.button.windows');
+            case 'mac': return t('download.button.mac');
+            case 'linux': return t('download.button.linux');
+            default: return t('download.button.default');
         }
     };
 
@@ -76,16 +78,16 @@ export default function DownloadSection() {
                             </motion.div>
 
                             <CardTitle className="text-3xl md:text-4xl mb-4">
-                                Descarga CeroCloud
+                                {t('download.title')}
                             </CardTitle>
                             <CardDescription className="text-lg">
                                 {loading ? (
                                     <span className="flex items-center justify-center gap-2">
-                                        <Loader2 className="w-4 h-4 animate-spin" /> Buscando última versión...
+                                        <Loader2 className="w-4 h-4 animate-spin" /> {t('download.loading_version')}
                                     </span>
                                 ) : (
                                     <>
-                                        Versión <span className="font-bold text-foreground">{release?.tag_name || "Unknown"}</span> - {release?.name || "Release"}
+                                        {t('download.version_prefix')} <span className="font-bold text-foreground">{release?.tag_name === release?.name ? release?.tag_name : `${release?.tag_name} - ${release?.name || "Release"}`}</span>
                                     </>
                                 )}
                             </CardDescription>
@@ -110,7 +112,7 @@ export default function DownloadSection() {
                                 <a href="https://github.com/CeroCloud/CeroCloud-Desktop" target="_blank" rel="noreferrer">
                                     <Button size="lg" variant="outline" className="text-lg px-8 py-6 group w-full">
                                         <Github className="mr-2 h-5 w-5" />
-                                        Ver en GitHub
+                                        {t('download.github')}
                                         <ExternalLink className="ml-2 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </Button>
                                 </a>
@@ -124,19 +126,19 @@ export default function DownloadSection() {
                                 transition={{ delay: 0.4 }}
                                 className="bg-muted/50 rounded-lg p-6 mt-6"
                             >
-                                <h4 className="font-semibold mb-3 text-center">Requisitos del Sistema</h4>
+                                <h4 className="font-semibold mb-3 text-center">{t('download.requirements.title')}</h4>
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 text-sm text-center">
                                     <div>
-                                        <p className="font-medium mb-1">Sistema Operativo</p>
-                                        <p className="text-muted-foreground">Windows 10/11, macOS, Linux</p>
+                                        <p className="font-medium mb-1">{t('download.requirements.os.label')}</p>
+                                        <p className="text-muted-foreground">{t('download.requirements.os.value')}</p>
                                     </div>
                                     <div>
-                                        <p className="font-medium mb-1">Espacio en Disco</p>
-                                        <p className="text-muted-foreground">Mínimo 200 MB</p>
+                                        <p className="font-medium mb-1">{t('download.requirements.disk.label')}</p>
+                                        <p className="text-muted-foreground">{t('download.requirements.disk.value')}</p>
                                     </div>
                                     <div>
-                                        <p className="font-medium mb-1">Conexión</p>
-                                        <p className="text-muted-foreground">No requiere internet</p>
+                                        <p className="font-medium mb-1">{t('download.requirements.connection.label')}</p>
+                                        <p className="text-muted-foreground">{t('download.requirements.connection.value')}</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -144,9 +146,9 @@ export default function DownloadSection() {
                             {/* Features Highlight */}
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 pt-4">
                                 {[
-                                    { Icon: Shield, text: "100% Gratuito" },
-                                    { Icon: Rocket, text: "Instalación Rápida" },
-                                    { Icon: HardDrive, text: "Datos Locales" },
+                                    { Icon: Shield, text: t('download.features.free') },
+                                    { Icon: Rocket, text: t('download.features.install') },
+                                    { Icon: HardDrive, text: t('download.features.local') },
                                 ].map((item, index) => (
                                     <motion.div
                                         key={item.text}

@@ -1,0 +1,11 @@
+{
+  "seo": {
+    "title": "404 - Page Not Found | CeroCloud"
+  },
+  "title": "Path not found",
+  "description": "Sorry, the page you are looking for does not exist or has been moved. You seem to have wandered off the local system.",
+  "buttons": {
+    "home": "Back to Home",
+    "back": "Go Back"
+  }
+}

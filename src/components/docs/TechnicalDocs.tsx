@@ -1,48 +1,52 @@
 import { Database, Lock, Code2, Layers, Cpu, Server } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-export function TechnicalDocs() {
+export default function TechnicalDocs() {
+    const { t } = useTranslation('docs');
+
     return (
         <div className="space-y-12 max-w-4xl animate-in fade-in duration-500">
             <div>
-                <h1 className="text-4xl font-extrabold mb-4">Documentación Técnica</h1>
+                <h1 className="text-4xl font-extrabold mb-4">{t('technical.hero.title')}</h1>
                 <p className="text-xl text-muted-foreground">
-                    Detalles sobre la arquitectura, seguridad y stack tecnológico de CeroCloud.
+                    {t('technical.hero.subtitle')}
                 </p>
             </div>
 
             {/* Architecture */}
             <section className="space-y-6">
                 <h2 className="text-2xl font-bold flex items-center gap-2">
-                    <Layers className="w-6 h-6 text-primary" /> Arquitectura
+                    <Layers className="w-6 h-6 text-primary" /> {t('technical.architecture.title')}
                 </h2>
                 <div className="prose dark:prose-invert max-w-none">
                     <p>
-                        CeroCloud utiliza una arquitectura <strong>híbrida moderna</strong> basada en Electron.
-                        Combina la flexibilidad de las tecnologías web con la potencia del acceso nativo al sistema operativo.
+                        {t('technical.architecture.description_start')} <strong>{t('technical.architecture.hybrid')}</strong> {t('technical.architecture.description_mid')}
+                        <br />
+                        {t('technical.architecture.description_end')}
                     </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
                     <div className="bg-card border p-6 rounded-xl">
                         <h3 className="font-bold mb-4 flex items-center gap-2">
-                            <Cpu className="w-5 h-5 text-blue-500" /> Process Main (Backend Local)
+                            <Cpu className="w-5 h-5 text-blue-500" /> {t('technical.architecture.backend.title')}
                         </h3>
                         <ul className="text-sm space-y-2 text-muted-foreground">
-                            <li>• Gestiona el ciclo de vida de la app</li>
-                            <li>• Acceso directo a SQLite (better-sqlite3)</li>
-                            <li>• I/O de archivos (Backups, Logs)</li>
-                            <li>• Comunicación segura vía IPC</li>
+                            {/* @ts-ignore */}
+                            {(t('technical.architecture.backend.list', { returnObjects: true }) as string[]).map((item, i) => (
+                                <li key={i}>{item}</li>
+                            ))}
                         </ul>
                     </div>
                     <div className="bg-card border p-6 rounded-xl">
                         <h3 className="font-bold mb-4 flex items-center gap-2">
-                            <MonitorIcon className="w-5 h-5 text-purple-500" /> Process Renderer (Frontend)
+                            <MonitorIcon className="w-5 h-5 text-purple-500" /> {t('technical.architecture.frontend.title')}
                         </h3>
                         <ul className="text-sm space-y-2 text-muted-foreground">
-                            <li>• React + Vite</li>
-                            <li>• Estado global con Zustand</li>
-                            <li>• Routing con React-Router</li>
-                            <li>• UI con Tailwind + Shadcn</li>
+                            {/* @ts-ignore */}
+                            {(t('technical.architecture.frontend.list', { returnObjects: true }) as string[]).map((item, i) => (
+                                <li key={i}>{item}</li>
+                            ))}
                         </ul>
                     </div>
                 </div>
@@ -51,28 +55,28 @@ export function TechnicalDocs() {
             {/* Database */}
             <section className="space-y-6">
                 <h2 className="text-2xl font-bold flex items-center gap-2">
-                    <Database className="w-6 h-6 text-primary" /> Persistencia de Datos
+                    <Database className="w-6 h-6 text-primary" /> {t('technical.database.title')}
                 </h2>
                 <p className="text-muted-foreground">
-                    Utilizamos <strong>SQLite</strong> como motor de base de datos embebido. Esto garantiza:
+                    {t('technical.database.description_start')} <strong>SQLite</strong> {t('technical.database.description_end')}
                 </p>
                 <div className="grid sm:grid-cols-3 gap-4">
                     <div className="text-center p-4 bg-muted/20 rounded-lg">
-                        <span className="block font-bold text-foreground">Zero Config</span>
-                        <span className="text-xs text-muted-foreground">Sin instalación de servidores</span>
+                        <span className="block font-bold text-foreground">{t('technical.database.features.zero_config.title')}</span>
+                        <span className="text-xs text-muted-foreground">{t('technical.database.features.zero_config.desc')}</span>
                     </div>
                     <div className="text-center p-4 bg-muted/20 rounded-lg">
-                        <span className="block font-bold text-foreground">ACID</span>
-                        <span className="text-xs text-muted-foreground">Integridad transaccional</span>
+                        <span className="block font-bold text-foreground">{t('technical.database.features.acid.title')}</span>
+                        <span className="text-xs text-muted-foreground">{t('technical.database.features.acid.desc')}</span>
                     </div>
                     <div className="text-center p-4 bg-muted/20 rounded-lg">
-                        <span className="block font-bold text-foreground">Portabilidad</span>
-                        <span className="text-xs text-muted-foreground">Todo en un solo archivo .db</span>
+                        <span className="block font-bold text-foreground">{t('technical.database.features.portability.title')}</span>
+                        <span className="text-xs text-muted-foreground">{t('technical.database.features.portability.desc')}</span>
                     </div>
                 </div>
 
                 <div className="mt-4">
-                    <h3 className="font-bold mb-2">Esquema Simplificado:</h3>
+                    <h3 className="font-bold mb-2">{t('technical.database.schema_title')}</h3>
                     <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-xs font-mono">
                         {`
 // Products
@@ -100,7 +104,7 @@ CREATE TABLE sales (
             {/* Security */}
             <section className="space-y-6">
                 <h2 className="text-2xl font-bold flex items-center gap-2">
-                    <Lock className="w-6 h-6 text-primary" /> Seguridad
+                    <Lock className="w-6 h-6 text-primary" /> {t('technical.security.title')}
                 </h2>
                 <div className="space-y-4">
                     <div className="flex gap-4 items-start">
@@ -108,9 +112,9 @@ CREATE TABLE sales (
                             <Server className="w-5 h-5" />
                         </div>
                         <div>
-                            <h3 className="font-bold">Local-First por Diseño</h3>
+                            <h3 className="font-bold">{t('technical.security.local_first.title')}</h3>
                             <p className="text-sm text-muted-foreground">
-                                No hay nube. Los datos nunca salen de la máquina del usuario a menos que él explícitamente los exporte (ej: Backup a Google Drive).
+                                {t('technical.security.local_first.description')}
                             </p>
                         </div>
                     </div>
@@ -119,9 +123,9 @@ CREATE TABLE sales (
                             <Code2 className="w-5 h-5" />
                         </div>
                         <div>
-                            <h3 className="font-bold">Aislamiento de Contexto</h3>
+                            <h3 className="font-bold">{t('technical.security.isolation.title')}</h3>
                             <p className="text-sm text-muted-foreground">
-                                <code>contextBridge</code> y <code>nodeIntegration: false</code> están activados. El frontend no tiene acceso directo a Node.js, preveniendo ataques RCE vía XSS.
+                                <code>contextBridge</code> {t('common.and')} <code>nodeIntegration: false</code> {t('technical.security.isolation.description')}
                             </p>
                         </div>
                     </div>

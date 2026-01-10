@@ -1,0 +1,89 @@
+{
+  "about": {
+    "seo": {
+      "title": "About Us - CeroCloud POS",
+      "description": "Learn about the mission, philosophy, and team behind CeroCloud. 100% local, secure, and open-source business management."
+    },
+    "hero": {
+      "title_start": "We are democratizing",
+      "title_highlight": "local management",
+      "subtitle": "No subscriptions. No cloud. Just powerful software for your business."
+    },
+    "philosophy": {
+      "privacy": {
+        "title": "Data Sovereignty",
+        "description": "We believe your business data belongs to you. Not to us, not to the cloud. That's why CeroCloud works 100% offline."
+      },
+      "cost": {
+        "title": "Zero Recurring Costs",
+        "description": "Enterprise-grade software shouldn't bleed your budget. One downloaded, it's yours forever."
+      }
+    },
+    "mission": "Empowering local businesses with technology that respects their privacy and independence.",
+    "team": {
+      "title": "Built by Developers",
+      "dev_team": "Development Team",
+      "roles": {
+        "lead_dev": "Lead Developer & Architect",
+        "developer": "Core Contributor"
+      },
+      "tech_stack": "Tech Stack"
+    },
+    "footer_love": "Made with love for local businesses"
+  },
+  "contribute": {
+    "seo": {
+      "title": "Contribute to CeroCloud - Open Source POS",
+      "description": "Help us build the best open-source local POS. Contribute code, report bugs, or translate CeroCloud."
+    },
+    "hero": {
+      "title": "Join the Revolution",
+      "subtitle": "CeroCloud is open source. Your code, ideas, and feedback shape the future of local business software."
+    },
+    "cards": {
+      "bugs": {
+        "title": "Report Bugs",
+        "description": "Found a glitch? Let us know so we can fix it for everyone.",
+        "action": "Open Issue"
+      },
+      "code": {
+        "title": "Write Code",
+        "description": "Grab an issue, fork the repo, and submit a PR. We love contributors!",
+        "action": "View Repo"
+      },
+      "discuss": {
+        "title": "Join Discussions",
+        "description": "Share ideas for new features or ask questions in our community.",
+        "action": "Discuss"
+      },
+      "spread": {
+        "title": "Spread the Word",
+        "description": "Star the repo and tell others about CeroCloud.",
+        "action": "Star Repo"
+      }
+    },
+    "steps": {
+      "step1": {
+        "title": "Fork & Clone",
+        "description": "Fork the repository to your GitHub account and clone it locally."
+      },
+      "step2": {
+        "title": "Branch Out",
+        "description": "Create a new branch for your feature or fix (e.g., feat/new-report)."
+      },
+      "step3": {
+        "title": "Commit & Push",
+        "description": "Commit your changes with clear messages and push to your fork."
+      },
+      "step4": {
+        "title": "Pull Request",
+        "description": "Open a PR against our main branch. We'll review and merge!"
+      }
+    },
+    "thanks": {
+      "title": "Thank You!",
+      "description": "Every contribution helps small businesses around the world.",
+      "link": "See all contributors"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "title": "Releases",
+  "subtitle": "Download the latest version or explore the history.",
+  "seo": {
+    "title": "Download CeroCloud - Latest Stable Version (Free)",
+    "description": "Download the latest version of CeroCloud (Windows, Linux, macOS). Free and secure POS and Inventory software. Check the changelog and news.",
+    "og_title": "Download CeroCloud - Free POS Software",
+    "og_description": "Get the latest stable version of CeroCloud. Virus-free, ad-free, 100% open source and local."
+  },
+  "latest_badge": "LATEST",
+  "stable_badge": "Stable",
+  "stable_release": "Stable Release",
+  "notes": {
+    "title": "Release Notes",
+    "expand": "View Details",
+    "collapse": "Hide Details"
+  },
+  "downloads": "Downloads",
+  "assets": {
+    "windows": "Windows Installer",
+    "linux_appimage": "Linux AppImage",
+    "linux_deb": "Linux Deb",
+    "linux_rpm": "Linux RPM",
+    "mac": "macOS Installer"
+  },
+  "previous": {
+    "title": "Previous Releases"
+  },
+  "changes_count": "{{count}} changes",
+  "maintenance": "Maintenance",
+  "changes_title": "Changes",
+  "groups": {
+    "improvements": "Improvements & Integrations",
+    "fixes": "Fixes",
+    "others": "Others"
+  },
+  "error": {
+    "load": "Could not load releases",
+    "history": "Could not load release history",
+    "rate_limit": "API Rate limit exceeded. Please try again in an hour."
+  },
+  "beta": {
+    "title": "Preview Versions (Beta)",
+    "badge": "Beta"
+  }
+}

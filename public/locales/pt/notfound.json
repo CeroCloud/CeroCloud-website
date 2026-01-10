@@ -1,0 +1,11 @@
+{
+  "seo": {
+    "title": "404 - Página Não Encontrada | CeroCloud"
+  },
+  "title": "Caminho não encontrado",
+  "description": "Desculpe, a página que você procura não existe ou foi movida. Parece que você saiu do sistema local.",
+  "buttons": {
+    "home": "Voltar ao Início",
+    "back": "Voltar"
+  }
+}

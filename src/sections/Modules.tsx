@@ -2,61 +2,7 @@ import { memo } from "react";
 import { motion } from "framer-motion";
 import { BarChart3, Package, ShoppingCart, HardDrive, type LucideIcon } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-
-const modules = [
-    {
-        icon: BarChart3,
-        title: "Dashboard Analítico",
-        subtitle: "Premium Glass",
-        description: "Visualización de ingresos y ventas en tiempo real mediante gráficas dinámicas.",
-        features: [
-            "KPIs en tiempo real",
-            "Alertas de stock bajo",
-            "Análisis de tendencias",
-        ],
-        color: "text-blue-500",
-        bgColor: "bg-blue-500/10",
-    },
-    {
-        icon: Package,
-        title: "Gestión de Inventario",
-        subtitle: "Profesional",
-        description: "Catálogo completo con soporte para imágenes locales y control total de stock.",
-        features: [
-            "Catálogo con imágenes",
-            "Control de categorías",
-            "Niveles mínimos",
-        ],
-        color: "text-green-500",
-        bgColor: "bg-green-500/10",
-    },
-    {
-        icon: ShoppingCart,
-        title: "Punto de Venta (POS)",
-        subtitle: "Rápido y Eficiente",
-        description: "Interfaz de caja rápida para el registro de transacciones con múltiples métodos de pago.",
-        features: [
-            "Caja rápida",
-            "Múltiples pagos",
-            "Historial completo",
-        ],
-        color: "text-purple-500",
-        bgColor: "bg-purple-500/10",
-    },
-    {
-        icon: HardDrive,
-        title: "Data Protection Suite",
-        subtitle: "Seguridad Total",
-        description: "Sistema completo de respaldo y restauración con cifrado AES-256.",
-        features: [
-            "Backup Wizard (Cifrado)",
-            "Restore Wizard (Integridad)",
-            "Previsualización de datos",
-        ],
-        color: "text-orange-500",
-        bgColor: "bg-orange-500/10",
-    },
-];
+import { useTranslation } from "react-i18next";
 
 interface ModuleCardProps {
     module: {
@@ -128,6 +74,52 @@ const ModuleCard = memo(({ module, index }: ModuleCardProps) => {
 });
 
 export default function Modules() {
+    const { t } = useTranslation('landing');
+
+    const getFeatures = (key: string) => {
+        const res = t(key, { returnObjects: true });
+        return Array.isArray(res) ? (res as string[]) : [];
+    };
+
+    const modules = [
+        {
+            icon: BarChart3,
+            title: t('modules.dashboard.title'),
+            subtitle: t('modules.dashboard.subtitle'),
+            description: t('modules.dashboard.description'),
+            features: getFeatures('modules.dashboard.features'),
+            color: "text-blue-500",
+            bgColor: "bg-blue-500/10",
+        },
+        {
+            icon: Package,
+            title: t('modules.inventory.title'),
+            subtitle: t('modules.inventory.subtitle'),
+            description: t('modules.inventory.description'),
+            features: getFeatures('modules.inventory.features'),
+            color: "text-green-500",
+            bgColor: "bg-green-500/10",
+        },
+        {
+            icon: ShoppingCart,
+            title: t('modules.pos.title'),
+            subtitle: t('modules.pos.subtitle'),
+            description: t('modules.pos.description'),
+            features: getFeatures('modules.pos.features'),
+            color: "text-purple-500",
+            bgColor: "bg-purple-500/10",
+        },
+        {
+            icon: HardDrive,
+            title: t('modules.backup.title'),
+            subtitle: t('modules.backup.subtitle'),
+            description: t('modules.backup.description'),
+            features: getFeatures('modules.backup.features'),
+            color: "text-orange-500",
+            bgColor: "bg-orange-500/10",
+        },
+    ];
+
     return (
         <section id="modules" className="py-20 bg-muted/30">
             <div className="container mx-auto px-4">
@@ -140,10 +132,10 @@ export default function Modules() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                        Módulos y Funcionalidades
+                        {t('modules.main_title')}
                     </h2>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Todo lo que necesitas para gestionar tu negocio en un solo lugar
+                        {t('modules.intro_description')}
                     </p>
                 </motion.div>
 

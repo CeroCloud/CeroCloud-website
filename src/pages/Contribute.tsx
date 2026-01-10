@@ -1,13 +1,16 @@
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { MessageSquare, Bug, Heart, Code, Globe, Star } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Contribute() {
+    const { t } = useTranslation('about');
+
     return (
         <div className="min-h-screen bg-background pt-24 pb-20">
             <Helmet>
-                <title>Contribuir - Únete a CeroCloud</title>
-                <meta name="description" content="Guía para contrubuir al desarrollo de CeroCloud. Código, documentación, diseño y más." />
+                <title>{t('contribute.seo.title')}</title>
+                <meta name="description" content={t('contribute.seo.description')} />
             </Helmet>
 
             <div className="container mx-auto px-4 max-w-4xl">
@@ -25,11 +28,10 @@ export default function Contribute() {
                         </span>
                     </div>
                     <h1 className="text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500">
-                        Construyamos Juntos
+                        {t('contribute.hero.title')}
                     </h1>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        CeroCloud es un proyecto comunitario. No necesitas ser un experto para ayudar;
-                        desde reportar bugs hasta mejorar la documentación, cada aporte cuenta.
+                        {t('contribute.hero.subtitle')}
                     </p>
                 </motion.div>
 
@@ -37,30 +39,30 @@ export default function Contribute() {
                 <div className="grid md:grid-cols-2 gap-6 mb-24">
                     <ContributionCard
                         icon={Bug}
-                        title="Reportar Bugs"
-                        desc="Si encuentras un error, avísanos. Los reportes detallados son oro puro para nosotros."
-                        action="Ir a Issues"
+                        title={t('contribute.cards.bugs.title')}
+                        desc={t('contribute.cards.bugs.description')}
+                        action={t('contribute.cards.bugs.action')}
                         href="https://github.com/CeroCloud/CeroCloud-Desktop/issues/new"
                     />
                     <ContributionCard
                         icon={Code}
-                        title="Escribir Código"
-                        desc="Toma un issue etiquetado como 'good first issue' y envía tu primer Pull Request."
-                        action="Ver Repositorio"
+                        title={t('contribute.cards.code.title')}
+                        desc={t('contribute.cards.code.description')}
+                        action={t('contribute.cards.code.action')}
                         href="https://github.com/CeroCloud/CeroCloud-Desktop"
                     />
                     <ContributionCard
                         icon={MessageSquare}
-                        title="Discutir Ideas"
-                        desc="¿Tienes una idea para una nueva función? Compártela en nuestras discusiones."
-                        action="Unirse al debate"
+                        title={t('contribute.cards.discuss.title')}
+                        desc={t('contribute.cards.discuss.description')}
+                        action={t('contribute.cards.discuss.action')}
                         href="https://github.com/CeroCloud/CeroCloud-Desktop/discussions"
                     />
                     <ContributionCard
                         icon={Star}
-                        title="Difundir"
-                        desc="¡Danos una estrella en GitHub! Ayuda a que más gente conozca el proyecto."
-                        action="Dar Star ⭐"
+                        title={t('contribute.cards.spread.title')}
+                        desc={t('contribute.cards.spread.description')}
+                        action={t('contribute.cards.spread.action')}
                         href="https://github.com/CeroCloud/CeroCloud-Desktop"
                     />
                 </div>
@@ -69,32 +71,32 @@ export default function Contribute() {
                 <div className="relative border-l border-border ml-4 md:ml-8 pl-8 md:pl-12 space-y-12 mb-20">
                     <Step
                         number="1"
-                        title="Haz un Fork"
-                        desc="Crea tu propia copia del repositorio en GitHub para trabajar libremente."
+                        title={t('contribute.steps.step1.title')}
+                        desc={t('contribute.steps.step1.description')}
                     />
                     <Step
                         number="2"
-                        title="Crea una Rama"
-                        desc="Usa nombres descriptivos como 'feature/nueva-funcion' o 'fix/error-login'."
+                        title={t('contribute.steps.step2.title')}
+                        desc={t('contribute.steps.step2.description')}
                     />
                     <Step
                         number="3"
-                        title="Commit & Push"
-                        desc="Sigue nuestra convención de commits (ej: 'feat: add dark mode support')."
+                        title={t('contribute.steps.step3.title')}
+                        desc={t('contribute.steps.step3.description')}
                     />
                     <Step
                         number="4"
-                        title="Pull Request"
-                        desc="Envía tus cambios y espera la revisión del equipo. ¡Celebra tu aporte!"
+                        title={t('contribute.steps.step4.title')}
+                        desc={t('contribute.steps.step4.description')}
                     />
                 </div>
 
                 {/* Thank you */}
                 <div className="text-center bg-muted/30 rounded-3xl p-12 border border-border">
                     <Heart className="w-12 h-12 text-red-500 fill-red-500 mx-auto mb-6 animate-pulse" />
-                    <h2 className="text-3xl font-bold mb-4">¡Gracias por contribuir!</h2>
+                    <h2 className="text-3xl font-bold mb-4">{t('contribute.thanks.title')}</h2>
                     <p className="text-muted-foreground mb-8 text-lg">
-                        Tu nombre quedará inmortalizado en nuestra lista de contribuidores y en el corazón de la comunidad.
+                        {t('contribute.thanks.description')}
                     </p>
                     <a
                         href="https://github.com/CeroCloud/CeroCloud-Desktop/graphs/contributors"
@@ -102,7 +104,7 @@ export default function Contribute() {
                         rel="noreferrer"
                         className="text-primary hover:underline font-medium"
                     >
-                        Ver a nuestros héroes →
+                        {t('contribute.thanks.link')} →
                     </a>
                 </div>
             </div>

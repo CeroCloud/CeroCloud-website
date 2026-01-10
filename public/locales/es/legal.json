@@ -1,0 +1,103 @@
+{
+  "security": {
+    "seo": {
+      "title": "Seguridad y Privacidad - CeroCloud (AES-256)",
+      "description": "Tus datos, tu propiedad. Descubre cómo CeroCloud protege tu negocio con cifrado AES-256, base de datos local (SQLite) y funcionamiento 100% offline.",
+      "keywords": "seguridad datos pos, cifrado aes-256, software local seguro, privacidad empresarial, sin nube, offline first",
+      "og_title": "Seguridad de Grado Militar - CeroCloud",
+      "og_description": "Olvídate de las brechas de seguridad en la nube. CeroCloud mantiene tus datos cifrados y locales.",
+      "og_image_alt": "Seguridad CeroCloud - Cifrado AES-256 y Base de Datos Local"
+    },
+    "hero": {
+      "title_start": "Tus Datos. Tu Control.",
+      "title_highlight": "Sin Intermediarios.",
+      "subtitle": "En una era donde todo está en la nube, nosotros te devolvemos el poder. CeroCloud está diseñado desde cero con la privacidad y la soberanía de datos como prioridad absoluta."
+    },
+    "diagram": {
+      "local_data": {
+        "title": "Tus Datos (.db)",
+        "subtitle": "Almacenados localmente"
+      },
+      "cloud": {
+        "title": "Nube (No existe)",
+        "subtitle": "Cero conexión externa"
+      },
+      "protocol_info": "Protocolo: Local-Only • Cifrado: AES-256-CBC • Dependencia: 0%"
+    },
+    "features": {
+      "encryption": {
+        "title": "Cifrado Militar AES-256",
+        "description": "Tus backups no son simples archivos. Utilizamos el estándar de cifrado avanzado (AES) de 256 bits para asegurar que solo tú tengas acceso a tu información crítica."
+      },
+      "database": {
+        "title": "Base de Datos SQLite Local",
+        "description": "Olvídate de servidores externos lentos o vulnerables. Tus datos viven en tu disco duro, optimizados con SQLite y modo WAL para un rendimiento instantáneo."
+      },
+      "offline": {
+        "title": "Arquitectura Offline-First",
+        "description": "CeroCloud no necesita internet para funcionar. Si se cae la red, tu negocio sigue operando sin interrupciones. Cero dependencias externas."
+      },
+      "ownership": {
+        "title": "Propiedad Total",
+        "description": "No hay 'Términos de Servicio' ocultos sobre el uso de tus datos. Tú eres el único dueño y administrador de tu base de datos y tus clientes."
+      }
+    },
+    "cta": {
+      "title": "Protege tu negocio hoy mismo",
+      "button": "Descargar CeroCloud"
+    }
+  },
+  "license": {
+    "seo": {
+      "title": "Licencia Legal - Utiliza CeroCloud Libremente",
+      "description": "Información legal sobre el uso de CeroCloud. Código abierto bajo licencia MIT + Commons Clause."
+    },
+    "hero": {
+      "title": "Licencia y Uso Legal",
+      "subtitle_start": "CeroCloud es software de",
+      "subtitle_opensource": "Código Abierto",
+      "subtitle_under": "bajo la licencia",
+      "subtitle_end": "Diseñado para ser libre, pero protegido contra explotación comercial."
+    },
+    "allowed": {
+      "title": "Lo que SÍ puedes hacer",
+      "items": {
+        "use": "Usar CeroCloud en tu negocio gratuitamente (sin límites)",
+        "install": "Instalarlo en múltiples computadoras",
+        "modify": "Modificar el código fuente para tu uso personal",
+        "study": "Estudiar cómo funciona el sistema",
+        "share": "Compartir modificaciones de forma gratuita"
+      }
+    },
+    "restricted": {
+      "title": "Lo que NO puedes hacer",
+      "badge": "Commons Clause Restriction",
+      "items": {
+        "sell": "Vender el software (ejecutable o código) a terceros",
+        "charge": "Cobrar por servicios de instalación o configuración",
+        "saas": "Ofrecer CeroCloud como un servicio SaaS pagado",
+        "package": "Incluirlo en paquetes de software comercial",
+        "remove_notice": "Eliminar los avisos de copyright y licencia"
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1": {
+        "question": "¿Es realmente gratis para mi empresa?",
+        "answer": "Absolutamente. Ya seas un pequeño emprendedor o una empresa con 500 empleados, puedes usar CeroCloud internamente sin pagar ni un centavo, para siempre."
+      },
+      "q2": {
+        "question": "¿Puedo contratar a alguien para que le agregue funciones?",
+        "answer": "Sí. Puedes pagar a un desarrollador para que modifique TU versión de CeroCloud para uso interno. Lo que no puede hacer ese desarrollador es vender esa versión modificada a otras personas."
+      },
+      "q3": {
+        "question": "¿Por qué usar esta licencia y no MIT puro?",
+        "answer": "Queremos garantizar que CeroCloud siga siendo gratuito para los usuarios finales y evitar que empresas de terceros se apropien del trabajo de la comunidad para venderlo."
+      }
+    },
+    "disclaimer": {
+      "title": "Sin Garantías (AS IS)",
+      "text": "El software se proporciona \"tal cual\", sin garantía de ningún tipo. Los autores no se hacen responsables de daños o pérdida de datos. Te recomendamos encarecidamente realizar copias de seguridad frecuentes de tu información utilizando nuestra herramienta de backups."
+    }
+  }
+}

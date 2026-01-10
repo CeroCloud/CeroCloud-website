@@ -2,43 +2,7 @@ import { memo } from "react";
 import { motion } from "framer-motion";
 import { CloudOff, Shield, Sparkles, Database, type LucideIcon } from "lucide-react";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-
-const features = [
-    {
-        icon: CloudOff,
-        title: "Independencia de la Nube",
-        description: "Tu negocio y tus datos funcionan sin depender de servidores externos o conexión a internet.",
-        gradient: "from-blue-500 to-cyan-500",
-    },
-    {
-        icon: Shield,
-        title: "Seguridad de Grado Empresarial",
-        description: "Implementación de cifrado AES-256 para la protección de datos sensibles y respaldos.",
-        gradient: "from-green-500 to-emerald-500",
-    },
-    {
-        icon: Sparkles,
-        title: "Interfaz Moderna y Fluida",
-        description: "Diseño profesional basado en estándares web modernos (React + Tailwind CSS), alejándose de interfaces de escritorio tradicionales.",
-        gradient: "from-purple-500 to-pink-500",
-    },
-    {
-        icon: Database,
-        title: "Escalabilidad Local",
-        description: "Uso de SQLite como motor de base de datos para manejar grandes volúmenes de información sin pérdida de rendimiento.",
-        gradient: "from-orange-500 to-red-500",
-    },
-];
-
-interface FeatureCardProps {
-    feature: {
-        icon: LucideIcon;
-        title: string;
-        description: string;
-        gradient: string;
-    };
-    index: number;
-}
+import { useTranslation } from "react-i18next";
 
 const FeatureCard = memo(({ feature, index }: FeatureCardProps) => {
     return (
@@ -72,7 +36,46 @@ const FeatureCard = memo(({ feature, index }: FeatureCardProps) => {
     );
 });
 
+interface FeatureCardProps {
+    feature: {
+        icon: LucideIcon;
+        title: string;
+        description: string;
+        gradient: string;
+    };
+    index: number;
+}
+
 export default function Features() {
+    const { t } = useTranslation('landing');
+
+    const features = [
+        {
+            icon: CloudOff,
+            title: t('features.cloud.title'),
+            description: t('features.cloud.description'),
+            gradient: "from-blue-500 to-cyan-500",
+        },
+        {
+            icon: Shield,
+            title: t('features.security.title'),
+            description: t('features.security.description'),
+            gradient: "from-green-500 to-emerald-500",
+        },
+        {
+            icon: Sparkles,
+            title: t('features.interface.title'),
+            description: t('features.interface.description'),
+            gradient: "from-purple-500 to-pink-500",
+        },
+        {
+            icon: Database,
+            title: t('features.scalability.title'),
+            description: t('features.scalability.description'),
+            gradient: "from-orange-500 to-red-500",
+        },
+    ];
+
     return (
         <section id="features" className="py-20 bg-muted">
             <div className="container mx-auto px-4">
@@ -85,10 +88,10 @@ export default function Features() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                        Pilares Fundamentales
+                        {t('features.main_title')}
                     </h2>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        CeroCloud está construido sobre cuatro principios que garantizan control, seguridad y rendimiento
+                        {t('features.main_subtitle')}
                     </p>
                 </motion.div>
 
@@ -110,7 +113,7 @@ export default function Features() {
                     <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 border border-primary/20 rounded-full">
                         <Shield className="w-5 h-5 text-primary" />
                         <span className="font-medium">
-                            Tus datos permanecen privados, seguros y siempre disponibles
+                            {t('features.footer_note')}
                         </span>
                     </div>
                 </motion.div>

@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import "./index.css";
+import "./i18n";
 import App from "./App.tsx";
 
 createRoot(document.getElementById("root")!).render(

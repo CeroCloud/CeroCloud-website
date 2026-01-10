@@ -1,34 +1,36 @@
 import { motion } from "framer-motion";
 import { Users, Download, Shield, Star, Loader2 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { useLatestRelease } from "@/lib/useLatestRelease";
 
 export default function Stats() {
+    const { t } = useTranslation('landing');
     const { release, loading } = useLatestRelease();
 
     const stats = [
         {
             icon: Download,
             value: "100%",
-            label: "Gratuito",
-            description: "Sin costos ocultos",
+            label: t('stats.free.label'),
+            description: t('stats.free.description'),
         },
         {
             icon: Shield,
             value: "AES-256",
-            label: "Cifrado",
-            description: "Seguridad empresarial",
+            label: t('stats.security.label'),
+            description: t('stats.security.description'),
         },
         {
             icon: Users,
-            value: "Local",
-            label: "Control Total",
-            description: "Tus datos, tu poder",
+            value: t('stats.local.value'),
+            label: t('stats.local.label'),
+            description: t('stats.local.description'),
         },
         {
             icon: Star,
-            value: loading ? <Loader2 className="w-6 h-6 animate-spin mx-auto" /> : (release?.tag_name || "Unknown"),
-            label: "Versión Actual",
-            description: loading ? "Verificando..." : (release?.name || "Data Protection Suite"),
+            value: loading ? <Loader2 className="w-6 h-6 animate-spin mx-auto" /> : (release?.tag_name === release?.name ? release?.tag_name : `${release?.tag_name} - ${release?.name || "Release"}`),
+            label: t('stats.version.label'),
+            description: loading ? t('stats.version.loading') : "Latest Stable Release",
         },
     ];
 

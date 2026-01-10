@@ -1,0 +1,82 @@
+{
+  "seo": {
+    "title": "Roadmap de Desenvolvimento - O Futuro do CeroCloud",
+    "description": "Conheça o roadmap do CeroCloud. Planos futuros: App móvel, impressão térmica, multifilial e mais. Software POS em constante evolução.",
+    "keywords": "roadmap cerocloud, cerocloud futuro, desenvolvimento pos, software ponto de venda open source, funcionalidades planejadas",
+    "og_title": "Roadmap do CeroCloud - Transparência Total",
+    "og_description": "Veja o que estamos construindo. Junte-se à comunidade e proponha novas funcionalidades para o melhor POS local."
+  },
+  "hero": {
+    "title": "Mapa",
+    "subtitle": "Nossa visão transparente do desenvolvimento. CeroCloud evolui constantemente graças ao apoio da comunidade."
+  },
+  "phases": {
+    "phase0": {
+      "title": "Fase 0: Preparação",
+      "items": [
+        "Definição de escopo e arquitetura",
+        "Escolha da stack (Electron + React + SQLite)",
+        "Documentação inicial e guias de contribuição"
+      ]
+    },
+    "phase1": {
+      "title": "Fase 1: Base do Sistema",
+      "items": [
+        "Configuração de Electron + Vite",
+        "Design UI/UX com Shadcn/UI",
+        "CRUD de Produtos completo",
+        "Persistência de dados com electron-store"
+      ]
+    },
+    "phase2": {
+      "title": "Fase 2: Vendas e POS",
+      "items": [
+        "Módulo de Ponto de Venda (POS)",
+        "Carrinho de compras interativo",
+        "Cálculo de impostos e descontos",
+        "Controle de estoque automático"
+      ]
+    },
+    "phase3": {
+      "title": "Fase 3: Relatórios e Backups",
+      "items": [
+        "Sistema de relatórios e estatísticas",
+        "Exportação para Excel/CSV",
+        "Sistema de backups `.cerobak`",
+        "Validação de integridade de dados"
+      ]
+    },
+    "phase4": {
+      "title": "Fase 4: UX Avanzado (Atual)",
+      "items": [
+        "Dashboard com gráficos interativos",
+        "Modo Escuro aperfeiçoado",
+        "Criptografia AES-256 para backups",
+        "Melhorias de desempenho e animações"
+      ]
+    },
+    "phase5": {
+      "title": "Fase 5: Escalabilidade",
+      "items": [
+        "Sistema de múltiplos usuários e funções",
+        "Suporte para impressão térmica (ESC/POS)",
+        "Suporte para rede local (LAN)",
+        "Gestão de múltiplas empresas"
+      ]
+    },
+    "phase6": {
+      "title": "Fase 6: Expansão",
+      "items": [
+        "Companion App para móveis",
+        "Sincronização opcional na nuvem",
+        "Integração com e-commerce",
+        "Internacionalização (i18n)"
+      ]
+    }
+  },
+  "cta": {
+    "title": "Tem uma ideia?",
+    "description": "O roadmap é flexível e se adapta às necessidades da comunidade.",
+    "link": "Propor funcionalidade"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "title": "Versões",
+  "subtitle": "Baixe a versão mais recente ou explore o histórico.",
+  "seo": {
+    "title": "Baixar CeroCloud - Última Versão Estável (Grátis)",
+    "description": "Baixe a última versão do CeroCloud (Windows, Linux, macOS). Software POS e Inventário gratuito e seguro. Consulte o histórico de alterações e novidades.",
+    "og_title": "Baixar CeroCloud - Software POS Gratuito",
+    "og_description": "Obtenha a última versão estável do CeroCloud. Sem vírus, sem publicidade, 100% código aberto e local."
+  },
+  "latest_badge": "LATEST",
+  "stable_badge": "Stable",
+  "stable_release": "Stable Release",
+  "notes": {
+    "title": "Notas de Lançamento",
+    "expand": "Ver Detalhes",
+    "collapse": "Ocultar Detalhes"
+  },
+  "downloads": "Downloads",
+  "assets": {
+    "windows": "Instalador Windows",
+    "linux_appimage": "Linux AppImage",
+    "linux_deb": "Linux Deb",
+    "linux_rpm": "Linux RPM",
+    "mac": "Instalador macOS"
+  },
+  "previous": {
+    "title": "Versões Anteriores"
+  },
+  "changes_count": "{{count}} alterações",
+  "maintenance": "Manutenção",
+  "changes_title": "Alterações",
+  "groups": {
+    "improvements": "Melhorias e Integrações",
+    "fixes": "Correções",
+    "others": "Outros"
+  },
+  "error": {
+    "load": "Não foi possível carregar as versões",
+    "history": "Não foi possível carregar o histórico",
+    "rate_limit": "Limite da API excedido. Por favor, tente novamente em uma hora."
+  },
+  "beta": {
+    "title": "Versões de Teste (Beta)",
+    "badge": "Beta"
+  }
+}

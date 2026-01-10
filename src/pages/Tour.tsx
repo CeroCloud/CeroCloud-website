@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Card } from "@/components/ui/card";
@@ -25,97 +25,79 @@ import darkInventory from "@/assets/docs/inventory-dark.png";
 import lightSettings from "@/assets/docs/settings-light.png"; // Used for Security
 import darkSettings from "@/assets/docs/settings-dark.png"; // Used for Security
 import { useTheme } from "@/contexts/ThemeContext";
-
-const features = [
-    {
-        id: "dashboard",
-        title: "Dashboard Analítico 'Premium Glass'",
-        subtitle: "Control Total en Tiempo Real",
-        description: "Visualiza el pulso de tu negocio con gráficas dinámicas y KPIs actualizados al instante. Diseñado para facilitar la toma de decisiones sin distracciones.",
-        points: [
-            "Visualización de ingresos y ventas en tiempo real",
-            "Alertas automáticas de stock bajo",
-            "Interfaz libre de desorden (Clutter-free)",
-            "Modo oscuro optimizado para largas jornadas"
-        ],
-        icon: LayoutDashboard,
-        color: "text-blue-500",
-        lightImage: lightDashboard,
-        darkImage: darkDashboard
-    },
-    {
-        id: "pos",
-        title: "Punto de Venta (POS) Fluido",
-        subtitle: "Ventas Rápidas, Clientes Felices",
-        description: "Una experiencia de cobro optimizada para la velocidad. Registra transacciones, gestiona múltiples métodos de pago y emite tickets en segundos.",
-        points: [
-            "Interfaz de caja rápida con atajos de teclado",
-            "Búsqueda instantánea de productos",
-            "Cálculo automático de cambio",
-            "Soporte para múltiples métodos de pago"
-        ],
-        icon: ShoppingCart,
-        color: "text-green-500",
-        lightImage: lightPos,
-        darkImage: darkPos
-    },
-    {
-        id: "inventory",
-        title: "Gestión de Inventario Profesional",
-        subtitle: "Tu Stock, Perfectamente Organizado",
-        description: "Olvídate de las hojas de cálculo. Mantén un catálogo detallado con imágenes, categorías y proveedores, todo almacenado localmente.",
-        points: [
-            "Soporte para imágenes de productos",
-            "Gestión de proveedores y costos",
-            "Control de niveles mínimos y máximos",
-            "Historial de movimientos detallado"
-        ],
-        icon: Package,
-        color: "text-purple-500",
-        lightImage: lightInventory,
-        darkImage: darkInventory
-    },
-    {
-        id: "security",
-        title: "Data Protection Suite",
-        subtitle: "Seguridad de Grado Bancario",
-        description: "Tus datos son tuyos. Nuesto sistema de copias de seguridad cifradas garantiza que tu información esté segura sin depender de la nube.",
-        points: [
-            "Cifrado AES-256 militar",
-            "Asistente de Backups (CeroBak)",
-            "Restauración con validación de integridad",
-            "Sin telemetría ni rastreadores"
-        ],
-        icon: ShieldCheck,
-        color: "text-amber-500",
-        lightImage: lightSettings,
-        darkImage: darkSettings
-    }
-];
+import { useTranslation } from "react-i18next";
 
 export default function Tour() {
+    const { t } = useTranslation('tour');
     const { theme } = useTheme();
     const navigate = useNavigate();
     const [previewTheme, setPreviewTheme] = useState<'light' | 'dark'>(theme === 'dark' ? 'dark' : 'light');
 
-    // Sync initial preview with system theme, but allow manual override afterwards
+    // Sync preview when system theme changes
     useEffect(() => {
         setPreviewTheme(theme === 'dark' ? 'dark' : 'light');
     }, [theme]);
 
+    const features = useMemo(() => [
+        {
+            id: "dashboard",
+            title: t('features.dashboard.title'),
+            subtitle: t('features.dashboard.subtitle'),
+            description: t('features.dashboard.description'),
+            points: t('features.dashboard.points', { returnObjects: true }) as string[],
+            icon: LayoutDashboard,
+            color: "text-blue-500",
+            lightImage: lightDashboard,
+            darkImage: darkDashboard
+        },
+        {
+            id: "pos",
+            title: t('features.pos.title'),
+            subtitle: t('features.pos.subtitle'),
+            description: t('features.pos.description'),
+            points: t('features.pos.points', { returnObjects: true }) as string[],
+            icon: ShoppingCart,
+            color: "text-green-500",
+            lightImage: lightPos,
+            darkImage: darkPos
+        },
+        {
+            id: "inventory",
+            title: t('features.inventory.title'),
+            subtitle: t('features.inventory.subtitle'),
+            description: t('features.inventory.description'),
+            points: t('features.inventory.points', { returnObjects: true }) as string[],
+            icon: Package,
+            color: "text-purple-500",
+            lightImage: lightInventory,
+            darkImage: darkInventory
+        },
+        {
+            id: "security",
+            title: t('features.security.title'),
+            subtitle: t('features.security.subtitle'),
+            description: t('features.security.description'),
+            points: t('features.security.points', { returnObjects: true }) as string[],
+            icon: ShieldCheck,
+            color: "text-amber-500",
+            lightImage: lightSettings,
+            darkImage: darkSettings
+        }
+    ], [t]);
+
     return (
         <div className="min-h-screen bg-background pt-8 pb-20">
             <Helmet>
-                <title>Tour del Producto - CeroCloud POS y Dashboard</title>
-                <meta name="description" content="Explora las características: Dashboard analítico en tiempo real, Punto de Venta (POS) rápido, Gestión de Inventario con imágenes y Seguridad AES-256." />
-                <meta name="keywords" content="tour cerocloud, características pos, dashboard ventas, control inventario, seguridad local, software gestion" />
+                <title>{t('seo.title')}</title>
+                <meta name="description" content={t('seo.description')} />
+                <meta name="keywords" content={t('seo.keywords')} />
 
                 {/* Open Graph */}
-                <meta property="og:title" content="Tour Virtual - CeroCloud" />
-                <meta property="og:description" content="Mira cómo CeroCloud transforma tu negocio. Interfaz moderna, rápida y 100% local." />
+                <meta property="og:title" content={t('seo.og_title')} />
+                <meta property="og:description" content={t('seo.og_description')} />
                 <meta property="og:url" content="https://cerocloud.github.io/CeroCloud-website/tour" />
                 <meta property="og:image" content="https://cerocloud.github.io/CeroCloud-website/assets/docs/pos-light.png" />
-                <meta property="og:image:alt" content="CeroCloud Punto de Venta - Interfaz POS completa" />
+                <meta property="og:image:alt" content={t('seo.og_image_alt')} />
                 <meta property="og:type" content="website" />
 
                 <link rel="canonical" href="https://cerocloud.github.io/CeroCloud-website/tour" />
@@ -130,19 +112,18 @@ export default function Tour() {
                         transition={{ duration: 0.5 }}
                     >
                         <Badge variant="outline" className="mb-4 px-4 py-1 text-sm border-primary/30 text-primary">
-                            Vista Previa Interactiva
+                            {t('preview_badge')}
                         </Badge>
                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-                            Potencia Local para tu Negocio
+                            {t('hero.title')}
                         </h1>
                         <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                            Descubre cómo CeroCloud transforma tu computadora en un
-                            centro de comando empresarial, sin depender de internet.
+                            {t('hero.subtitle')}
                         </p>
 
                         {/* Theme Toggle for Screenshots */}
                         <div className="inline-flex items-center gap-3 p-1.5 bg-muted/50 rounded-full border border-border/50 shadow-sm">
-                            <span className="text-sm font-medium text-muted-foreground pl-3 pr-1">Ver interfaz en:</span>
+                            <span className="text-sm font-medium text-muted-foreground pl-3 pr-1">{t('hero.view_theme')}</span>
                             <button
                                 onClick={() => setPreviewTheme('light')}
                                 className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${previewTheme === 'light'
@@ -150,7 +131,7 @@ export default function Tour() {
                                     : 'text-muted-foreground hover:text-foreground'
                                     }`}
                             >
-                                <Sun className="w-4 h-4" /> Claro
+                                <Sun className="w-4 h-4" /> {t('common:light')}
                             </button>
                             <button
                                 onClick={() => setPreviewTheme('dark')}
@@ -159,7 +140,7 @@ export default function Tour() {
                                     : 'text-muted-foreground hover:text-foreground'
                                     }`}
                             >
-                                <Moon className="w-4 h-4" /> Oscuro
+                                <Moon className="w-4 h-4" /> {t('common:dark')}
                             </button>
                         </div>
                     </motion.div>
@@ -206,7 +187,7 @@ export default function Tour() {
                                     variant="outline"
                                     onClick={() => navigate("/releases")}
                                 >
-                                    Pruébalo ahora
+                                    {t('cta.try')}
                                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </Button>
                             </div>
@@ -245,14 +226,14 @@ export default function Tour() {
                 >
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5" />
                     <div className="relative z-10">
-                        <h2 className="text-3xl font-bold mb-6">¿Listo para modernizar tu negocio?</h2>
+                        <h2 className="text-3xl font-bold mb-6">{t('footer_cta.title')}</h2>
                         <Button
                             size="lg"
                             className="text-lg px-10 py-6 shadow-xl shadow-primary/20"
                             onClick={() => navigate("/releases")}
                         >
                             <Zap className="mr-2 h-5 w-5 fill-current" />
-                            Descargar CeroCloud Gratis
+                            {t('footer_cta.button')}
                         </Button>
                     </div>
                 </motion.div>

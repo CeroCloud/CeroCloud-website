@@ -3,12 +3,15 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { FileQuestion, ArrowLeft, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 export default function NotFound() {
+    const { t } = useTranslation('notfound');
+
     return (
         <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4 relative overflow-hidden">
             <Helmet>
-                <title>404 - Página No Encontrada | CeroCloud</title>
+                <title>{t('seo.title')}</title>
                 <meta name="robots" content="noindex" />
             </Helmet>
 
@@ -38,23 +41,23 @@ export default function NotFound() {
                         404
                     </h1>
                     <h2 className="text-2xl font-bold mb-4 text-foreground">
-                        Ruta no encontrada
+                        {t('title')}
                     </h2>
                     <p className="text-muted-foreground mb-8 text-lg">
-                        Lo sentimos, la página que buscas no existe o ha sido movida. Parece que te has salido del sistema local.
+                        {t('description')}
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link to="/">
                             <Button size="lg" className="w-full sm:w-auto gap-2 group">
                                 <Home className="w-4 h-4" />
-                                Volver al Inicio
+                                {t('buttons.home')}
                             </Button>
                         </Link>
                         <button onClick={() => window.history.back()}>
                             <Button variant="outline" size="lg" className="w-full sm:w-auto gap-2 group">
                                 <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                                Regresar
+                                {t('buttons.back')}
                             </Button>
                         </button>
                     </div>

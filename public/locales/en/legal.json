@@ -1,0 +1,103 @@
+{
+  "security": {
+    "seo": {
+      "title": "Security and Privacy - CeroCloud (AES-256)",
+      "description": "Your data, your property. Discover how CeroCloud protects your business with AES-256 encryption, local database (SQLite), and 100% offline operation.",
+      "keywords": "pos data security, aes-256 encryption, secure local software, business privacy, no cloud, offline first",
+      "og_title": "Military Grade Security - CeroCloud",
+      "og_description": "Forget about cloud security breaches. CeroCloud keeps your data encrypted and local.",
+      "og_image_alt": "CeroCloud Security - AES-256 Encryption and Local Database"
+    },
+    "hero": {
+      "title_start": "Your Data. Your Control.",
+      "title_highlight": "No Intermediaries.",
+      "subtitle": "In an era where everything is in the cloud, we give you the power back. CeroCloud is designed from scratch with data privacy and sovereignty as absolute priorities."
+    },
+    "diagram": {
+      "local_data": {
+        "title": "Your Data (.db)",
+        "subtitle": "Stored locally"
+      },
+      "cloud": {
+        "title": "Cloud (Does not exist)",
+        "subtitle": "Zero external connection"
+      },
+      "protocol_info": "Protocol: Local-Only • Encryption: AES-256-CBC • Dependency: 0%"
+    },
+    "features": {
+      "encryption": {
+        "title": "AES-256 Military Encryption",
+        "description": "Your backups are not simple files. We use the Advanced Encryption Standard (AES) 256-bit to ensure only you have access to your critical information."
+      },
+      "database": {
+        "title": "Local SQLite Database",
+        "description": "Forget slow or vulnerable external servers. Your data lives on your hard drive, optimized with SQLite and WAL mode for instant performance."
+      },
+      "offline": {
+        "title": "Offline-First Architecture",
+        "description": "CeroCloud does not need internet to work. If the network goes down, your business keeps operating without interruptions. Zero external dependencies."
+      },
+      "ownership": {
+        "title": "Total Ownership",
+        "description": "No hidden 'Terms of Service' about your data usage. You are the sole owner and administrator of your database and your customers."
+      }
+    },
+    "cta": {
+      "title": "Protect your business today",
+      "button": "Download CeroCloud"
+    }
+  },
+  "license": {
+    "seo": {
+      "title": "Legal License - Use CeroCloud Freely",
+      "description": "Legal information about using CeroCloud. Open Source under MIT + Commons Clause license."
+    },
+    "hero": {
+      "title": "Legal License and Usage",
+      "subtitle_start": "CeroCloud is",
+      "subtitle_opensource": "Open Source",
+      "subtitle_under": "software under",
+      "subtitle_end": "Designed to be free, but protected against commercial exploitation."
+    },
+    "allowed": {
+      "title": "What you CAN do",
+      "items": {
+        "use": "Use CeroCloud in your business for free (no limits)",
+        "install": "Install it on multiple computers",
+        "modify": "Modify source code for personal use",
+        "study": "Study how the system works",
+        "share": "Share modifications for free"
+      }
+    },
+    "restricted": {
+      "title": "What you CANNOT do",
+      "badge": "Commons Clause Restriction",
+      "items": {
+        "sell": "Sell the software (executable or code) to third parties",
+        "charge": "Charge for installation or configuration services",
+        "saas": "Offer CeroCloud as a paid SaaS service",
+        "package": "Include it in commercial software packages",
+        "remove_notice": "Remove copyright and license notices"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "Is it really free for my business?",
+        "answer": "Absolutely. Whether you are a small entrepreneur or a company with 500 employees, you can use CeroCloud internally without paying a dime, forever."
+      },
+      "q2": {
+        "question": "Can I hire someone to add features?",
+        "answer": "Yes. You can pay a developer to modify YOUR version of CeroCloud for internal use. What that developer cannot do is sell that modified version to others."
+      },
+      "q3": {
+        "question": "Why use this license and not pure MIT?",
+        "answer": "We want to guarantee that CeroCloud remains free for end users and prevent third-party companies from appropriating community work to sell it."
+      }
+    },
+    "disclaimer": {
+      "title": "No Warranty (AS IS)",
+      "text": "The software is provided \"as is\", without warranty of any kind. The authors are not responsible for damages or data loss. We strongly recommend making frequent backups of your information using our backup tool."
+    }
+  }
+}
