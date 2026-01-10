@@ -27,34 +27,51 @@ export default function Navbar() {
         { name: t('navbar.docs'), href: "/docs" },
     ];
 
+    // Optimized Scroll Listener (Only for Navbar Background)
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20);
-
-            if (!isHome) return;
-
-            // Active section detection
-            const sections = navLinks
-                .filter(link => link.href.startsWith("/#"))
-                .map(link => link.href.substring(2)); // remove /#
-
-            const currentSection = sections.find(section => {
-                const element = document.getElementById(section);
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    return rect.top <= 100 && rect.bottom >= 100;
-                }
-                return false;
-            });
-
-            if (currentSection) {
-                setActiveSection(currentSection);
+            const scrolled = window.scrollY > 20;
+            if (isScrolled !== scrolled) {
+                setIsScrolled(scrolled);
             }
         };
 
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [isHome, navLinks]); // Added navLinks dependency
+    }, [isScrolled]);
+
+    // Intersection Observer for Active Section (High Performance)
+    useEffect(() => {
+        if (!isHome) return;
+
+        const observerOptions = {
+            root: null,
+            rootMargin: "-20% 0px -50% 0px", // Trigger when section is in the middle-ish viewport
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActiveSection(entry.target.id);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections defined in navLinks
+        navLinks.forEach((link) => {
+            if (link.href.startsWith("/#")) {
+                const id = link.href.substring(2);
+                const element = document.getElementById(id);
+                if (element) observer.observe(element);
+            } else if (link.href === "/") {
+                const hero = document.getElementById("hero");
+                if (hero) observer.observe(hero);
+            }
+        });
+
+        return () => observer.disconnect();
+    }, [isHome, navLinks]);
 
     // Handle initial scroll if URL has hash
     useEffect(() => {
@@ -72,14 +89,14 @@ export default function Navbar() {
         setIsMobileMenuOpen(false);
 
         if (href.startsWith("/#")) {
-            const hash = href.substring(1); // #target
+            const hash = href.substring(1);
             if (isHome) {
                 const element = document.querySelector(hash);
                 if (element) {
                     element.scrollIntoView({ behavior: "smooth" });
                 }
             } else {
-                navigate(href); // Navigate to /#target
+                navigate(href);
             }
         } else {
             navigate(href);
@@ -92,7 +109,9 @@ export default function Navbar() {
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.6 }}
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[hsl(222.2_47.4%_11.2%)]/95 backdrop-blur-xl border-b border-white/10 ${isScrolled ? "shadow-lg" : ""
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${isScrolled
+                        ? "bg-background/95 backdrop-blur-md shadow-lg border-border/40"
+                        : "bg-transparent border-transparent"
                     }`}
             >
                 <div className="container mx-auto px-4">
@@ -120,8 +139,8 @@ export default function Navbar() {
                         <div className="hidden lg:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
                             {navLinks.map((link) => {
                                 const isHash = link.href.startsWith("/#");
-                                const sectionId = isHash ? link.href.substring(2) : link.href;
-                                const isActive = isHome && activeSection === sectionId || (!isHome && location.pathname === link.href);
+                                const sectionId = isHash ? link.href.substring(2) : (link.href === "/" ? "hero" : link.href);
+                                const isActive = (isHome && activeSection === sectionId) || (!isHome && location.pathname === link.href);
 
                                 return (
                                     <button
@@ -202,7 +221,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="fixed top-16 md:top-20 left-0 right-0 z-40 bg-[hsl(222.2_47.4%_11.2%)]/95 backdrop-blur-2xl border-b border-white/10 lg:hidden shadow-2xl overflow-hidden"
+                        className="fixed top-16 md:top-20 left-0 right-0 z-40 bg-background/95 backdrop-blur-2xl border-b border-border/40 lg:hidden shadow-2xl overflow-hidden"
                     >
                         <div className="container mx-auto px-4 py-6">
                             <div className="flex flex-col gap-2">
@@ -218,29 +237,29 @@ export default function Navbar() {
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: index * 0.05 }}
-                                        className="text-base font-medium text-slate-300 hover:text-white transition-colors py-3 px-4 hover:bg-white/5 rounded-lg"
+                                        className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-3 px-4 hover:bg-accent/50 rounded-lg"
                                     >
                                         {link.name}
                                     </motion.a>
                                 ))}
 
                                 {/* Mobile CTAs */}
-                                <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-white/10">
+                                <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-border/40">
                                     <div className="flex items-center justify-between gap-4 px-2">
-                                        <span className="text-sm font-medium text-slate-400">Tema</span>
+                                        <span className="text-sm font-medium text-muted-foreground">Tema</span>
                                         <div className="flex items-center gap-2">
                                             <LanguageSelector />
 
-                                            <div className="flex bg-slate-900/50 p-1 rounded-lg border border-white/5">
+                                            <div className="flex bg-accent/50 p-1 rounded-lg border border-border/20">
                                                 <button
                                                     onClick={() => theme === 'dark' && toggleTheme()}
-                                                    className={`p-2 rounded-md transition-all ${theme === 'light' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
+                                                    className={`p-2 rounded-md transition-all ${theme === 'light' ? 'bg-primary text-primary-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}
                                                 >
                                                     <Sun className="h-4 w-4" />
                                                 </button>
                                                 <button
                                                     onClick={() => theme === 'light' && toggleTheme()}
-                                                    className={`p-2 rounded-md transition-all ${theme === 'dark' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
+                                                    className={`p-2 rounded-md transition-all ${theme === 'dark' ? 'bg-primary text-primary-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}
                                                 >
                                                     <Moon className="h-4 w-4" />
                                                 </button>
@@ -249,7 +268,7 @@ export default function Navbar() {
                                     </div>
                                     <Button
                                         variant="outline"
-                                        className="w-full gap-2 justify-center border-white/10 text-slate-200 hover:bg-white/5 hover:text-white bg-transparent"
+                                        className="w-full gap-2 justify-center border-border/40 text-muted-foreground hover:bg-accent/50 hover:text-foreground bg-transparent"
                                         onClick={() => window.open(GITHUB_REPO, "_blank", "noopener,noreferrer")}
                                         aria-label="Ver repositorio en GitHub"
                                     >
@@ -258,7 +277,7 @@ export default function Navbar() {
                                     </Button>
                                     <Button
                                         onClick={() => handleNavigation("/releases")}
-                                        className="w-full gap-2 justify-center bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-900/20 border-0"
+                                        className="w-full gap-2 justify-center bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/20 border-0"
                                     >
                                         <Download className="h-4 w-4" />
                                         {t('navbar.download')}
