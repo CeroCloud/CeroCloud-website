@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="src/assets/cerocloud-icon.png" alt="CeroCloud Logo" width="120" height="auto" />
+</div>
+
 # CeroCloud Website 🌐
 
 [![Deploy Website to GitHub Pages](https://github.com/CeroCloud/CeroCloud-website/actions/workflows/deploy.yml/badge.svg)](https://github.com/CeroCloud/CeroCloud-website/actions/workflows/deploy.yml)
