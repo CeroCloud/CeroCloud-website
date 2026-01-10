@@ -82,6 +82,8 @@ export default function Docs() {
                 <meta property="og:url" content="https://cerocloud.github.io/CeroCloud-website/docs" />
                 <meta property="og:image" content="https://cerocloud.github.io/CeroCloud-website/assets/dashboard-light.png" />
                 <meta property="og:image:alt" content={t('seo.og_image_alt')} />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
                 <meta property="og:type" content="website" />
 
                 <link rel="canonical" href="https://cerocloud.github.io/CeroCloud-website/docs" />
@@ -132,41 +134,97 @@ export default function Docs() {
     );
 }
 
+import Fuse from 'fuse.js';
+
 function SidebarNav({ docSections, activeSection, onNavigate }: { docSections: any[], activeSection: string, onNavigate: (id: string) => void }) {
     const { t } = useTranslation('docs');
+    const [searchQuery, setSearchQuery] = useState("");
+
+    // Flatten all searchable items
+    const allItems = useMemo(() => {
+        return docSections.flatMap(section => section.items.map((item: any) => ({
+            ...item,
+            sectionTitle: section.title
+        })));
+    }, [docSections]);
+
+    // Initialize Fuse
+    const fuse = useMemo(() => new Fuse(allItems, {
+        keys: ['title', 'sectionTitle'],
+        threshold: 0.3,
+    }), [allItems]);
+
+    const searchResults = useMemo(() => {
+        if (!searchQuery) return null;
+        return fuse.search(searchQuery).map(result => result.item);
+    }, [searchQuery, fuse]);
 
     return (
         <div className="space-y-4 h-full flex flex-col p-4 md:p-0">
             <div className="relative">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                <Input placeholder={t('sidebar.search_input')} className="pl-9" />
+                <Input
+                    placeholder={t('sidebar.search_input')}
+                    className="pl-9"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                />
             </div>
 
             <ScrollArea className="flex-1 md:pr-4">
                 <div className="space-y-6">
-                    {docSections.map((section) => (
-                        <div key={section.title}>
-                            <h4 className="font-semibold text-sm text-foreground mb-3 px-2">
-                                {section.title}
+                    {searchQuery && searchResults ? (
+                        <div className="space-y-2">
+                            <h4 className="font-semibold text-sm text-foreground mb-3 px-2 flex items-center gap-2">
+                                <Search className="w-3 h-3" /> Resultados
                             </h4>
-                            <div className="space-y-1">
-                                {section.items.map((item: any) => (
+                            {searchResults.length > 0 ? (
+                                searchResults.map((item: any) => (
                                     <Button
                                         key={item.id}
-                                        variant={activeSection === item.id ? "secondary" : "ghost"}
-                                        className={`w-full justify-start gap-2 h-9 ${activeSection === item.id
-                                            ? "bg-primary/10 text-primary hover:bg-primary/15"
-                                            : "text-muted-foreground hover:text-foreground"
-                                            }`}
-                                        onClick={() => onNavigate(item.id)}
+                                        variant="ghost"
+                                        className="w-full justify-start gap-2 h-auto py-2 text-left items-start whitespace-normal"
+                                        onClick={() => {
+                                            onNavigate(item.id);
+                                            setSearchQuery("");
+                                        }}
                                     >
-                                        <item.icon className="h-4 w-4" />
-                                        {item.title}
+                                        <item.icon className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                                        <div>
+                                            <div className="font-medium">{item.title}</div>
+                                            <div className="text-xs text-muted-foreground">{item.sectionTitle}</div>
+                                        </div>
                                     </Button>
-                                ))}
-                            </div>
+                                ))
+                            ) : (
+                                <p className="text-sm text-muted-foreground px-2">No se encontraron resultados.</p>
+                            )}
                         </div>
-                    ))}
+                    ) : (
+                        docSections.map((section) => (
+                            <div key={section.title}>
+                                <h4 className="font-semibold text-sm text-foreground mb-3 px-2">
+                                    {section.title}
+                                </h4>
+                                <div className="space-y-1">
+                                    {section.items.map((item: any) => (
+                                        <Button
+                                            key={item.id}
+                                            variant={activeSection === item.id ? "secondary" : "ghost"}
+                                            className={`w-full justify-start gap-2 h-9 ${activeSection === item.id
+                                                ? "bg-primary/10 text-primary hover:bg-primary/15"
+                                                : "text-muted-foreground hover:text-foreground"
+                                                }`}
+                                            onClick={() => onNavigate(item.id)}
+                                        >
+                                            <item.icon className="h-4 w-4" />
+                                            {item.title}
+                                        </Button>
+                                    ))}
+                                </div>
+                            </div>
+                        ))
+                    )}
                 </div>
             </ScrollArea>
         </div>

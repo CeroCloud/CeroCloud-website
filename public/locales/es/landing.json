@@ -2,7 +2,7 @@
   "home": {
     "title": "CeroCloud - Software POS e Inventario 100% Local",
     "description": "Sistema de Punto de Venta (POS) e Inventario diseñado para escritorio. Funciona sin internet, sin suscripciones mensuales y con control total de tus datos. Descarga gratis.",
-    "keywords": "CeroCloud, software punto de venda, sistema de inventario, pos escritorio, software gratuito, sin internet, offline pos, gestión de negocios, electron react",
+    "keywords": "CeroCloud, software punto de venta, sistema de inventario, pos escritorio, software gratuito, sin internet, offline pos, gestión de negocios, electron react, facturación local, control de stock, software pyme",
     "og": {
       "title": "CeroCloud - Gestión Empresarial Local y Segura",
       "description": "El sistema de gestión que corre en TU computadora. Sin nube, sin rentas, sin riesgos. Dashboard, POS e Inventario en un solo lugar.",
@@ -34,8 +34,7 @@
       "title": "Escalabilidad Local",
       "description": "Uso de SQLite como motor de base de datos para manejar grandes volúmenes de información sin pérdida de rendimiento."
     }
-  }
-,
+  },
   "modules": {
     "main_title": "Módulos Integrados",
     "intro_description": "Todo lo que necesitas para gestionar tu negocio en una sola aplicación.",
@@ -43,28 +42,47 @@
       "title": "Dashboard",
       "subtitle": "Visión General",
       "description": "Obtén una vista clara y rápida del estado de tu negocio con métricas clave en tiempo real.",
-      "features": ["Métricas en tiempo real", "Gráficos de rendimiento", "Alertas de stock", "Resumen financiero"]
+      "features": [
+        "Métricas en tiempo real",
+        "Gráficos de rendimiento",
+        "Alertas de stock",
+        "Resumen financiero"
+      ]
     },
     "inventory": {
       "title": "Inventario",
       "subtitle": "Gestión de Productos",
       "description": "Control total sobre tu stock, categorías y movimientos de productos.",
-      "features": ["Control de existencias", "Gestión de categorías", "Historial de movimientos", "Ajustes de inventario"]
+      "features": [
+        "Control de existencias",
+        "Gestión de categorías",
+        "Historial de movimientos",
+        "Ajustes de inventario"
+      ]
     },
     "pos": {
       "title": "Punto de Venta",
       "subtitle": "Ventas Ágiles",
       "description": "Interfaz optimizada para realizar ventas rápidas y eficientes en el mostrador.",
-      "features": ["Interfaz táctil o teclado", "Múltiples métodos de pago", "Impresión de tickets", "Gestión de clientes"]
+      "features": [
+        "Interfaz táctil o teclado",
+        "Múltiples métodos de pago",
+        "Impresión de tickets",
+        "Gestión de clientes"
+      ]
     },
     "backup": {
       "title": "Respaldos",
       "subtitle": "Seguridad de Datos",
       "description": "Protege tu información vital con herramientas integradas de copia de seguridad y restauración.",
-      "features": ["Respaldos locales", "Restauración en un clic", "Historial de versiones", "Exportación de datos"]
+      "features": [
+        "Respaldos locales",
+        "Restauración en un clic",
+        "Historial de versiones",
+        "Exportación de datos"
+      ]
     }
-  }
-,
+  },
   "hero": {
     "subtitle": "Sin nube. Sin límites.",
     "headline_start": "Gestión empresarial",
@@ -90,8 +108,7 @@
       "loading": "Cargando..."
     },
     "scroll_more": "Descubre más"
-  }
-,
+  },
   "stats": {
     "free": {
       "label": "Descarga Libre",
@@ -110,8 +127,7 @@
       "label": "Versión Estable",
       "loading": "Verificando..."
     }
-  }
-,
+  },
   "download": {
     "title": "Descarga CeroCloud",
     "version_prefix": "Versión:",

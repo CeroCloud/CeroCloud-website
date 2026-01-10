@@ -50,7 +50,10 @@
   "license": {
     "seo": {
       "title": "Legal License - Use CeroCloud Freely",
-      "description": "Legal information about using CeroCloud. Open Source under MIT + Commons Clause license."
+      "description": "Legal information about using CeroCloud. Open source under MIT license + Commons Clause.",
+      "og_title": "CeroCloud License - Fair and Free Use",
+      "og_description": "Understand what you can and cannot do with CeroCloud. Open source with commercial protections.",
+      "og_image_alt": "CeroCloud License"
     },
     "hero": {
       "title": "Legal License and Usage",

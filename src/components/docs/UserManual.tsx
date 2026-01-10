@@ -6,6 +6,7 @@ import welcomeDark from "@/assets/docs/welcome-dark.png";
 import posLight from "@/assets/docs/pos-light.png";
 import posDark from "@/assets/docs/pos-dark.png";
 import { useTranslation } from "react-i18next";
+import DocFeedback from "./DocFeedback";
 
 export default function UserManual() {
     const { theme } = useTheme();
@@ -187,6 +188,8 @@ export default function UserManual() {
                     <ReportCard title={t('manual.reports.cards.export.title')} desc={t('manual.reports.cards.export.desc')} />
                 </div>
             </section>
+
+            <DocFeedback articleId="user-manual" />
         </div>
     );
 }

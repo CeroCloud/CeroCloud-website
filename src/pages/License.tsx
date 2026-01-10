@@ -27,6 +27,16 @@ export default function License() {
             <Helmet>
                 <title>{t('license.seo.title')}</title>
                 <meta name="description" content={t('license.seo.description')} />
+
+                {/* Open Graph */}
+                <meta property="og:title" content={t('license.seo.og_title')} />
+                <meta property="og:description" content={t('license.seo.og_description')} />
+                <meta property="og:url" content="https://cerocloud.github.io/CeroCloud-website/license" />
+                <meta property="og:image" content="https://cerocloud.github.io/CeroCloud-website/assets/dashboard-light.png" />
+                <meta property="og:image:alt" content={t('license.seo.og_image_alt')} />
+                <meta property="og:type" content="website" />
+
+                <link rel="canonical" href="https://cerocloud.github.io/CeroCloud-website/license" />
             </Helmet>
 
             <div className="container mx-auto px-4 max-w-4xl">

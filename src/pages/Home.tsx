@@ -1,11 +1,19 @@
+import { Suspense, lazy } from "react";
 import { Helmet } from "react-helmet-async";
-
 import { useTranslation } from "react-i18next";
 import Hero from "@/sections/Hero";
-import Stats from "@/sections/Stats";
-import Features from "@/sections/Features";
-import Modules from "@/sections/Modules";
-import Download from "@/sections/Download";
+import LazySection from "@/components/LazySection";
+
+// Lazy load heavy sections below the fold
+const Stats = lazy(() => import("@/sections/Stats"));
+const Features = lazy(() => import("@/sections/Features"));
+const Modules = lazy(() => import("@/sections/Modules"));
+const Download = lazy(() => import("@/sections/Download"));
+
+// Loading fallback with approximate heights to minimize CLS
+const SectionLoader = ({ height = "h-96" }: { height?: string }) => (
+    <div className={`w-full ${height} bg-muted/5 animate-pulse rounded-lg my-12`} />
+);
 
 export default function Home() {
     const { t } = useTranslation('landing');
@@ -45,11 +53,30 @@ export default function Home() {
             </Helmet>
 
             <Hero />
-            <Stats />
-            <Features />
-            <Modules />
 
-            <Download />
+            <Suspense fallback={<SectionLoader height="h-32" />}>
+                <LazySection rootMargin="100px">
+                    <Stats />
+                </LazySection>
+            </Suspense>
+
+            <Suspense fallback={<SectionLoader height="h-[800px]" />}>
+                <LazySection>
+                    <Features />
+                </LazySection>
+            </Suspense>
+
+            <Suspense fallback={<SectionLoader height="h-[600px]" />}>
+                <LazySection>
+                    <Modules />
+                </LazySection>
+            </Suspense>
+
+            <Suspense fallback={<SectionLoader height="h-96" />}>
+                <LazySection>
+                    <Download />
+                </LazySection>
+            </Suspense>
         </>
     );
 }

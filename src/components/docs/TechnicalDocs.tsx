@@ -1,5 +1,6 @@
 import { Database, Lock, Code2, Layers, Cpu, Server } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import DocFeedback from "./DocFeedback";
 
 export default function TechnicalDocs() {
     const { t } = useTranslation('docs');
@@ -130,8 +131,11 @@ CREATE TABLE sales (
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+
+            </section >
+
+            <DocFeedback articleId="technical-docs" />
+        </div >
     );
 }
 

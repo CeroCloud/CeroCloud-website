@@ -12,6 +12,16 @@ export default function About() {
             <Helmet>
                 <title>{t('about.seo.title')}</title>
                 <meta name="description" content={t('about.seo.description')} />
+
+                {/* Open Graph */}
+                <meta property="og:title" content={t('about.seo.og_title')} />
+                <meta property="og:description" content={t('about.seo.og_description')} />
+                <meta property="og:url" content="https://cerocloud.github.io/CeroCloud-website/about" />
+                <meta property="og:image" content="https://cerocloud.github.io/CeroCloud-website/assets/dashboard-light.png" />
+                <meta property="og:image:alt" content={t('about.seo.og_image_alt')} />
+                <meta property="og:type" content="website" />
+
+                <link rel="canonical" href="https://cerocloud.github.io/CeroCloud-website/about" />
             </Helmet>
 
             <div className="container mx-auto px-4 max-w-4xl">
@@ -21,7 +31,7 @@ export default function About() {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-20"
                 >
-                    <img src={logo} alt="CeroCloud Logo" loading="lazy" className="w-24 h-24 mx-auto mb-6 drop-shadow-2xl" />
+                    <img src={logo} alt="CeroCloud Logo" width="96" height="96" loading="lazy" className="w-24 h-24 mx-auto mb-6 drop-shadow-2xl" />
                     <h1 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
                         {t('about.hero.title_start')} <span className="text-primary">{t('about.hero.title_highlight')}</span>
                     </h1>

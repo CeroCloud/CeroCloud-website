@@ -2,7 +2,10 @@
   "about": {
     "seo": {
       "title": "About Us - CeroCloud POS",
-      "description": "Learn about the mission, philosophy, and team behind CeroCloud. 100% local, secure, and open-source business management."
+      "description": "Learn about the mission, philosophy, and team behind CeroCloud. 100% local, secure, and open-source business management.",
+      "og_title": "Meet CeroCloud - Team & Mission",
+      "og_description": "We are democratizing local business management. 100% offline and Open Source software.",
+      "og_image_alt": "CeroCloud Team"
     },
     "hero": {
       "title_start": "We are democratizing",
@@ -16,7 +19,7 @@
       },
       "cost": {
         "title": "Zero Recurring Costs",
-        "description": "Enterprise-grade software shouldn't bleed your budget. One downloaded, it's yours forever."
+        "description": "Business software shouldn't bleed your budget. Once downloaded, it's yours forever."
       }
     },
     "mission": "Empowering local businesses with technology that respects their privacy and independence.",
@@ -34,7 +37,10 @@
   "contribute": {
     "seo": {
       "title": "Contribute to CeroCloud - Open Source POS",
-      "description": "Help us build the best open-source local POS. Contribute code, report bugs, or translate CeroCloud."
+      "description": "Help us build the best open-source local POS. Contribute code, report bugs, or translate CeroCloud.",
+      "og_title": "Contribute to CeroCloud - Open Source Revolution",
+      "og_description": "Your help matters. Join us to build the best free POS software.",
+      "og_image_alt": "Contribute to CeroCloud Open Source"
     },
     "hero": {
       "title": "Join the Revolution",
