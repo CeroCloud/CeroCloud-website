@@ -23,7 +23,7 @@ class CeroCloudServer {
         this.server = new Server(
             {
                 name: "cerocloud-mcp-server",
-                version: "0.1.0",
+                version: "0.2.0",
             },
             {
                 capabilities: {
@@ -105,7 +105,7 @@ class CeroCloudServer {
                         await fs.readFile(path.join(LOCALES_DIR, baseLang, `${ns}.json`), "utf-8")
                     );
 
-                    // Get all recursive keys from base
+                    // Get all recursive keys from base with their values
                     const baseKeys = this.flattenKeys(baseContent);
 
                     for (const targetLang of targetLangs) {
@@ -120,11 +120,18 @@ class CeroCloudServer {
                         }
 
                         const targetKeys = this.flattenKeys(targetContent);
-                        const missingInTarget = Array.from(baseKeys).filter(k => !targetKeys.has(k));
+                        // Check which usage keys from base are missing in target
+                        const missingInTarget = Array.from(baseKeys.keys()).filter(k => !targetKeys.has(k));
 
                         if (missingInTarget.length > 0) {
                             report.push(`⚠️  ${targetLang}/${ns}.json is missing ${missingInTarget.length} keys:`);
-                            missingInTarget.forEach(k => report.push(`   - ${k}`));
+                            missingInTarget.forEach(k => {
+                                const sourceValue = baseKeys.get(k);
+                                const truncatedValue = sourceValue && sourceValue.length > 50
+                                    ? sourceValue.substring(0, 50) + "..."
+                                    : sourceValue;
+                                report.push(`   - ${k} (Source: "${truncatedValue}")`);
+                            });
                             totalMissing += missingInTarget.length;
                         }
                     }
@@ -160,14 +167,14 @@ class CeroCloudServer {
         }
     }
 
-    private flattenKeys(obj: any, prefix = ""): Set<string> {
-        const keys = new Set<string>();
+    private flattenKeys(obj: any, prefix = ""): Map<string, string> {
+        const keys = new Map<string, string>();
         for (const key in obj) {
             if (typeof obj[key] === "object" && obj[key] !== null && !Array.isArray(obj[key])) {
                 const subKeys = this.flattenKeys(obj[key], `${prefix}${key}.`);
-                subKeys.forEach(k => keys.add(k));
+                subKeys.forEach((v, k) => keys.set(k, v));
             } else {
-                keys.add(`${prefix}${key}`);
+                keys.set(`${prefix}${key}`, String(obj[key]));
             }
         }
         return keys;
@@ -190,4 +197,19 @@ class CeroCloudServer {
 }
 
 const server = new CeroCloudServer();
-server.run().catch(console.error);
+
+if (process.argv.includes("--audit")) {
+    console.log("🔍 Running Translation Audit (CLI Mode)...\n");
+    // Accessing private method for CLI use (casting to any)
+    (server as any).handleAuditTranslations({}).then((result: any) => {
+        if (result.isError) {
+            console.error(result.content[0].text);
+            process.exit(1);
+        } else {
+            console.log(result.content[0].text);
+            process.exit(0);
+        }
+    });
+} else {
+    server.run().catch(console.error);
+}

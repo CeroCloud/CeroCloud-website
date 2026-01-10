@@ -11,18 +11,15 @@ Este documento define la estrategia de evolución técnica y de producto para el
 ### 1. Optimización SEO & Performance (Core Web Vitals)
 
 - [x] **Reducción de CLS (Cumulative Layout Shift):** Implementar atributos de `width/height` en todas las imágenes restantes (Docs, Features).
-- [ ] **Lazy Loading Avanzado:** Implementar `IntersectionObserver` para diferir la carga de componentes pesados como el `Map` o videos hasta que el usuario haga scroll.
-- [ ] **Metaetiquetas Dinámicas:** Refinar las descripciones y títulos de cada sub-página usando `react-helmet-async` para asegurar keywords de "POS Local" y "Software Inventario".
-- [ ] **Auditoría de Accesibilidad (A11y):** Asegurar tabbing correcto en el Navbar móvil y contraste de colores en modo oscuro.
+- [x] **Lazy Loading Avanzado:** Implementar `IntersectionObserver` para diferir la carga de componentes pesados como el `Map` o videos hasta que el usuario haga scroll.
+- [x] **Metaetiquetas Dinámicas:** Refinar descripciones, títulos y Open Graph (OG) en todas las sub-páginas para asegurar SEO y "Social Shareability" óptimos.
+- [x] **Auditoría de Accesibilidad (A11y):** Asegurar tabbing correcto en el Navbar móvil y contrastes revisados.
 
 ### 2. Contenido y Documentación
 
-- [ ] **Buscador en Documentación:** Integrar una barra de búsqueda rápida (tipo Algolia o Fuse.js) en la sección `/docs`.
-- [ ] **Feedback en Docs:** Añadir botones de "¿Te fue útil esta sección?" al final de cada artículo de documentación.
-
-### 3. Infraestructura MCP
-
-- [ ] **Expansión del Audit:** Mejorar la herramienta MCP `audit_translations` para que no solo detecte claves faltantes, sino que sugiera traducciones automáticas usando IA.
+- [x] **Buscador en Documentación:** Integrar una barra de búsqueda rápida (tipo Algolia o Fuse.js) en la sección `/docs`.
+- [x] **Feedback en Docs:** Agregar sección "¿Te fue útil este artículo?" con 👍/👎 al final de cada página de documentación.
+- [x] **Expansión Audit MCP:** Mejorar la herramienta MCP `audit_translations` para que no solo detecte claves faltantes, sino que incluya el texto fuente para facilitar la traducción.
 
 ---
 
@@ -69,6 +66,7 @@ Este documento define la estrategia de evolución técnica y de producto para el
 
 ## 📊 Métricas de Éxito (KPIs)
 
-* **Performance:** Score Lighthouse > 95 en todas las categorías (Mobile/Desktop).
+- **Performance:** Score Lighthouse > 95 en todas las categorías (Mobile/Desktop).
+
 - **SEO:** Primeros resultados en Google para "POS Software Open Source [País]".
 - **Conversión:** Aumentar el % de clicks en "Descargar" vs. Visitas totales.

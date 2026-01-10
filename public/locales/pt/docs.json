@@ -292,6 +292,14 @@
   "common": {
     "or": "ou",
     "and": "e",
-    "retry": "Tentar novamente"
+    "retry": "Tentar novamente",
+    "yes": "Sim",
+    "no": "Não",
+    "undo": "Desfazer"
+  },
+  "feedback": {
+    "question": "Esta seção foi útil?",
+    "thanks": "Obrigado pelo seu feedback!",
+    "improved": "Obrigado. Trabalharemos para melhorar."
   }
 }

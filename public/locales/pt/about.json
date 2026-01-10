@@ -1,8 +1,11 @@
 {
   "about": {
     "seo": {
-      "title": "Sobre Nós - CeroCloud POS",
-      "description": "Conheça a missão, filosofia e equipe por trás do CeroCloud. Gestão empresarial 100% local, segura e open source."
+      "title": "Sobre Nós - CeroCloud PDV",
+      "description": "Conheça a missão, filosofia e equipe por trás do CeroCloud. Gestão empresarial 100% local, segura e de código aberto.",
+      "og_title": "Conheça CeroCloud - Equipe e Missão",
+      "og_description": "Estamos democratizando a gestão de negócios locais. Software 100% offline e Open Source.",
+      "og_image_alt": "Equipe CeroCloud"
     },
     "hero": {
       "title_start": "Estamos democratizando a",
@@ -16,7 +19,7 @@
       },
       "cost": {
         "title": "Zero Custos Recorrentes",
-        "description": "Software empresarial não deve sangrar seu orçamento. Uma vez baixado, é seu para sempre."
+        "description": "O software empresarial não deve sangrar seu orçamento. Uma vez baixado, é seu para sempre."
       }
     },
     "mission": "Empoderando negócios locais com tecnologia que respeita sua privacidade e independência.",
@@ -33,8 +36,11 @@
   },
   "contribute": {
     "seo": {
-      "title": "Contribuir para o CeroCloud - POS Open Source",
-      "description": "Ajude-nos a construir o melhor POS local open source. Contribua com código, relate bugs ou traduza o CeroCloud."
+      "title": "Contribuir para o CeroCloud - PDV Open Source",
+      "description": "Ajude-nos a construir o melhor PDV local de código aberto. Contribua com código, relate erros ou traduza o CeroCloud.",
+      "og_title": "Contribua para o CeroCloud - Revolução Open Source",
+      "og_description": "Sua ajuda importa. Junte-se a nós para construir o melhor software PDV gratuito.",
+      "og_image_alt": "Contribuir para o CeroCloud Open Source"
     },
     "hero": {
       "title": "Junte-se à Revolução",

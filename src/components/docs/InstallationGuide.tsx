@@ -1,5 +1,6 @@
 import { Terminal, Download, Monitor, Laptop, AlertTriangle, CheckCircle2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import DocFeedback from "./DocFeedback";
 
 export default function InstallationGuide() {
     const { t } = useTranslation('docs');
@@ -128,6 +129,8 @@ export default function InstallationGuide() {
                     </div>
                 </div>
             </section>
+
+            <DocFeedback articleId="installation-guide" />
         </div>
     );
 }

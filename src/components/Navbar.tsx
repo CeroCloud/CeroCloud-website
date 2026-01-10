@@ -110,8 +110,8 @@ export default function Navbar() {
                 animate={{ y: 0 }}
                 transition={{ duration: 0.6 }}
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${isScrolled
-                        ? "bg-background/95 backdrop-blur-md shadow-lg border-border/40"
-                        : "bg-transparent border-transparent"
+                    ? "bg-background/95 backdrop-blur-md shadow-lg border-border/40"
+                    : "bg-background/95 backdrop-blur-md border-transparent"
                     }`}
             >
                 <div className="container mx-auto px-4">
@@ -202,10 +202,12 @@ export default function Navbar() {
                             </Button>
                         </div>
 
+
                         {/* Mobile/Tablet Menu Button - Right */}
                         <button
                             className="lg:hidden p-2 text-foreground ml-auto"
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
                         >
                             {isMobileMenuOpen ? <X /> : <Menu />}
                         </button>

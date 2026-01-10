@@ -3,8 +3,9 @@
     "title": "Roadmap de Desenvolvimento - O Futuro do CeroCloud",
     "description": "Conheça o roadmap do CeroCloud. Planos futuros: App móvel, impressão térmica, multifilial e mais. Software POS em constante evolução.",
     "keywords": "roadmap cerocloud, cerocloud futuro, desenvolvimento pos, software ponto de venda open source, funcionalidades planejadas",
-    "og_title": "Roadmap do CeroCloud - Transparência Total",
-    "og_description": "Veja o que estamos construindo. Junte-se à comunidade e proponha novas funcionalidades para o melhor POS local."
+    "og_title": "Roadmap CeroCloud - Transparência Total",
+    "og_description": "Veja o que estamos construindo. Junte-se à comunidade e proponha novos recursos para o melhor PDV local.",
+    "og_image_alt": "Roadmap CeroCloud - Fases de Desenvolvimento"
   },
   "hero": {
     "title": "Mapa",

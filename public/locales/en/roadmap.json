@@ -4,7 +4,8 @@
     "description": "Know the CeroCloud roadmap. Future plans: Mobile app, thermal printing, multi-branch and more. POS software in constant evolution.",
     "keywords": "cerocloud roadmap, future cerocloud, pos development, open source point of sale software, planned features",
     "og_title": "CeroCloud Roadmap - Total Transparency",
-    "og_description": "See what we are building. Join the community and propose new features for the best local POS."
+    "og_description": "See what we are building. Join the community and propose new features for the best local POS.",
+    "og_image_alt": "CeroCloud Roadmap - Development Phases"
   },
   "hero": {
     "title": "Roadmap",

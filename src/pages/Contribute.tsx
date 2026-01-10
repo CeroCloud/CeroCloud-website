@@ -11,6 +11,16 @@ export default function Contribute() {
             <Helmet>
                 <title>{t('contribute.seo.title')}</title>
                 <meta name="description" content={t('contribute.seo.description')} />
+
+                {/* Open Graph */}
+                <meta property="og:title" content={t('contribute.seo.og_title')} />
+                <meta property="og:description" content={t('contribute.seo.og_description')} />
+                <meta property="og:url" content="https://cerocloud.github.io/CeroCloud-website/contribute" />
+                <meta property="og:image" content="https://cerocloud.github.io/CeroCloud-website/assets/dashboard-light.png" />
+                <meta property="og:image:alt" content={t('contribute.seo.og_image_alt')} />
+                <meta property="og:type" content="website" />
+
+                <link rel="canonical" href="https://cerocloud.github.io/CeroCloud-website/contribute" />
             </Helmet>
 
             <div className="container mx-auto px-4 max-w-4xl">

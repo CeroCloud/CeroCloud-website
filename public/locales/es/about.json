@@ -2,7 +2,10 @@
   "about": {
     "seo": {
       "title": "Sobre Nosotros - CeroCloud POS",
-      "description": "Conoce la misión, filosofía y equipo detrás de CeroCloud. Gestión empresarial 100% local, segura y de código abierto."
+      "description": "Conoce la misión, filosofía y equipo detrás de CeroCloud. Gestión empresarial 100% local, segura y de código abierto.",
+      "og_title": "Conoce CeroCloud - El Equipo y Misión",
+      "og_description": "Estamos democratizando la gestión de negocios locales. Software 100% offline y Open Source.",
+      "og_image_alt": "Equipo CeroCloud"
     },
     "hero": {
       "title_start": "Estamos democratizando la",
@@ -34,7 +37,10 @@
   "contribute": {
     "seo": {
       "title": "Contribuir a CeroCloud - POS Open Source",
-      "description": "Ayúdanos a construir el mejor POS local de código abierto. Aporta código, reporta errores o traduce CeroCloud."
+      "description": "Ayúdanos a construir el mejor POS local de código abierto. Aporta código, reporta errores o traduce CeroCloud.",
+      "og_title": "Contribuye a CeroCloud - Revolución Open Source",
+      "og_description": "Tu ayuda importa. Únete a nosotros para construir el mejor software POS gratuito.",
+      "og_image_alt": "Contribuir a CeroCloud Open Source"
     },
     "hero": {
       "title": "Únete a la Revolución",

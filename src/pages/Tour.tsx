@@ -98,6 +98,8 @@ export default function Tour() {
                 <meta property="og:url" content="https://cerocloud.github.io/CeroCloud-website/tour" />
                 <meta property="og:image" content="https://cerocloud.github.io/CeroCloud-website/assets/docs/pos-light.png" />
                 <meta property="og:image:alt" content={t('seo.og_image_alt')} />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
                 <meta property="og:type" content="website" />
 
                 <link rel="canonical" href="https://cerocloud.github.io/CeroCloud-website/tour" />
@@ -205,6 +207,8 @@ export default function Tour() {
                                             src={previewTheme === 'dark' ? feature.darkImage : feature.lightImage}
                                             alt={`${feature.title} - CeroCloud ${previewTheme === 'dark' ? 'Modo Oscuro' : 'Modo Claro'} - ${feature.subtitle}`}
                                             title={feature.title}
+                                            width="1920"
+                                            height="1080"
                                             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                                         />
 
@@ -226,6 +230,7 @@ export default function Tour() {
                 >
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5" />
                     <div className="relative z-10">
+
                         <h2 className="text-3xl font-bold mb-6">{t('footer_cta.title')}</h2>
                         <Button
                             size="lg"

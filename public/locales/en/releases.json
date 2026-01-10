@@ -5,7 +5,8 @@
     "title": "Download CeroCloud - Latest Stable Version (Free)",
     "description": "Download the latest version of CeroCloud (Windows, Linux, macOS). Free and secure POS and Inventory software. Check the changelog and news.",
     "og_title": "Download CeroCloud - Free POS Software",
-    "og_description": "Get the latest stable version of CeroCloud. Virus-free, ad-free, 100% open source and local."
+    "og_description": "Get the latest stable version of CeroCloud. Virus-free, ad-free, 100% open source and local.",
+    "og_image_alt": "CeroCloud POS Downloads"
   },
   "latest_badge": "LATEST",
   "stable_badge": "Stable",
