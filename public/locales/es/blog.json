@@ -1,0 +1,15 @@
+{
+    "title": "Blog de CeroCloud",
+    "subtitle": "Actualizaciones, tutoriales e historias de nuestro equipo.",
+    "back": "Volver al Blog",
+    "back_to_blog": "Volver al Blog",
+    "read_article": "Leer Artículo",
+    "team_label": "Equipo de Producto",
+    "up_next": "Siguiente Artículo",
+    "read_now": "Leer Ahora",
+    "author_label": "Autor",
+    "semantics": {
+        "author": "Autor",
+        "published": "Publicado"
+    }
+}

@@ -1,29 +1,24 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Download, Github, Lock, Zap, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Download, Github, Lock, Zap, ArrowRight, CheckCircle2, LayoutDashboard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import icon from "@/assets/cerocloud-icon.png";
 import dashboardDark from "@/assets/dashboard-dark.png";
 import dashboardLight from "@/assets/dashboard-light.png";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useLatestRelease } from "@/lib/useLatestRelease";
-import { useEffect, useState } from "react";
 
 export default function Hero() {
     const { t } = useTranslation('landing');
     const { theme } = useTheme();
     const { release, loading } = useLatestRelease();
-    const [mounted, setMounted] = useState(false);
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
+    // Use specific image based on theme, efficient LCP
     const dashboardImage = theme === "dark" ? dashboardDark : dashboardLight;
 
     return (
-        <section id="hero" className="relative min-h-[calc(100vh-80px)] lg:min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-primary/5 content-visibility-auto">
+        <section id="hero" className="relative min-h-[calc(100vh-80px)] lg:min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-primary/5">
             {/* Animated grid background */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
 
@@ -79,8 +74,6 @@ export default function Hero() {
                                         width="128"
                                         height="128"
                                         className="relative w-full h-full drop-shadow-2xl"
-                                        // fetchPriority="high" // React might complain about camelCase, lowercase usually fine or use styles
-                                        style={{ contentVisibility: 'auto' }}
                                     />
                                 </motion.div>
                                 <div>
@@ -158,21 +151,30 @@ export default function Hero() {
                             ))}
                         </motion.div>
 
-                        {/* Enhanced CTAs */}
+                        {/* Enhanced CTAs - CONVERSION OPTIMIZED */}
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5, duration: 0.5 }}
-                            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full sm:w-auto"
+                            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full sm:w-auto flex-wrap"
                         >
                             <Link to="/releases" className="w-full sm:w-auto">
-                                <Button size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-primary/25 transition-all w-full md:w-auto">
-                                    <Download className="mr-2 h-5 w-5" />
-                                    {t('hero.cta.download')}
+                                <Button size="lg" className="w-full md:w-auto text-lg px-8 py-6 shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all bg-gradient-to-r from-primary to-blue-600 hover:to-blue-500 border-0 ring-offset-2 focus:ring-2 relative overflow-hidden group">
+                                    <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                                    <Download className="mr-2 h-5 w-5 relative z-10" />
+                                    <span className="relative z-10 font-bold tracking-wide">{t('hero.cta.download')}</span>
                                 </Button>
                             </Link>
+
+                            <Link to="/demo" className="w-full sm:w-auto">
+                                <Button size="lg" variant="secondary" className="text-lg px-8 py-6 shadow-sm hover:shadow-md transition-all w-full md:w-auto border border-border/50 hover:bg-secondary/80">
+                                    <LayoutDashboard className="mr-2 h-5 w-5" />
+                                    {t('hero.cta.demo')}
+                                </Button>
+                            </Link>
+
                             <a href="https://github.com/CeroCloud/CeroCloud-Desktop" target="_blank" rel="noreferrer" className="w-full sm:w-auto">
-                                <Button size="lg" variant="outline" className="text-lg px-8 py-6 w-full md:w-auto">
+                                <Button size="lg" variant="outline" className="text-lg px-8 py-6 w-full md:w-auto hover:bg-background/80">
                                     <Github className="mr-2 h-5 w-5" />
                                     {t('hero.cta.github')}
                                 </Button>
@@ -202,20 +204,22 @@ export default function Hero() {
                             {/* Main showcase card */}
                             <div className="relative bg-gradient-to-br from-primary/10 via-transparent to-transparent rounded-2xl border border-primary/10 p-2 backdrop-blur-sm shadow-2xl">
                                 <div className="aspect-video bg-muted/20 rounded-xl overflow-hidden shadow-inner">
-                                    {mounted && (
-                                        <img
-                                            src={dashboardImage}
-                                            alt="CeroCloud Dashboard Interface"
-                                            width="1200"
-                                            height="675"
-                                            className="w-full h-full object-contain rounded-lg"
-                                            decoding="async"
-                                        />
-                                    )}
+                                    {/* PRIORITIZED IMAGE LOADING */}
+                                    <img
+                                        src={dashboardImage}
+                                        alt="CeroCloud Dashboard Interface"
+                                        width="1200"
+                                        height="675"
+                                        className="w-full h-full object-contain rounded-lg"
+                                        decoding="sync"
+                                        loading="eager"
+                                        // @ts-ignore
+                                        fetchpriority="high"
+                                    />
                                 </div>
                             </div>
 
-                            {/* Floating elements (Pure CSS animation instead of Framer Motion for better perf) */}
+                            {/* Floating elements (Pure CSS animation) */}
                             <div className="absolute -top-6 -right-6 bg-card/90 backdrop-blur-md border border-border/50 rounded-xl p-4 shadow-xl animate-[float_6s_ease-in-out_infinite]">
                                 <div className="flex items-center gap-2">
                                     <Lock className="w-4 h-4 text-primary" />

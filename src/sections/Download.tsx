@@ -98,7 +98,7 @@ export default function DownloadSection() {
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Button
                                     size="lg"
-                                    className="text-lg px-8 py-6 group"
+                                    className="text-lg px-8 py-6 group shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all bg-primary hover:bg-primary/90"
                                     onClick={handleDownload}
                                     disabled={loading}
                                 >

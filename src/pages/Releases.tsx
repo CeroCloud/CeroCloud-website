@@ -7,6 +7,7 @@ import { es, enUS, ptBR } from "date-fns/locale";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
+import staticReleases from "@/content/releases_static.json";
 
 interface ReleaseAsset {
     name: string;
@@ -25,8 +26,8 @@ interface GithubRelease {
 
 export default function Releases() {
     const { t, i18n } = useTranslation('releases');
-    const [releases, setReleases] = useState<GithubRelease[]>([]);
-    const [loading, setLoading] = useState(true);
+    const [releases, setReleases] = useState<GithubRelease[]>(staticReleases as unknown as GithubRelease[]);
+    const [loading, setLoading] = useState(staticReleases.length === 0);
     const [error, setError] = useState<string | null>(null);
     const [expandedRelease, setExpandedRelease] = useState<string | null>(null);
 

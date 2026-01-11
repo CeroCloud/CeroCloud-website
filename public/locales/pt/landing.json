@@ -34,8 +34,7 @@
       "title": "Escalabilidade Local",
       "description": "Uso do SQLite como motor de banco de dados para lidar com grandes volumes de informações sem perda de desempenho."
     }
-  }
-,
+  },
   "modules": {
     "main_title": "Módulos Integrados",
     "intro_description": "Tudo o que você precisa para gerenciar seu negócio em um único aplicativo.",
@@ -43,28 +42,47 @@
       "title": "Painel",
       "subtitle": "Visão Geral",
       "description": "Obtenha uma visão clara e rápida do status do seu negócio com métricas chave em tempo real.",
-      "features": ["Métricas em tempo real", "Gráficos de desempenho", "Alertas de estoque", "Resumo financeiro"]
+      "features": [
+        "Métricas em tempo real",
+        "Gráficos de desempenho",
+        "Alertas de estoque",
+        "Resumo financeiro"
+      ]
     },
     "inventory": {
       "title": "Estoque",
       "subtitle": "Gestão de Produtos",
       "description": "Controle total sobre seu estoque, categorias e movimentações de produtos.",
-      "features": ["Controle de estoque", "Gestão de categorias", "Histórico de movimentações", "Ajustes de estoque"]
+      "features": [
+        "Controle de estoque",
+        "Gestão de categorias",
+        "Histórico de movimentações",
+        "Ajustes de estoque"
+      ]
     },
     "pos": {
       "title": "Ponto de Venda",
       "subtitle": "Vendas Ágeis",
       "description": "Interface otimizada para realizar vendas rápidas e eficientes no balcão.",
-      "features": ["Interface tátil ou teclado", "Múltiplos métodos de pagamento", "Impressão de recibos", "Gestão de clientes"]
+      "features": [
+        "Interface tátil ou teclado",
+        "Múltiplos métodos de pagamento",
+        "Impressão de recibos",
+        "Gestão de clientes"
+      ]
     },
     "backup": {
       "title": "Backups",
       "subtitle": "Segurança de Dados",
       "description": "Proteja suas informações vitais com ferramentas integradas de backup e restauração.",
-      "features": ["Backups locais", "Restauração com um clique", "Histórico de versões", "Exportação de dados"]
+      "features": [
+        "Backups locais",
+        "Restauração com um clique",
+        "Histórico de versões",
+        "Exportação de dados"
+      ]
     }
-  }
-,
+  },
   "hero": {
     "subtitle": "Sem nuvem. Sem limites.",
     "headline_start": "Gestão empresarial",
@@ -82,16 +100,16 @@
       "free_bad": "Grátis"
     },
     "cta": {
-      "download": "Baixar Agora",
-      "github": "Ver no GitHub"
+      "download": "Baixar v1.0",
+      "github": "Código Fonte",
+      "demo": "Testar Demo"
     },
     "version": {
       "label": "Versão atual:",
       "loading": "Carregando..."
     },
     "scroll_more": "Descubra mais"
-  }
-,
+  },
   "stats": {
     "free": {
       "label": "Download Grátis",
@@ -110,8 +128,7 @@
       "label": "Versão Estável",
       "loading": "Verificando..."
     }
-  }
-,
+  },
   "download": {
     "title": "Baixar CeroCloud",
     "version_prefix": "Versão:",

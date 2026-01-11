@@ -13,6 +13,7 @@
   "navbar": {
     "home": "Home",
     "tour": "Tour",
+    "blog": "Blog",
     "security": "Security",
     "roadmap": "Roadmap",
     "docs": "Docs",
@@ -57,5 +58,54 @@
       "made_with": "Made with",
       "for_local": "for local businesses"
     }
+  },
+  "demo": {
+    "search_placeholder": "Search products...",
+    "categories": {
+      "all": "All",
+      "smart_home": "Smart Home",
+      "audio": "Audio",
+      "computers": "Computers",
+      "storage": "Storage",
+      "monitors": "Monitors",
+      "peripherals": "Peripherals"
+    },
+    "cart": {
+      "title": "Current Order",
+      "empty": "Cart is empty",
+      "subtotal": "Subtotal",
+      "tax": "Tax (12%)",
+      "total": "Total",
+      "charge": "Charge Order"
+    },
+    "checkout": {
+      "title": "Payment Method",
+      "description": "Select how to process",
+      "cash": "Cash",
+      "card": "Card",
+      "transfer": "Transfer",
+      "cancel": "Cancel",
+      "success_title": "Payment Successful!",
+      "success_desc": "Receipt #1234 printed."
+    },
+    "success": {
+      "title": "Sale Completed!",
+      "message": "Transaction processed successfully.",
+      "print": "Print Receipt",
+      "new_sale": "New Sale"
+    },
+    "feature_locked": "Feature available in Full Version",
+    "desktop_warning": {
+      "title": "Desktop View Required",
+      "desc": "The CeroCloud POS Demo is optimized for desktop and tablet screens.",
+      "back": "Back to Home"
+    }
+  },
+  "newsletter": {
+    "title": "Stay Updated",
+    "description": "Get the latest updates, articles and releases directly in your inbox.",
+    "placeholder": "Enter your email",
+    "button": "Subscribe",
+    "success": "Thanks for subscribing!"
   }
 }

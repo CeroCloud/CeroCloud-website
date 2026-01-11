@@ -1,9 +1,9 @@
-import { Github, ExternalLink, Heart, FileText, BookOpen, Download } from "lucide-react";
+import { ExternalLink, Heart, BookOpen } from "lucide-react";
 import icon from "@/assets/cerocloud-icon.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useLatestRelease } from "@/lib/useLatestRelease";
-
+import NewsletterForm from "@/components/NewsletterForm";
 
 export default function Footer() {
     const { t } = useTranslation();
@@ -12,155 +12,81 @@ export default function Footer() {
 
     return (
         <div className="dark bg-[hsl(222.2_47.4%_11.2%)] text-[hsl(210_40%_98%)]">
-            <footer className="relative bg-gradient-to-b from-transparent via-muted/20 to-muted/40 border-t border-border/50 overflow-hidden">
-                {/* Animated background elements */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]" />
-                <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+            <footer className="relative bg-background border-t border-border/50 overflow-hidden pt-10 pb-6">
+                {/* RESTORED: Background Grid & Effects */}
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
+                <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
 
-                <div className="container mx-auto px-4 py-8 md:py-12 relative z-10">
-                    <div className="grid md:grid-cols-12 gap-8 md:gap-12 mb-8">
-                        {/* Brand Column - Larger */}
-                        <div className="md:col-span-5">
-                            <div className="flex items-center gap-4 md:gap-5 mb-6">
-                                <div className="relative w-16 h-16">
-                                    {/* Glow effect */}
-                                    <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-xl" />
-                                    {/* Icon */}
-                                    <img src={icon} alt="CeroCloud Icon" loading="lazy" className="relative w-full h-full drop-shadow-xl" />
-                                </div>
+                <div className="container mx-auto px-4 relative z-10">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12 mb-10">
+                        {/* 1. BRAND COLUMN */}
+                        <div className="space-y-4">
+                            <div className="flex items-center gap-3">
+                                <img src={icon} alt="CeroCloud" className="w-10 h-10 drop-shadow-md" />
                                 <div>
-                                    <h3 className="text-3xl font-black">CeroCloud</h3>
-                                    <p className="text-sm text-primary font-semibold">{t('footer.brand.slogan')}</p>
+                                    <h3 className="font-bold text-lg leading-none">CeroCloud</h3>
+                                    <p className="text-xs text-muted-foreground mt-1">{t('footer.brand.slogan')}</p>
                                 </div>
                             </div>
-                            <p className="text-sm text-muted-foreground mb-6 max-w-md leading-relaxed">
+                            <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
                                 {t('footer.brand.description')}
-                                <span className="block mt-2 font-semibold text-foreground">{t('footer.brand.promise')}</span>
                             </p>
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
-                                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                                <span className="text-xs font-semibold">
-                                    {loading ? t('footer.version.loading') : (release?.tag_name === release?.name ? release?.tag_name : `${release?.tag_name} - ${release?.name || "Release"}`)}
+
+                            <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary/50 rounded-full border border-border/50">
+                                <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
+                                <span className="text-xs font-mono text-muted-foreground">
+                                    {loading ? "..." : (release?.tag_name || "v1.0.0")}
                                 </span>
                             </div>
                         </div>
 
-                        {/* Links Columns */}
-                        <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8 text-left">
-                            {/* Resources Column */}
-                            <div>
-                                <h4 className="font-bold mb-4 text-sm uppercase tracking-wider flex items-center gap-2">
-                                    <FileText className="w-4 h-4 text-primary" />
-                                    {t('footer.columns.resources.title')}
-                                </h4>
-                                <ul className="space-y-3 text-sm">
-                                    <li>
-                                        <Link to="/docs" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2 group">
-                                            <BookOpen className="w-3.5 h-3.5" />
-                                            {t('footer.columns.resources.docs')}
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/docs?section=manual" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2 group">
-                                            <BookOpen className="w-3.5 h-3.5" />
-                                            {t('footer.columns.resources.user_manual')}
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/docs?section=install" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2 group">
-                                            <Download className="w-3.5 h-3.5" />
-                                            {t('footer.columns.resources.install_guide')}
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
+                        {/* 2. RESOURCES */}
+                        <div>
+                            <h4 className="font-semibold text-sm mb-4 text-foreground flex items-center gap-2">
+                                <BookOpen className="w-4 h-4 text-primary" />
+                                {t('footer.columns.resources.title')}
+                            </h4>
+                            <ul className="space-y-2.5 text-sm md:text-[13px] text-muted-foreground">
+                                <li><Link to="/docs" className="hover:text-primary transition-colors">{t('footer.columns.resources.docs')}</Link></li>
+                                <li><Link to="/docs?section=manual" className="hover:text-primary transition-colors">{t('footer.columns.resources.user_manual')}</Link></li>
+                                <li><Link to="/docs?section=install" className="hover:text-primary transition-colors">{t('footer.columns.resources.install_guide')}</Link></li>
+                            </ul>
+                        </div>
 
-                            {/* Project Column */}
-                            <div>
-                                <h4 className="font-bold mb-4 text-sm uppercase tracking-wider flex items-center gap-2">
-                                    <Github className="w-4 h-4 text-primary" />
-                                    {t('footer.columns.project.title')}
-                                </h4>
-                                <ul className="space-y-3 text-sm">
-                                    <li>
-                                        <a
-                                            href="https://github.com"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2 group"
-                                        >
-                                            <Github className="w-3.5 h-3.5" />
-                                            GitHub
-                                            <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                                            {t('footer.columns.project.about')}
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/license" className="text-muted-foreground hover:text-primary transition-colors">
-                                            {t('footer.columns.project.license')}
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/releases" className="text-muted-foreground hover:text-primary transition-colors">
-                                            {t('footer.columns.project.changelog')}
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
+                        {/* 3. COMMUNITY */}
+                        <div>
+                            <h4 className="font-semibold text-sm mb-4 text-foreground flex items-center gap-2">
+                                <Heart className="w-4 h-4 text-primary" />
+                                {t('footer.columns.community.title')}
+                            </h4>
+                            <ul className="space-y-2.5 text-sm md:text-[13px] text-muted-foreground">
+                                <li><Link to="/contribute" className="hover:text-primary transition-colors">{t('footer.columns.community.contribute')}</Link></li>
+                                <li><a href="https://github.com/CeroCloud/CeroCloud-Desktop" target="_blank" className="hover:text-primary transition-colors inline-flex items-center gap-1">GitHub <ExternalLink className="w-3 h-3" /></a></li>
+                                <li><Link to="/roadmap" className="hover:text-primary transition-colors">{t('footer.columns.community.roadmap')}</Link></li>
+                            </ul>
+                        </div>
 
-                            {/* Community Column */}
-                            <div>
-                                <h4 className="font-bold mb-4 text-sm uppercase tracking-wider flex items-center gap-2">
-                                    <Heart className="w-4 h-4 text-primary" />
-                                    {t('footer.columns.community.title')}
-                                </h4>
-                                <ul className="space-y-3 text-sm">
-                                    <li>
-                                        <Link to="/contribute" className="text-muted-foreground hover:text-primary transition-colors">
-                                            {t('footer.columns.community.contribute')}
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/CeroCloud/CeroCloud-Desktop/issues/new" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1">
-                                            {t('footer.columns.community.issues')} <ExternalLink className="w-3 h-3" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <Link to="/roadmap" className="text-muted-foreground hover:text-primary transition-colors">
-                                            {t('footer.columns.community.roadmap')}
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
+                        {/* 4. NEWSLETTER (Compact) */}
+                        <div className="bg-muted/10 rounded-xl p-5 border border-border/30">
+                            <NewsletterForm />
                         </div>
                     </div>
 
-                    {/* Bottom Bar */}
-                    <div className="pt-6 border-t border-border/50">
-                        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                            <div className="flex flex-col md:flex-row items-center gap-3 text-sm text-muted-foreground">
-                                <span className="font-semibold">© {currentYear} CeroCloud.</span>
-                                <span className="hidden md:inline text-border">•</span>
-                                <span>{t('footer.bottom.tagline1')}</span>
-                                <span className="hidden md:inline text-border">•</span>
-                                <span className="text-xs">{t('footer.bottom.tagline2')}</span>
-                            </div>
-                            <div className="flex items-center gap-6">
-                                <Link to="/license" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                                    {t('footer.bottom.privacy')}
-                                </Link>
-                                <Link to="/license" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                                    {t('footer.bottom.terms')}
-                                </Link>
-                                <div className="flex items-center gap-2 text-sm">
-                                    <span className="text-muted-foreground">{t('footer.bottom.made_with')}</span>
-                                    <Heart className="w-4 h-4 text-red-500 fill-red-500 animate-pulse" />
-                                    <span className="text-muted-foreground">{t('footer.bottom.for_local')}</span>
-                                </div>
+                    {/* Bottom Bar - Corrected Translations */}
+                    <div className="pt-6 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
+                        <div className="flex items-center gap-2">
+                            <span>© {currentYear} CeroCloud</span>
+                            <span className="w-1 h-1 bg-border rounded-full" />
+                            <span>{t('footer.bottom.tagline1')}</span>
+                        </div>
+
+                        <div className="flex items-center gap-6">
+                            <Link to="/license" className="hover:text-foreground">{t('footer.bottom.privacy')}</Link>
+                            <Link to="/license" className="hover:text-foreground">{t('footer.bottom.terms')}</Link>
+                            <div className="flex items-center gap-1.5 opacity-80">
+                                <span>{t('footer.bottom.made_with')}</span>
+                                <Heart className="w-3 h-3 text-red-500 fill-red-500" />
+                                <span>{t('footer.bottom.for_local')}</span>
                             </div>
                         </div>
                     </div>

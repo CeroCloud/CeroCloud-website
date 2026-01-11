@@ -22,6 +22,7 @@ export default function Navbar() {
     const navLinks = [
         { name: t('navbar.home'), href: "/" },
         { name: t('navbar.tour'), href: "/tour" },
+        { name: t('navbar.blog'), href: "/blog" },
         { name: t('navbar.security'), href: "/security" },
         { name: t('navbar.roadmap'), href: "/roadmap" },
         { name: t('navbar.docs'), href: "/docs" },
