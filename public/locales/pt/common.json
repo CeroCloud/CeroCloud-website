@@ -13,6 +13,7 @@
   "navbar": {
     "home": "Início",
     "tour": "Tour",
+    "blog": "Blog",
     "security": "Segurança",
     "roadmap": "Roteiro",
     "docs": "Documentação",
@@ -57,5 +58,54 @@
       "made_with": "Feito com",
       "for_local": "para comércios locais"
     }
+  },
+  "demo": {
+    "search_placeholder": "Pesquisar produtos...",
+    "categories": {
+      "all": "Todos",
+      "smart_home": "Casa Inteligente",
+      "audio": "Áudio",
+      "computers": "Computadores",
+      "storage": "Armazenamento",
+      "monitors": "Monitores",
+      "peripherals": "Periféricos"
+    },
+    "cart": {
+      "title": "Pedido Atual",
+      "empty": "Carrinho vazio",
+      "subtotal": "Subtotal",
+      "tax": "Imposto (12%)",
+      "total": "Total",
+      "charge": "Cobrar Pedido"
+    },
+    "checkout": {
+      "title": "Método de Pagamento",
+      "description": "Selecione como processar",
+      "cash": "Dinheiro",
+      "card": "Cartão",
+      "transfer": "Transferência",
+      "cancel": "Cancelar",
+      "success_title": "Pagamento com Sucesso!",
+      "success_desc": "Recibo #1234 impresso."
+    },
+    "success": {
+      "title": "Venda Concluída!",
+      "message": "Transação processada com sucesso.",
+      "print": "Imprimir Recibo",
+      "new_sale": "Nova Venda"
+    },
+    "feature_locked": "Funcionalidade disponível na Versão Completa",
+    "desktop_warning": {
+      "title": "Visualização Desktop Necessária",
+      "desc": "O Demo PDV da CeroCloud é otimizado para telas de desktop e tablet.",
+      "back": "Voltar ao Início"
+    }
+  },
+  "newsletter": {
+    "title": "Fique Atualizado",
+    "description": "Receba as últimas novidades, artigos e lançamentos diretamente em sua caixa de entrada.",
+    "placeholder": "Seu e-mail",
+    "button": "Inscrever-se",
+    "success": "Obrigado por se inscrever!"
   }
 }

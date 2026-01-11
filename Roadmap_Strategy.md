@@ -29,18 +29,18 @@ Este documento define la estrategia de evolución técnica y de producto para el
 
 ### 1. Marketing e Integraciones
 
-- [ ] **Blog Técnico/Corporativo:** Crear una sección `/blog` usando MDX para publicar artículos sobre actualizaciones, tutoriales de inventario y casos de éxito.
-- [ ] **Integración con Newsletter:** Añadir formulario de suscripción (ej. Mailchimp o Resend) en el Footer o modal de salida.
-- [ ] **Analytics Privado:** Reemplazar o complementar Google Analytics con una solución privacy-first como Plausible o PostHog (self-hosted).
+- [x] **Blog Técnico/Corporativo:** Crear una sección `/blog` usando MDX para publicar artículos sobre actualizaciones, tutoriales de inventario y casos de éxito.
+- [x] **Integración con Newsletter:** Añadir formulario de suscripción (ej. Mailchimp o Resend) en el Footer o modal de salida.
+- [x] **Analytics Privado:** Reemplazar o complementar Google Analytics con una solución privacy-first como Plausible o PostHog (self-hosted).
 
 ### 2. Automatización de Releases
 
-- [ ] **Workflow de Despliegue Automático:** Configurar GitHub Actions para que al detectar un nuevo Tag en el repo `CeroCloud-Desktop`, se dispare un rebuild del website automáticamente para mostrar la nueva versión al instante.
-- [ ] **Generación de Changelog:** Automatizar la creación de notas de la versión en formato amigable para el usuario final.
+- [x] **Workflow de Despliegue Automático:** Configurar GitHub Actions para que al detectar un nuevo Tag en el repo `CeroCloud-Desktop`, se dispare un rebuild del website automáticamente para mostrar la nueva versión al instante.
+- [x] **Generación de Changelog:** Automatizar la creación de notas de la versión en formato amigable para el usuario final.
 
 ### 3. Interactividad Web
 
-- [ ] **Live Demo (Simulador):** Crear una mini-interfaz web (usando componentes reales del Desktop pero con datos mock) que permita al usuario "probar" el POS directamente en el navegador sin instalar nada (WebAssembly o Mock UI).
+- [x] **Live Demo (Simulador):** Crear una mini-interfaz web (usando componentes reales del Desktop pero con datos mock) que permita al usuario "probar" el POS directamente en el navegador sin instalar nada (WebAssembly o Mock UI).
 
 ---
 

@@ -1,0 +1,15 @@
+{
+    "title": "CeroCloud Blog",
+    "subtitle": "Updates, tutorials, and stories from our team.",
+    "back": "Back to Blog",
+    "back_to_blog": "Back to Blog",
+    "read_article": "Read Article",
+    "team_label": "Product Team",
+    "up_next": "Up Next",
+    "read_now": "Read Now",
+    "author_label": "Author",
+    "semantics": {
+        "author": "Author",
+        "published": "Published"
+    }
+}

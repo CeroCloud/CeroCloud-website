@@ -31,7 +31,7 @@ i18n
         },
 
         // Namespaces
-        ns: ['common', 'landing', 'tour', 'releases', 'docs', 'about', 'legal', 'roadmap', 'notfound'],
+        ns: ['common', 'landing', 'tour', 'releases', 'docs', 'about', 'legal', 'roadmap', 'notfound', 'blog'],
         defaultNS: 'common'
     });
 

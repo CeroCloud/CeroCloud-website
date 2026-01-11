@@ -100,8 +100,9 @@
       "free_bad": "Gratis"
     },
     "cta": {
-      "download": "Descargar Ahora",
-      "github": "Ver en GitHub"
+      "download": "Descargar v1.0",
+      "github": "Código Fuente",
+      "demo": "Probar Demo"
     },
     "version": {
       "label": "Versión actual:",

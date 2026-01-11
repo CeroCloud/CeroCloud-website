@@ -13,6 +13,7 @@
   "navbar": {
     "home": "Inicio",
     "tour": "Recorrido",
+    "blog": "Blog",
     "security": "Seguridad",
     "roadmap": "Roadmap",
     "docs": "Documentación",
@@ -55,7 +56,56 @@
       "privacy": "Privacidad",
       "terms": "Términos",
       "made_with": "Hecho con",
-      "for_local": "para comercios locales"
+      "for_local": "para negocios locales"
     }
+  },
+  "demo": {
+    "search_placeholder": "Buscar productos...",
+    "categories": {
+      "all": "Todos",
+      "smart_home": "Smart Home",
+      "audio": "Audio",
+      "computers": "Computadoras",
+      "storage": "Almacenamiento",
+      "monitors": "Monitores",
+      "peripherals": "Periféricos"
+    },
+    "cart": {
+      "title": "Orden Actual",
+      "empty": "Carrito vacio",
+      "subtotal": "Subtotal",
+      "tax": "IVA (12%)",
+      "total": "Total",
+      "charge": "Cobrar Orden"
+    },
+    "checkout": {
+      "title": "Método de Pago",
+      "description": "Selecciona cómo procesar",
+      "cash": "Efectivo",
+      "card": "Tarjeta",
+      "transfer": "Transferencia",
+      "cancel": "Cancelar",
+      "success_title": "¡Pago Exitoso!",
+      "success_desc": "Recibo #1234 impreso."
+    },
+    "success": {
+      "title": "¡Venta Exitosa!",
+      "message": "Transacción procesada correctamente.",
+      "print": "Imprimir Ticket",
+      "new_sale": "Nueva Venta"
+    },
+    "feature_locked": "Función disponible en Versión Completa",
+    "desktop_warning": {
+      "title": "Requiere Vista de Escritorio",
+      "desc": "El Demo TPV de CeroCloud está optimizado para pantallas de escritorio y tableta.",
+      "back": "Volver al Inicio"
+    }
+  },
+  "newsletter": {
+    "title": "Mantente Actualizado",
+    "description": "Recibe las últimas noticias, artículos y lanzamientos directamente en tu bandeja.",
+    "placeholder": "Tu correo electrónico",
+    "button": "Suscribirse",
+    "success": "¡Gracias por suscribirte!"
   }
 }
